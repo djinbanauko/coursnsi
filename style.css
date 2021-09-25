@@ -3,7 +3,7 @@ html {
 }
 body{
   background-image: url("bg.jpg");
-  background-repeat: no-repeat;
+  margin : 5% ;
 }
 code {
    font-family : Courier New, monospace;
