@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Traitement_d_image</title>
+</head>
+<body><p>Nom :</p>
+<p>Prénom :</p>
+<h1 id='traitement-dimage'>Traitement d&#39;image</h1>
+<p>Lorsque l&#39;on prend une photographie, l&#39;appareil corrige lui-même l&#39;image finale, mais le résultat n&#39;est pas toujours satisfaisant. On peut alors utiliser des logiciels de traitement d&#39;image afin d&#39;améliorer le résultat. Il est possible de faire subir à l&#39;image toutes sortes de transformations : changement de format, de définition, modification des couleurs, trucages variés.</p>
+<p>&nbsp;</p>
+<p>Nous allons observé ces différents traitements grâce 3 activités. </p>
+<p><strong>Remarque :</strong> </p>
+<p>Vous trouverez dans le public de la classe un fichier vous présentant les bases de Gimp, il pourrait vous être utile, pensez à y jeter un œil.</p>
+<p>&nbsp;</p>
+<h2 id='activité-1--introduction-au-traitement-dimage-avec-gimp'>Activité 1 : Introduction au traitement d&#39;image avec GIMP</h2>
+<p><strong>Modifier les couleurs</strong></p>
+<ol start='' >
+<li>Télécharger sur le bureau le dossier d&#39;images que vous trouverez dans le public de la classe.</li>
+<li>Ouvrir la photo de votre choix avec le logiciel Gimp (clic droit + ouvrir avec Gimp).</li>
+<li>Dans le menu &quot;couleurs&quot;, tester les réglages des niveaux (dans le menu &quot;Niveaux&quot;).</li>
+<li>Modifier l&#39;image avec les premiers outils de ce menu jusqu&#39;à la commande &quot;courbe&quot;. On observe particulièrement les effets produits par les changements dans la balance et la température des couleurs et par ceux produits par &quot;Luminosité - contraste &quot;</li>
+
+</ol>
+<p><strong>définition :</strong></p>
+<p>Contraste = Opposition entre deux valeurs, chacune faisant ressortir l&#39;autre. L&#39;oeil humain est particulièrement sensible au contraste, il est meilleur comparateur qu&#39;analyseur.</p>
+<p><img src="img/contraste.jpg" style="zoom:50%;" /></p>
+<p><strong>Utiliser des filtres</strong></p>
+<ol start='' >
+<li>Ouvrir la photo de votre choix avec le logiciel Gimp (clic droit + ouvrir avec Gimp).</li>
+<li>Ouvrir le menu &quot;Filtres&quot;.</li>
+<li>Explorer les différents types de filtres proposés par Gimp.</li>
+<li>Dans le menu &quot;Flou&quot;, tester le flou gaussien, puis le flou médian.</li>
+<li>Dans le menu &quot;distorsions&quot;, tester les filtres &quot;Mosaïque&quot; et &quot;Kaléidoscope&quot;. en faisant varier la rotation du miroir et la taille des tuiles</li>
+<li>Appliquer les différents filtres du menu &quot;Artistiques&quot;</li>
+
+</ol>
+<p>&nbsp;</p>
+<h2 id='activité-2---créer-un-filtre-snapchat'>Activité 2  : Créer un filtre Snapchat</h2>
+<p>Snapchat offre la possibilité de créer des filtres personnalisés et géolocalisés. En s&#39;appuyant sur l&#39;outil GoogleMaps, on peut définir une zone géographique de validité du filtre (un lycée et ses environs, un parc, etc).</p>
+<p><strong>Créer votre image</strong></p>
+<p>En utilisant ce que vous venez de voir sur Gimp, créer une image répondant aux caractéristiques suivante :</p>
+<ul>
+<li>Image png transparente (pensez à &quot;Exporter sous ...&quot; sur l&#39;éditeur photo).</li>
+<li>Les dimensions du fichier png : 1080 x 1920 pixels.</li>
+<li>Le poids du fichier png doit être inférieur à 300 Ko.</li>
+
+</ul>
+<p><em>Remarque :</em> Vous pouvez utiliser les photographies fournies dans l&#39;activité 1 et/ou des images trouver sur le Web.</p>
+<p><strong>Créer votre géofiltre</strong></p>
+<p>Aller sur la page Snapchat de création de géofiltres.</p>
+<p>Pour cela, tapez dans votre navigateur préféré &quot;snapchat geofiltres&quot;.</p>
+<p><img src="img/recherche_snap.jpg" alt="recherche" style="zoom: 50%;" /></p>
+<p>Choisir le premier lien, puis cliquer sur le bouton jaune &quot;Démarrer&quot;.</p>
+<p>Vous remarquez qu&#39;il est possible de créer plusieurs sortes de filtres, celui que nous souhaitons créer aujourd&#39;hui se trouve dans &quot;Filtres communautaires&quot;, cliquez alors que &quot;envoyer&quot;.</p>
+<p>Choisissez ensuite géofilter.</p>
+<p>Il faudra alors importer son image, définir une zone (fence) de validité du filtre, entrer un mail, un nom, puis une description du filtre.</p>
+<p>&nbsp;</p>
+<h2 id='activité-3--traitement-dimage-avec-python'>Activité 3 : Traitement d&#39;image avec Python</h2>
+<p>Nous allons utiliser le langage de programmation Python afin de directement travailler sur les pixels d&#39;une image. Par travailler sur les pixels, j&#39;entends déterminer la valeur du canal rouge, la valeur du canal et la valeur du canal bleu pour un pixel donné ou bien encore modifier carrément la couleur d&#39;un pixel.</p>
+<p>&nbsp;</p>
+<p>Avant de commencer à écrire un programme qui nous permettra de travailler sur les pixels d&#39;une image, il est nécessaire de préciser que chaque pixel a des coordonnées x,y.</p>
+<p><img src="img/coordonnees.jpg" alt="coordonnee" style="zoom: 67%;" /></p>
+<p>Comme vous pouvez le constater sur le schéma ci-dessus, le pixel de coordonnées (0,0) se trouve en haut à gauche de l&#39;image. Si l&#39;image fait 800 pixels de large et 600 pixels de haut, le pixel ayant pour coordonnées (400,300) sera au milieu de l&#39;image.</p>
+<p>Dans un premier temps nous allons utiliser une simple photo de pomme pour faire nos premiers essais, ensuite, vous pourrez travailler avec l&#39;image de votre choix. L&#39;image de la pomme se trouve dans le dossier d&#39;images que vous avez télécharger dans l&#39;activité 1. Cette image devra se trouver dans le même dossier que vos programmes Python.</p>
+<p>&nbsp;</p>
+<p><strong>-&gt; Ouvrir Thonny</strong></p>
+<p>Vous devez arriver sur une fenêtre semblable à celle-ci :</p>
+<p><img src="img/thonny.jpg" alt="thonny" style="zoom:50%;" /></p>
+<p>La partie basse appelée <code>console</code> sert en général à visualiser le résultat d&#39;un programme python ainsi que les éventuels problèmes rencontrés.</p>
+<p>La partie droite appelée <code>Assistance</code> sert d&#39;aide en cas de problème, espérons ne pas en avoir besoin !</p>
+<p>La partie centrale est la zone ou on entre du code python.</p>
+<p>Le bouton rond vert avec une petite flèche blanche à intérieur sert à tester le code python.</p>
+<ol start='' >
+<li><p>Copier et tester le code suivant dans thonny :</p>
+<pre><code class='language-python' lang='python'>from PIL import Image
+img = Image.open(&quot;pomme.jpg&quot;)
+r,v,b=img.getpixel((100,250))
+print(&quot;canal rouge : &quot;,r,&quot;canal vert : &quot;,v,&quot;canal bleu : &quot;,b)
+</code></pre>
+</li>
+
+</ol>
+<p>Ce programme vous donne le canal rouge, le canal vert et le canal bleu du pixel de coordonnées (100,250) de l&#39;image &quot;pomme.jpg&quot;</p>
+<p>Voici une analyse ligne par ligne du programme ci-dessus :</p>
+<ul>
+<li>&quot;from PIL import Image&quot; : pour travailler sur les images nous avons besoin d&#39;une extension de Python (appelé bibliothèque). Cette bibliothèque se nomme PIL.</li>
+<li>&quot;img = Image.open(&quot;pomme.jpg&quot;)&quot; c&#39;est grâce à cette ligne que nous précisons que nous allons travailler avec l&#39;image &quot;pomme.jpg&quot;. Pour travailler avec une autre image, il suffit de remplacer &quot;pomme.jpg&quot; par un autre nom (attention, votre fichier image devra se trouver dans le même dossier que le ficher de votre programme Python).</li>
+<li>&quot;r,v,b=img.getpixel((100,250))&quot; cette ligne récupère les valeurs du canal rouge (r), du canal vert (v) et du canal bleu (b) du pixel de coordonnées (100,250). Dans la suite du programme, r correspondra à la valeur du canal rouge, v correspondra à la valeur du canal vert et b correspondra à la valeur du canal bleu</li>
+<li>&quot;print(&quot;canal rouge : &quot;,r,&quot;canal vert : &quot;,v,&quot;canal bleu : &quot;,b)&quot; permet d&#39;imprimer le résultat</li>
+
+</ul>
+<p>&nbsp;</p>
+<ol start='2' >
+<li>Modifiez le programme de la question 1 pour qu&#39;il affiche les valeurs du canal rouge, du canal vert et du canal bleu du pixel de coordonnées (250,300), notez votre réponse.</li>
+
+</ol>
+<p>              r =                v =                 b =</p>
+<p>&nbsp;</p>
+<p>Il est possible de modifier les canaux RVB d&#39;un pixel :</p>
+<ol start='3' >
+<li><p>Copier et tester le code suivant dans thonny :</p>
+<pre><code class='language-python' lang='python'>from PIL import Image
+img = Image.open(&quot;pomme.jpg&quot;)
+img.putpixel((250,250),(255,0,0))
+img.show()
+</code></pre>
+<p>Regardez attentivement le centre de l&#39;image, vous devriez voir un pixel rouge à la place d&#39;un pixel vert.</p>
+</li>
+
+</ol>
+<p>Voici une analyse ligne par ligne du programme ci-dessus :</p>
+<p>Les deux premières lignes sont identiques que celles à la question 1.</p>
+<ul>
+<li>&quot;img.putpixel((250,250),(255,0,0))&quot; permet de colorier le pixel de coordonnées (250,250) en rouge (255,0,0).</li>
+<li>&quot;img.show()&quot; permet d&#39;afficher l&#39;image modifiée</li>
+
+</ul>
+<ol start='4' >
+<li><p>Modifiez le programme du &quot;À faire vous-même 3&quot; afin de colorier le pixel de coordonnées (100,250) en bleu.</p>
+<p>Appeler l&#39;enseignant afin de valider cette question.</p>
+</li>
+
+</ol>
+<p>Modifiez un pixel c&#39;est déjà bien, mais comment faire pour modifier plusieurs pixels ? La réponse est simple, nous allons utiliser des boucles &quot;for&quot;. Le but ici n&#39;est pas de détailler le fonctionnement des boucles &quot;for&quot; en Python, vous devez juste comprendre que grâce à ces boucles nous allons pouvoir balayer toute l&#39;image et ne plus nous contenter de modifier les pixels un par un.</p>
+<ol start='5' >
+<li>Copier et tester le programme suivant (ATTENTION : l&#39;exécution de ce programme n&#39;est pas très intéressante en soi, vous pouvez l&#39;arrêter à tout moment en appuyant simultanément sur la touche Ctrl et sur la touche C):</li>
+
+</ol>
+<pre><code class='language-python' lang='python'>from PIL import Image
+img = Image.open(&quot;pomme.jpg&quot;)
+largeur_image=500
+hauteur_image=500
+for y in range(hauteur_image):
+    for x in range(largeur_image):
+        r,v,b=img.getpixel((x,y))
+        print(&quot;rouge : &quot;,r,&quot;vert : &quot;,v,&quot;bleu : &quot;,b)
+print(&quot;fin&quot;)
+</code></pre>
+<p>Quelques commentaires sur ce programme :</p>
+<ul>
+<li>Nous commençons par définir les variables &quot;largeur_image&quot; et &quot;hauteur_image&quot; (&quot;largeur_image=500&quot; et &quot;hauteur_image=500&quot;). Je pense que vous aurez compris que notre image &quot;pomme.jpg&quot; fait 500 pixels de large et 500 pixels de haut. Si vous désirez travailler avec une autre image, il faudra veiller à bien modifier la valeur de ces deux variables.</li>
+<li>Les 2 boucles &quot;for&quot; nous permettent de parcourir l&#39;ensemble des pixels de l&#39;image :</li>
+
+</ul>
+<pre><code class='language-python' lang='python'>for y in range(hauteur_image):
+    for x in range(largeur_image):
+		 	   ...
+</code></pre>
+<ul>
+<li>Le plus important ici est de bien comprendre que dans la suite du programme, les variables x et y vont nous permettre de parcourir l&#39;ensemble des pixels de l&#39;image : nous allons commencer avec le pixel de coordonnées (0,0), puis le pixel de coordonnées (1,0), puis le pixel de coordonnées (2,0)...jusqu&#39;au pixel de coordonnées (499,0). Ensuite, nous allons changer de ligne avec le pixel de coordonnées (0,1), puis le pixel de coordonnées (1,1)...bref, le dernier pixel sera le pixel de coordonnées (499,499), tout cela grâce à la double boucle &quot;for&quot; !</li>
+<li>&quot;r,v,b=img.getpixel((x,y))&quot; cette ligne ne devrait pas poser de problème, nous avons juste remplacé les coordonnées des pixels par (x,y) afin de considérer l&#39;ensemble des pixels de l&#39;image.</li>
+<li>&quot;print(&quot;rouge : &quot;,r,&quot;vert : &quot;,v,&quot;bleu : &quot;,b)&quot; nous imprimons les valeurs des canaux RVB pour chaque pixel de l&#39;image.</li>
+<li>&quot;print(&quot;fin&quot;)&quot; ATTENTION cette ligne n&#39;est pas dans la double boucle (pas de décalage), le mot &quot;fin&quot; ne sera donc affiché qu&#39;une seule fois (après avoir parcouru l&#39;ensemble des pixels).</li>
+
+</ul>
+<p>Compliquons un peu la chose en modifiant tous les pixels de l&#39;image :</p>
+<ol start='6' >
+<li><p>Copier et tester le code suivant :</p>
+<pre><code class='language-python' lang='python'>from PIL import Image
+img = Image.open(&quot;pomme.jpg&quot;)
+largeur_image=500
+hauteur_image=500
+for y in range(hauteur_image):
+    for x in range(largeur_image):
+        r,v,b=img.getpixel((x,y))
+        n_r=v
+        n_v=b
+        n_b=r
+        img.putpixel((x,y),(n_r,n_v,n_b))
+img.show()
+</code></pre>
+<p>Expliquez en quelques mots ce que fait ce programme.</p>
+</li>
+
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ol start='7' >
+<li>En vous inspirant de ce qui a été fait au à la question 6, écrire un programme qui inverse les valeurs des canaux bleu et rouge sans changer la valeur du canal vert</li>
+
+</ol>
+<p>Appeler l&#39;enseignant pour valider cette question.</p>
+<ol start='8' >
+<li>Après avoir fait quelques recherches sur le &quot;négatif d&#39;une image&quot;, écrivez un programme qui donne le négatif d&#39;une image.</li>
+
+</ol>
+<p>Appeler l&#39;enseignant pour valider cette question.</p>
+<ol start='9' >
+<li><p>Après avoir fait quelques recherches sur les &quot;images en niveau de gris&quot;, écrivez un programme qui transforme une &quot;image couleur&quot; en une &quot;image en niveau de gris&quot;.</p>
+<p>Petite astuce qui pourrait vous aider : en Python pour avoir une division entière (le résultat est un entier), il faut utiliser l&#39;opérateur // à la place de l&#39;opérateur /.</p>
+</li>
+
+</ol>
+<p>Appeler l&#39;enseignant pour valider cette question.</p>
+<ol start='10' >
+<li><p>Testez les programmes écrient dans les questions 8 et 9 avec une image de votre choix (attention aux variables &quot;largeur_image&quot; et &quot;hauteur_image&quot;).</p>
+</li>
+<li><p>Copier et tester le programme suivant:</p>
+<pre><code class='language-python' lang='python'>from PIL import Image
+img = Image.open(&quot;pomme.jpg&quot;)
+largeur_image=500
+hauteur_image=500
+for y in range(hauteur_image):
+    for x in range(largeur_image):
+        r,v,b=img.getpixel((x,y))
+        if b&lt;200:
+            n_b=255-b
+        else :
+            n_b=b
+        img.putpixel((x,y),(r,v,n_b))
+img.show()
+</code></pre>
+<p>Expliquer en quelques mots ce que fait le programme.</p>
+</li>
+
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ol start='12' >
+<li><p>Copier et tester le programme suivant :</p>
+<pre><code class='language-python' lang='python'>from PIL import Image
+img = Image.open(&quot;pomme.jpg&quot;)
+largeur_image=500
+hauteur_image=500
+for y in range(hauteur_image):
+    for x in range(largeur_image):
+        r,v,b=img.getpixel((x,y))
+        if v&gt;100 and y&gt;250:
+            n_v=0
+        else :
+            n_v=255
+        img.putpixel((x,y),(r,n_v,b))
+img.show()
+</code></pre>
+</li>
+
+</ol>
+<p>Expliquer en quelques mots ce que fait le programme.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>JHermilier</p>
+<p>&nbsp;</p>
+</body>
+</html>
