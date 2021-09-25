@@ -8,6 +8,10 @@ body{
 code {
    font-family : Courier New, monospace;
 }
+p{
+  background-color : white;
+  opacity : 0.5;
+}
 
 li {
   padding-bottom : 5px;
