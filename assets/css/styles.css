@@ -1,0 +1,21 @@
+html {
+    font-family : Helvetica, sans-serif;
+}
+body{
+  background-image: url("/assets/images/background.jpg");
+}
+code {
+    font-family : Courier New, monospace;
+}
+.container{
+  background-color : rgba(255, 255, 255, 0.75);
+}
+
+li {
+  padding-bottom : 5px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
