@@ -2,15 +2,16 @@
 <html>
     <head>
         <meta charset='UTF-8'>
-        <link href="../style.css" rel="stylesheet" type="text/css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link href="/style.css" rel="stylesheet" type="text/css">
         <title>De l'argentique au numérique</title>
 </head>
 <body>
-    <div>
+    <div class="container p-5 mt-5 border rounded-3">
         <h1>De l&#39;argentique au numérique</h1>
         <h2>Principe de fonctionnement </h2>
         <p>Un appareil photo, qu&#39;il soit argentique ou numérique, perçoit la lumière  de ce qui lui fait face à travers un orifice fin et recueille cette image à l&#39;aide d&#39;un dispositif chimique ou électronique, le <code>capteur</code>. Un système optique, l&#39;<code>objectif</code>, permet d&#39;agir sur la concentration des faisceaux lumineux afin de reproduire une image sur le capteur.</p>
-        <img src="img/principe_photo.jpg" referrerpolicy="no-referrer" alt="principe_photo">
+        <img class="img-fluid" src="img/principe_photo.jpg" referrerpolicy="no-referrer" alt="principe_photo">
         <strong>définition</strong> : </p>
         <p>Vidéo: <a href='https://www.youtube.com/watch?v=pEtUsh7DI9k'>La photo, de l&#39;argentique au numérique</a></p>
         <ul>
@@ -24,7 +25,7 @@
         <h2>Les capteurs</h2>
         <p>Les capteurs photographiques sont des éléments électroniques sensibles à la lumière, ils sont composés de 3 éléments : une microlentille, un <code>filtre dit de Bayer</code> et des photosites qui vont transformer le signal lumineux en une intensité électrique.</br>L&#39;ensemble de ces signaux électriques va créer des pixels.</p>
         <p>Le filtre de Bayer est une grille composé de rouge, vert et bleu, comme vous pouvez le remarquer ci-dessous, il y a deux fois plus de vert que de rouge et de bleu.</p>
-        <img src="img/bayer.jpg" alt="bayer" style="zoom: 50%;" />
+        <img class="img-fluid" src="img/bayer.jpg" alt="bayer" style="zoom: 50%;" />
         <h2>L&#39;image et les pixels</h2>
         <p>Une image possède deux caractéristiques : sa définition et sa résolution.<br/>La définition<br/>
         <br/>
@@ -35,7 +36,7 @@
         <h2>Les pixels</h2>
         <p>Un pixel est composé de trois parties : une partie rouge, une partie verte et une partie bleue. À chaque pixel on associe donc 3 couleurs : le rouge, le vert et le bleu. On parle du canal rouge, du canal vert et du canal bleu d’un pixel (on parle de système RVB ou RGB en anglais). <br/>
         La théorie physique de la synthèse additive des couleurs montre que la variation de l’intensité lumineuse de chaque canal permet d’obtenir un très grand nombre de couleurs. La valeur de l’intensité lumineuse associée à chaque canal de chaque pixel d’une image est très souvent comprise entre 0 et 255 (256 valeurs possibles). On codera donc un pixel à l&#39;aide d&#39;un triplet de valeur (par exemple &quot;247,56,98&quot;). La première valeur donnant l&#39;intensité du canal rouge, la deuxième valeur donnant l&#39;intensité du canal vert et la troisième valeur donnant l&#39;intensité du canal bleu.</p>
-        <img src="img\pixel.png" referrerpolicy="no-referrer" alt="pixel">
+        <img class="img-fluid" src="img\pixel.png" referrerpolicy="no-referrer" alt="pixel">
         <br/>
         <strong>Exercice 1:</strong>
         <ol start='' >
