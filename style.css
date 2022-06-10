@@ -1,5 +1,14 @@
 html {
-  font-family : Helvetica, sans-serif;
+    font-family : Helvetica, sans-serif;
+}
+body {
+	 background-color : #FEF9D7;
+	 color : #283618;
+}
+
+#corps{
+	margin-top : 30px;
+	 padding : 10px;
 }
 
 code {
@@ -10,6 +19,32 @@ li {
   padding-bottom : 5px;
 }
 
-div {
-  margin : 5px;
+h1,h2,h3{
+	color : #BC6C25;
+}
+
+	
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color : #87986A;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right : 0;
+  width: 100%;
+}
+
+.nav li{
+	float : right;
+}
+
+
+
+li a {
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  color : #283618;
 }
