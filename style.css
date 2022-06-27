@@ -1,8 +1,8 @@
-html {
-    font-family : Helvetica, sans-serif;
-}
 body {
-	 color : #283618;
+	font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+	font-size: 1rem;
 }
 
 .corps{
