@@ -8,7 +8,7 @@ body {
 .corps{
 	margin: 50px;
 	padding : 10px;
-	border : solid #BC6C25;
+	border : solid 1px #BC6C25;
 }
 
 code {
