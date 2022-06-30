@@ -67,6 +67,10 @@ li {
   width: 100%;
 }
 
+#home{
+	float : left;
+}
+
 .nav li{
 	float : right;
 }
