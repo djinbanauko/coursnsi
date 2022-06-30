@@ -39,6 +39,7 @@ code{
     font-size: 0.9em;
 }
 #pdp {
+	height: 50px;
 	 border-radius: 999em;
 }
 .corps{
