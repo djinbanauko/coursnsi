@@ -49,6 +49,7 @@ code{
 /* page accueil */
 #pdp{
 	 border-radius: 999em;
+	width : 100%;
 }
 #div_pdp{
 	float: left;
