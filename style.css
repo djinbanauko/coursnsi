@@ -108,8 +108,12 @@ li {
   right : 0;
   width: 100%;
 }
+#hom_icon{
+	vertical-align: middle;
+}
 #home{
 	float : left;
+	padding: 12px 20px;
 }
 .nav li{
 	float : right;
