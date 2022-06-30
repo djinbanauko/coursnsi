@@ -15,8 +15,18 @@
 		<li><a href='index.html'>Accueil</a></li>
 	</ul>
 	<div class="corps">
-		<h1>Contact</h1>
-
+		<h1>Formulair de contact</h1>
+		<form>
+			<label for="name">Nom et prénom</label>
+			<input type="text" id="name" placeholder="Votre nom et prénom">
+			<label for="sujet">Sujet</label>
+			<input type="text" id="sujet" placeholder="L'objet de votre message">
+			<label for="mail">Adresse mail</label>
+			<input id="mail" type="email" placeholder="Votre adresse mail">
+			<label for="message">Message</label>
+    			<textarea id="message" placeholder="Votre message" style="height:200px"></textarea>
+			<button type="submit">Envoyer</button>
+		</form>
 	</div>
 </body>
 <footer>
