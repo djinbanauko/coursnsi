@@ -48,9 +48,14 @@ table{
 }
 tr{
 	width: 100%;
+	border: 1px solid #eee;
 }
 td{
 	width: 50%;
+	border: 1px solid #eee;
+}
+td b{
+	  background-color : #f8f8f8;
 }
 
 .corps{
