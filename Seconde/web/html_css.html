@@ -29,15 +29,15 @@
 		<img id="capture" src ="img/capture.jpg"></br>
 		<p>Nous allons pour l'instant uniquement utiliser la fenêtre "HTML" et la fenêtre "Result".</p>
 		<ol>
-			<li>Ecrire le code suivant dans la partie HTML :</li>
+			<li>Écrire le code suivant dans la partie HTML :</li>
 			<textarea>
 				<h1>Hello World! Ceci est un titre</h1>
 				<p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
 			</textarea>
-			<li> Dire ce qui s'affiche dans la fenêtre.</li>
+			<li>Dire ce qui s'affiche dans la fenêtre.</li>
 			<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
 		</ol>
-		<p>Comme déjà évoqué ci-dessus, en HTML tout est une histoire de balises que l'on ouvre et que l'on ferme. Une balise ouvrante est de la forme <b><nom_de_la_balise></b>, les balises fermantes sont de la forme <b></nom_de_la_balise></b>.</p>
+		<p>Comme déjà évoqué ci-dessus, en HTML tout est une histoire de balises que l'on ouvre et que l'on ferme. Une balise ouvrante est de la forme <b>&lt;nom_de_la_balise&gt;</b>, les balises fermantes sont de la forme <b>&lt;/nom_de_la_balise&gt;</b>.</p>
 		<p>En observant attentivement le code, vous devriez forcément remarquer que toute balise ouverte doit être refermée à un moment ou un autre. La balise ouvrante et la balise fermante peuvent être sur la même ligne ou pas, cela n'a pas d'importance, la seule question à se poser ici est : ai-je bien refermé toutes les balises que j'ai ouvertes ?
 		<p> Enfin pour terminer avec les généralités sur les balises, il est important de savoir qu'une structure du type :</p>
 		<textarea>
@@ -53,9 +53,228 @@
 				</balise2>
 			</balise1>
 		</textarea>
-		<p>Notez que dans notre exemple de la question question 1 nous respectons bien cette règle "d'imbrication" des balises avec la balise <pre><p></pre> et la balise <pre><strong></pre>.</p>
-			
-			
+		<p>Notez que dans notre exemple de la question question 1 nous respectons bien cette règle "d'imbrication" des balises avec la balise &lt;p&gt; et la balise &lt;strong&gt;.</p>
+		<p>Il est important de comprendre que chaque balise a une signification qu'il faut bien respecter (on parle de la <b>sémantique</b> des balises). Vous trouverez une liste non exhaustive des balises et de leur sémantique plus bas.</p>
+		<p>Vous devez aussi savoir qu'il existe des balises qui sont à la fois ouvrantes et fermantes (&lt;balise/&gt;) : un exemple, la balise permettant de sauter une ligne, la balise <b>&lt;br/&gt;</b></p>
+		<p>Il est possible d'ajouter des éléments à une balise ouvrante, on parle d'attribut. Une balise peut contenir plusieurs attributs :</p>
+		<textarea><ma_balise attribut_1= "valeur_1" attribut_2="valeur_2"></textarea>
+		<p>Il existe beaucoup d'attributs différents, nous allons nous contenter de 2 exemples avec l'attribut <b>id</b> (id pour identifiant) et <b>class</b>.</p>
+		<ol start="3">
+			<li>Écrire le code HTML suivant :</li>
+			<textarea> <h1>Ceci est un titre</h1>
+				<h2 class="titre_1">Ceci est un sous titre</h2>
+				<p id="para_1">Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
+			</textarea>
+			<li>Dire ce qui s'affiche dans la fenêtre.</li>
+			<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+		</ol>	
+		<p>Le HTML n'a pas été conçu pour gérer la mise en page (c'est possible, mais c'est une mauvaise pratique). Le HTML s'occupe uniquement du contenu et de la sémantique, pour tout ce qui concerne la mise en page et l'aspect "décoratif" (on parle du "style" de la page), on utilisera le CSS (Cascading Style Sheets).</p>
+		<h2>CSS</h2>
+		<p>Dans JSFIDDLE, il est possible d'écrire du CSS dans la fenêtre en haut à droite.</p>
+		<ol start="5">
+			<li>Écrire le code HTML suivant dans la partie HTML :</li>
+			<textarea><h1>Ceci est un titre</h1>
+<h2>Ceci est un sous titre</h2>
+<p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
+			</textarea>
+			<p>et le code CSS suivant dans la partie CSS:</p>
+			<textarea>
+h1
+{
+	text-align: center;
+	background-color: red;
+}
+h2
+{
+	font-family: Verdana;
+	font-style: italic;
+	color: green;
+}
+			</textarea>
+			<li>Dire ce qui s'affiche dans la fenêtre.</li>
+			<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+		</ol>	
+		<p>Dans l'exemple de la question 5, les propriétés "<b>text-align</b>" et "<b>background-color</b>" seront appliquées au contenu de toutes les balises de type h1 (avec respectivement les valeurs "center" et "red").....</p>
+		<ol start="7">
+			<li>Écrire le code HTML suivant  dans la partie HTML:</li>
+			<textarea><h1>Ceci est un titre</h1>
+<h2>Ceci est un sous titre</h2>
+<p id="para_1">Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
+			</textarea>
+			<p>et le code CSS suivant dans la partie CSS:</p>
+			<textarea>#para_1
+{
+	font-style: italic;
+	color: green;
+}
+			</textarea>
+			<li>Dire ce qui s'affiche dans la fenêtre. Que remarquez vous ? </li>
+			<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+		</ol>	
+		<p>Il est donc possible de cibler un paragraphe et pas un autre en utilisant l'<b>id</b> du paragraphe (en CSS l'<b>id</b> se traduisant par le signe <b>#</b>).</p>
+		<p>Il est aussi possible d'utiliser l'attribut <b>class</b> à la place de l'id. Dans le CSS on utilisera le point <b>.</b> à la place du #.</p>
+		<p>L'unique différence entre <b>id</b> et <b>class</b> est que l'<b>id</b> ne cible qu'un seul élément alors que la <b>class</b> permet de cibler plusieurs éléments d'une même page.</p>
+		<p>Ainsi, si nous avions eu un 3e paragraphe, nous aurions pu avoir :</p>
+		<textarea><p class="para_1">Voici un 3e paragraphe</p></textarea>
+		<p>Mais nous n'aurions pas pu avoir :</p>
+		<textarea><p id="para_1"> Voici un 3e paragraphe </p></textarea>
+		<p>car l'<b>id</b> para_1 a déjà été utilisé pour le 1er paragraphe.</p>
+		<p>JSFIDDLE est un très bel outil, mais il ne peut pas être utilisé pour la réalisation d'une vraie page web.</p>
+		<p>Nous allons créer 2 fichiers : un fichier qui contiendra du HTML (<b>index.html</b>) et un fichier qui contiendra du CSS (<b>style.css</b>).</p>
+		<ol start="9">
+			<li>À l'aide d'un éditeur de texte, créer un nouveau fichier.</li>
+			<li>Sauvegarder le fichier en précisant son nom, "index.html".</li>
+			<li>Écrire le code suivant dans l'éditeur de texte (sans oublier de sauvegarder quand vous avez terminé) :</li>
+			<textarea><!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Voici mon site</title>
+	</head>
+	<body>
+		<h1>Hello World! Ceci est un titre</h1>
+		<p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
+	</body>
+</html>
+			</textarea>
+			<li>Tester le code à l'aide d'un navigateur web (Firefox ou Chrome) en "double-cliquant" sur le fichier index.html.</li>
+		</ol>
+		<p>Dans le code de la question 11, vous reconnaissez le code se trouvant entre les balises &lt;body&gt; :</p>
+		<textarea><body>
+......
+</body>
+		</textarea>
+		<p>Tout votre code HTML devra se trouver entre ces 2 balises.</br>Le reste des balises devraient vous êtes inconnues. Passons-les en revue :</br>La première ligne :</p>
+		<textarea><!doctype html></textarea>
+		<p>permet d'indiquer au navigateur que nous utiliserons la dernière version du HTML.</p>
+		<p>La balise &lt;html&gt; est obligatoire, l'attribut lang="fr" permet d'indiquer au navigateur que nous utiliserons le français pour écrire notre page.</p>
+		<p>Les balises &lt;head&gt;...&lt;/head&gt; délimitent ce que l'on appelle l'en-tête. L'en-tête contient, dans notre exemple, 2 balises : la balise &lt;meta charset="utf-8&gt; qui permet de définir l'encodage des caractères (plus d'informations en première NSI) et la balise &lt;title&gt; qui définit le titre de la page (attention ce titre ne s'affiche pas dans le navigateur, ne pas confondre avec la balise &lt;h1&gt;).</p>
+		<ol start="13">
+			<li>Toujours à l'aide d'un éditeur de texte, vous allez créer un fichier qui va contenir le CSS de notre page (style.css). Compléter ce fichier à l'aide du code suivant :</li>
+		</ol>
+		<textarea>h1
+{
+	text-align: center;
+	background-color: red;
+}
+p
+{
+	font-family: Verdana;
+	font-style: italic;
+	color: green;
+}
+		</textarea>
+		<p>Pour l'instant notre CSS ne sera pas appliqué à notre page, pour ce faire, il faut modifier notre code HTML en ajoutant une ligne qui va permettre d'associer notre code CSS à notre page.</p>
+		<ol start="14">
+			<li>Modifier le code HTML avec la ligne suivante &lt;link rel="stylesheet" href="style.css"&gt; : </li>
+			<textarea><!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Voici mon site</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>Hello World! Ceci est un titre</h1>
+		<p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
+	</body>
+</html>
+			</textarea>
+			<li>Tester le code à l'aide d'un navigateur web (en “double-cliquant” sur le fichier index.html).</li>
+		</ol>
+		<p>Dans l'exemple que nous venons de voir, les fichiers "index.html" et "style.css" se trouvent dans le même dossier. Il est souvent utile de placer les fichiers CSS dans un dossier "CSS". Il faudra alors modifier le code HTML en conséquence :</p>
+		<textarea><link rel="stylesheet" href="CSS/style.css"></textarea>
+		<h2>Listes des principales balises</h2>
+		<b>Les textes</b></br>
+		<table>
+			<tr>
+				<td><b>Balise</b></td>
+				<td><b>Effet</b></td>
+			</tr>
+			<tr>
+				<td>p</td>
+				<td>paragraphe</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>texte en gras</td>
+			</tr>
+			<tr>
+				<td>i</td>
+				<td>texte en itallique</td>
+			</tr>
+			<tr>
+				<td>h1</td>
+				<td>titre de niveau 1</td>
+			</tr>
+			<tr>
+				<td>...</td>
+				<td>...</td>
+			</tr>
+			<tr>
+				<td>h6</td>
+				<td>titre de niveau 6</td>
+			</tr>
+		</table>
+		<b>Les balises auto fermantes</b></br>
+		<table>
+			<tr>
+				<td><b>Balise</b></td>
+				<td><b>Effet</b></td>
+			</tr>
+			<tr>
+				<td>/br</td>
+				<td>Retour à la ligne</td>
+			</tr>
+			<tr>
+				<td>/hr</td>
+				<td>Ligne de séparation horizontale</td>
+			</tr>
+		</table>
+		<b>Les images</b></br>
+		<p>La balise img est auto fermante, elle permet bien évidemment d'insérer une image. Elle possède deux attributs :</p>
+		<ul>
+			<li><b>src</b> = chemin jusqu'à l'image.</li>
+			<li><b>alt</b> = description de l'image (cet attribut est utilisé notamment par les systèmes de description des pages web utilisées par les non-voyants).</li>
+		</ul>
+		<textarea><img src = "img/une_image.jpg" alt = "une pieuvre"></textarea>
+		<b>Les liens</b></br>
+		<p>La balise permettant de créer des liens hypertextes est la balise <b>a</b>, ce sont ces liens hypertextes qui permettent de passer d'une page à une autre.</p>
+		<p>L'attribut <b>href</b> a pour valeur le chemin jusqu'à la page.</p>
+		<p>La phrase placée entre la balise ouvrante et la fermante défini la zone cliquable permettant accéder au lien dans href.</p>
+		<textarea><a href = "une_autre_page.html"> Cliquez ici pour vous rendre une une autre page.</a></textarea>
+		<b>Les listes</b></br>
+		<p>Il existe deux types de listes : </p>
+		<ul>
+			<li>numérotées:</li>
+			<textearea><ol>
+    <li> premier élément de la liste </li>
+    <li> deuxième élément de la liste </li>
+    <li> .... </li>
+</ol>
+			</textarea>
+			<li>non numérotées :</li>
+			<textarea><ul>
+    <li> élément de la liste </li>
+    <li> .... </li>
+</ul>
+			</textarea>
+		</ul>
+		<b>Les tableaux</b></br>
+		<textarea><table>
+    <tr>
+    	<td> premiere case de la premiere ligne du tableau</td>
+        <td> deuxieme case de la premiere ligne du tableau</td>
+    </tr>
+    <tr>
+    	<td> premiere case de la deuxieme ligne du tableau</td>
+        <td> deuxieme case de la deuxieme ligne du tableau</td>
+    </tr>
+</table>
+		</textarea>
+		<b>Les formulaires</b></br>
+		<p>Les formulaires permettent à l'utilisateur de transmettre des informations. Un formulaire devra être délimité par des balises <b>form</b>:</p>
+
 	</div>
 </body>
 <footer>
