@@ -42,6 +42,10 @@ code,textarea{
   font-size: 0.9em;
   resize: none;
 }
+table{
+	width: 100%;
+	border: 1px solid #eee;
+}
 tr{
 	width: 100%;
 }
