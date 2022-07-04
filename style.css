@@ -53,8 +53,8 @@ td{
 	width: 50%;
 	border: 2px solid #eee;
 }
-td b{
-	width: 100%;
+.tab_titre{
+	font-weight: bold;
 	  background-color : #f8f8f8;
 }
 
