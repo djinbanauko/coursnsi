@@ -60,7 +60,10 @@ td{
 
 /* images */
 .logo{
-	zoom : 10%;
+	width: 24px;
+}
+.logo2{
+	width: 48px;
 }
 img{
 	width : 80%;
