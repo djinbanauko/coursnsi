@@ -30,13 +30,15 @@
 		<p>Nous allons pour l'instant uniquement utiliser la fenêtre "HTML" et la fenêtre "Result".</p>
 		<ol>
 			<li>Écrire le code suivant dans la partie HTML :</li>
+		</ol>
 			<textarea rows="3">
 	<h1>Hello World! Ceci est un titre</h1>
 	<p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
 			</textarea>
+		<ol start="2">
 			<li>Dire ce qui s'affiche dans la fenêtre.</li>
-			<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
 		</ol>
+		<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
 		<p>Comme déjà évoqué ci-dessus, en HTML tout est une histoire de balises que l'on ouvre et que l'on ferme. Une balise ouvrante est de la forme <b>&lt;nom_de_la_balise&gt;</b>, les balises fermantes sont de la forme <b>&lt;/nom_de_la_balise&gt;</b>.</p>
 		<p>En observant attentivement le code, vous devriez forcément remarquer que toute balise ouverte doit être refermée à un moment ou un autre. La balise ouvrante et la balise fermante peuvent être sur la même ligne ou pas, cela n'a pas d'importance, la seule question à se poser ici est : ai-je bien refermé toutes les balises que j'ai ouvertes ?
 		<p> Enfin pour terminer avec les généralités sur les balises, il est important de savoir qu'une structure du type :</p>
@@ -61,26 +63,29 @@
 		<p>Il existe beaucoup d'attributs différents, nous allons nous contenter de 2 exemples avec l'attribut <b>id</b> (id pour identifiant) et <b>class</b>.</p>
 		<ol start="3">
 			<li>Écrire le code HTML suivant :</li>
-			<textarea rows="4"> 
+		</ol>
+		<textarea rows="4"> 
 <h1>Ceci est un titre</h1>
 <h2 class="titre_1">Ceci est un sous titre</h2>
 <p id="para_1">Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
-			</textarea>
+		</textarea>
+		<ol start="4">
 			<li>Dire ce qui s'affiche dans la fenêtre.</li>
+		</ol>
 			<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </p>
-		</ol>	
 		<p>Le HTML n'a pas été conçu pour gérer la mise en page (c'est possible, mais c'est une mauvaise pratique). Le HTML s'occupe uniquement du contenu et de la sémantique, pour tout ce qui concerne la mise en page et l'aspect "décoratif" (on parle du "style" de la page), on utilisera le CSS (Cascading Style Sheets).</p>
 		<h2>CSS</h2>
 		<p>Dans JSFIDDLE, il est possible d'écrire du CSS dans la fenêtre en haut à droite.</p>
 		<ol start="5">
 			<li>Écrire le code HTML suivant dans la partie HTML :</li>
-			<textarea rows="4">
+		</ol>
+		<textarea rows="4">
 <h1>Ceci est un titre</h1>
 <h2>Ceci est un sous titre</h2>
 <p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
-			</textarea>
-			<p>et le code CSS suivant dans la partie CSS:</p>
-			<textarea rows="10">
+		</textarea>
+		<p>et le code CSS suivant dans la partie CSS:</p>
+		<textarea rows="10">
 h1{
 	text-align: center;
 	background-color: red;
@@ -90,28 +95,31 @@ h2{
 	font-style: italic;
 	color: green;
 }
-			</textarea>
+		</textarea>
+		<ol start="6">
 			<li>Dire ce qui s'affiche dans la fenêtre.</li>
-			<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
-		</ol>	
+		</ol>
+		<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
 		<p>Dans l'exemple de la question 5, les propriétés "<b>text-align</b>" et "<b>background-color</b>" seront appliquées au contenu de toutes les balises de type h1 (avec respectivement les valeurs "center" et "red").....</p>
 		<ol start="7">
 			<li>Écrire le code HTML suivant  dans la partie HTML:</li>
-			<textarea rows="4">
+		</ol>
+		<textarea rows="4">
 <h1>Ceci est un titre</h1>
 <h2>Ceci est un sous titre</h2>
 <p id="para_1">Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
-			</textarea>
-			<p>et le code CSS suivant dans la partie CSS:</p>
-			<textarea rows="5">
+		</textarea>
+		<p>et le code CSS suivant dans la partie CSS:</p>
+		<textarea rows="5">
 #para_1{
 	font-style: italic;
 	color: green;
 }
-			</textarea>
+		</textarea>
+		<ol start="8">
 			<li>Dire ce qui s'affiche dans la fenêtre. Que remarquez vous ? </li>
-			<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
-		</ol>	
+		</ol>
+		<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
 		<p>Il est donc possible de cibler un paragraphe et pas un autre en utilisant l'<b>id</b> du paragraphe (en CSS l'<b>id</b> se traduisant par le signe <b>#</b>).</p>
 		<p>Il est aussi possible d'utiliser l'attribut <b>class</b> à la place de l'id. Dans le CSS on utilisera le point <b>.</b> à la place du #.</p>
 		<p>L'unique différence entre <b>id</b> et <b>class</b> est que l'<b>id</b> ne cible qu'un seul élément alors que la <b>class</b> permet de cibler plusieurs éléments d'une même page.</p>
@@ -126,7 +134,8 @@ h2{
 			<li>À l'aide d'un éditeur de texte, créer un nouveau fichier.</li>
 			<li>Sauvegarder le fichier en précisant son nom, "index.html".</li>
 			<li>Écrire le code suivant dans l'éditeur de texte (sans oublier de sauvegarder quand vous avez terminé) :</li>
-			<textarea rows="12">
+		</ol>
+		<textarea rows="12">
 <!doctype html>
 <html lang="fr">
 	<head>
@@ -138,7 +147,8 @@ h2{
 		<p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
 	</body>
 </html>
-			</textarea>
+		</textarea>
+		<ol start="12">
 			<li>Tester le code à l'aide d'un navigateur web (Firefox ou Chrome) en "double-cliquant" sur le fichier index.html.</li>
 		</ol>
 		<p>Dans le code de la question 11, vous reconnaissez le code se trouvant entre les balises &lt;body&gt; :</p>
@@ -169,7 +179,8 @@ p{
 		<p>Pour l'instant notre CSS ne sera pas appliqué à notre page, pour ce faire, il faut modifier notre code HTML en ajoutant une ligne qui va permettre d'associer notre code CSS à notre page.</p>
 		<ol start="14">
 			<li>Modifier le code HTML avec la ligne suivante &lt;link rel="stylesheet" href="style.css"&gt; : </li>
-			<textarea rows="13">
+		</ol>
+		<textarea rows="13">
 <!doctype html>
 <html lang="fr">
 	<head>
@@ -182,7 +193,8 @@ p{
 		<p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
 	</body>
 </html>
-			</textarea>
+		</textarea>
+		<ol start="14">
 			<li>Tester le code à l'aide d'un navigateur web (en “double-cliquant” sur le fichier index.html).</li>
 		</ol>
 		<p>Dans l'exemple que nous venons de voir, les fichiers "index.html" et "style.css" se trouvent dans le même dossier. Il est souvent utile de placer les fichiers CSS dans un dossier "CSS". Il faudra alors modifier le code HTML en conséquence :</p>
@@ -252,21 +264,23 @@ p{
 		<p>Il existe deux types de listes : </p>
 		<ul>
 			<li>numérotées:</li>
-			<textarea rows="6">
+		</ul>
+		<textarea rows="6">
 <ol>
 	<li> premier élément de la liste </li>
   <li> deuxième élément de la liste </li>
   <li> .... </li>
 </ol>
-			</textarea>
+		</textarea>
+		<ul>
 			<li>non numérotées :</li>
-			<textarea>
+		</ul>
+		<textarea>
 <ul>
 	<li> élément de la liste </li>
   <li> .... </li>
 </ul>
-			</textarea>
-		</ul>
+		</textarea>
 		<b>Les tableaux</b></br>
 		<textarea rows="11">
 <table>
