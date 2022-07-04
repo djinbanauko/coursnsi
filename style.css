@@ -53,6 +53,9 @@ code,textarea{
 img{
 	width : 100%;
 }
+.pixel{
+	width: 80%;
+}
 
 /*page accueil*/
 #pdp{
