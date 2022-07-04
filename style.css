@@ -44,17 +44,16 @@ textarea{
 }
 table{
 	width: 100%;
-	border: 1px solid #eee;
 }
 tr{
 	width: 100%;
-	border: 1px solid #eee;
 }
 td{
 	width: 50%;
-	border: 1px solid #eee;
+	border: 2px solid #eee;
 }
 td b{
+	width: 100%;
 	  background-color : #f8f8f8;
 }
 
