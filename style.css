@@ -45,6 +45,13 @@ code{
 	margin: 50px;
 	padding : 20px;
 }
+/* images */
+.logo {
+	zoom : 10%;
+}
+img {
+	width : 100%;
+}
 
 /* page accueil */
 #pdp{
