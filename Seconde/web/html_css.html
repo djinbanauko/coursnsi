@@ -3,7 +3,7 @@
 <head>
 	<meta charset='UTF-8'>
 	<link href="../../style.css" rel="stylesheet" type="text/css">
-	<title>HTML CSS</title>
+	<title>HTML et CSS</title>
 	<link rel="icon" href="../../img/caille.png">
 </head>
 <body>
@@ -14,13 +14,53 @@
 		<li><a href='../'>Seconde</a></li>
 		<li id="home"><a href=''><img id="home_icon" src="../../img/home.png"></a></li>
 	</ul>
-    <div class="corps">
-        <a href="pdf/html_css.pdf"><img src="../../img/pdf.png" style="zoom: 10%;"></a>
-        <a href="odt/html_css.odt"><img src="../../img/odt.png" style="zoom: 10%;"></i></a>
-	    </br>
-        <h1>HTML CSS</h1>
-        En travaux...
-</div>
+  <div class="corps">
+		<a href="pdf/html_css.pdf"><img src="../../img/pdf.png" style="zoom: 10%;"></a>
+		<a href="odt/html_css.odt"><img src="../../img/odt.png" style="zoom: 10%;"></i></a>
+		</br>
+    <h1>HTML et CSS</h1>
+		<p>Nous allons nous intéresser à un acteur fondamental du développement web, le couple HTML+CSS (Hyper Text Markup Langage et Cascading Style Sheets).</br> Dans un premier temps, nous allons exclusivement nous intéresser au HTML. </p>
+		<h2>HTML</h2>
+		<p>Voici la définition que nous en donne Wikipedia :</br> L'<i>Hypertext Markup Language</i>, généralement abrégé <b>HTML</b>, est le format de données conçu pour représenter les pages web. C’est un langage de balisage permettant d’écrire de l’hypertexte, d’où son nom. HTML permet également de structurer sémantiquement et de mettre en forme le contenu des pages, d’inclure des ressources multimédias, dont des images, des formulaires de saisie, et des programmes informatiques. Il permet de créer des documents interopérables avec des équipements très variés de manière conforme aux exigences de l’accessibilité du web. Il est souvent utilisé conjointement avec des langages de programmation (JavaScript) et des formats de présentation (feuilles de style en cascade).</p>
+		<p>Pour l'instant, nous allons retenir deux éléments de cette définition "<b>conçu pour représenter les pages web</b>" et "<b>un langage de balisage</b>".</p>
+		<p>Grâce au HTML vous allez pouvoir, dans votre navigateur (Firefox, Chrome, Opera,....), afficher du texte, afficher des images, proposer des hyperliens (liens vers d'autres pages web), afficher des formulaires et même maintenant afficher des vidéos (grâce à la dernière version du HTML, l'HTML5).</p>
+		<p>HTML n'est pas un langage de programmation (comme le Python par exemple), ici, pas question de conditions, de boucles....c'est un <b>langage de description</b>.</p>
+		<p>Pour aborder le HTML, nous allons, dans un premier temps utiliser le site <a href ="https://jsfiddle.net">jsfiddle</a>.</br>Vous devriez voir apparaître ceci :</p>
+		<img src ="img/capture.jpg"></br>
+		<p>Nous allons pour l'instant uniquement utiliser la fenêtre "HTML" et la fenêtre "Result".</p>
+		<ol>
+			<li>Ecrire le code suivant dans la partie HTML :</li>
+			<code lang="html"><h1>Hello World! Ceci est un titre</h1>
+						<p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
+			</code>
+			<li> Dire ce qui s'affiche dans la fenêtre.</li>
+			<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+		</ol>
+		<p>Comme déjà évoqué ci-dessus, en HTML tout est une histoire de balises que l'on ouvre et que l'on ferme. Une balise ouvrante est de la forme <b><nom_de_la_balise></b>, les balises fermantes sont de la forme <b></nom_de_la_balise></b>.</p>
+		<p>En observant attentivement le code, vous devriez forcément remarquer que toute balise ouverte doit être refermée à un moment ou un autre. La balise ouvrante et la balise fermante peuvent être sur la même ligne ou pas, cela n'a pas d'importance, la seule question à se poser ici est : ai-je bien refermé toutes les balises que j'ai ouvertes ?
+		<p> Enfin pour terminer avec les généralités sur les balises, il est important de savoir qu'une structure du type :</p>
+		<code lang="html">
+			<balise1>
+				<balise2>
+			</balise1>
+				</balise2>
+		</code>
+		<p>est interdite, la balise2 a été ouverte après la balise1, elle devra donc être refermée avant la balise1.</br> En revanche, l'enchaînement suivant est correct :</p>
+		<code lang="html">
+			<balise1>
+				<balise2>
+				</balise2>
+			</balise1>
+		</code>
+		<p>Notez que dans notre exemple de la question question 1 nous respectons bien cette règle "d'imbrication" des balises avec la balise <b><p></b> et la balise <b><strong></b>.</p>
+			
+			
+			<textarea>
+<a href="">zd</a>
+<p>bonjout tout le monde</p>
+</textarea>
+			
+	</div>
 </body>
 <footer>
 	<p>JHermilier</p>
