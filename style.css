@@ -34,13 +34,13 @@ p{
 a{
 	color: #09832e;
 }	
-code,textarea{
+textarea{
 	font-family : Courier New, monospace;
 	background-color : #f8f8f8;
 	border-radius: 3px;
 	padding: 2px 4px 0px 4px;
   font-size: 0.9em;
-  resize: none;
+     resize: none;
 }
 table{
 	width: 100%;
