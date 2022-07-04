@@ -30,7 +30,7 @@
 		<p>Nous allons pour l'instant uniquement utiliser la fenêtre "HTML" et la fenêtre "Result".</p>
 		<ol>
 			<li>Écrire le code suivant dans la partie HTML :</li>
-			<textarea>
+			<textarea rows="3">
 				<h1>Hello World! Ceci est un titre</h1>
 				<p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
 			</textarea>
@@ -40,14 +40,14 @@
 		<p>Comme déjà évoqué ci-dessus, en HTML tout est une histoire de balises que l'on ouvre et que l'on ferme. Une balise ouvrante est de la forme <b>&lt;nom_de_la_balise&gt;</b>, les balises fermantes sont de la forme <b>&lt;/nom_de_la_balise&gt;</b>.</p>
 		<p>En observant attentivement le code, vous devriez forcément remarquer que toute balise ouverte doit être refermée à un moment ou un autre. La balise ouvrante et la balise fermante peuvent être sur la même ligne ou pas, cela n'a pas d'importance, la seule question à se poser ici est : ai-je bien refermé toutes les balises que j'ai ouvertes ?
 		<p> Enfin pour terminer avec les généralités sur les balises, il est important de savoir qu'une structure du type :</p>
-		<textarea>
+		<textarea rows="5">
 			<balise1>
 				<balise2>
 			</balise1>
 				</balise2>
 		</textarea>
 		<p>est interdite, la balise2 a été ouverte après la balise1, elle devra donc être refermée avant la balise1.</br> En revanche, l'enchaînement suivant est correct :</p>
-		<textarea>
+		<textarea rows="5">
 			<balise1>
 				<balise2>
 				</balise2>
@@ -61,7 +61,7 @@
 		<p>Il existe beaucoup d'attributs différents, nous allons nous contenter de 2 exemples avec l'attribut <b>id</b> (id pour identifiant) et <b>class</b>.</p>
 		<ol start="3">
 			<li>Écrire le code HTML suivant :</li>
-			<textarea> <h1>Ceci est un titre</h1>
+			<textarea rows="4"> <h1>Ceci est un titre</h1>
 				<h2 class="titre_1">Ceci est un sous titre</h2>
 				<p id="para_1">Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
 			</textarea>
@@ -73,19 +73,17 @@
 		<p>Dans JSFIDDLE, il est possible d'écrire du CSS dans la fenêtre en haut à droite.</p>
 		<ol start="5">
 			<li>Écrire le code HTML suivant dans la partie HTML :</li>
-			<textarea><h1>Ceci est un titre</h1>
+			<textarea rows="4"><h1>Ceci est un titre</h1>
 <h2>Ceci est un sous titre</h2>
 <p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
 			</textarea>
 			<p>et le code CSS suivant dans la partie CSS:</p>
-			<textarea>
-h1
-{
+			<textarea rows="10">
+h1{
 	text-align: center;
 	background-color: red;
 }
-h2
-{
+h2{
 	font-family: Verdana;
 	font-style: italic;
 	color: green;
@@ -97,13 +95,12 @@ h2
 		<p>Dans l'exemple de la question 5, les propriétés "<b>text-align</b>" et "<b>background-color</b>" seront appliquées au contenu de toutes les balises de type h1 (avec respectivement les valeurs "center" et "red").....</p>
 		<ol start="7">
 			<li>Écrire le code HTML suivant  dans la partie HTML:</li>
-			<textarea><h1>Ceci est un titre</h1>
+			<textarea rows="4"><h1>Ceci est un titre</h1>
 <h2>Ceci est un sous titre</h2>
 <p id="para_1">Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
 			</textarea>
 			<p>et le code CSS suivant dans la partie CSS:</p>
-			<textarea>#para_1
-{
+			<textarea rows="5">#para_1{
 	font-style: italic;
 	color: green;
 }
@@ -117,7 +114,7 @@ h2
 		<p>Ainsi, si nous avions eu un 3e paragraphe, nous aurions pu avoir :</p>
 		<textarea><p class="para_1">Voici un 3e paragraphe</p></textarea>
 		<p>Mais nous n'aurions pas pu avoir :</p>
-		<textarea><p id="para_1"> Voici un 3e paragraphe </p></textarea>
+		<textarea rows="2"><p id="para_1"> Voici un 3e paragraphe </p></textarea>
 		<p>car l'<b>id</b> para_1 a déjà été utilisé pour le 1er paragraphe.</p>
 		<p>JSFIDDLE est un très bel outil, mais il ne peut pas être utilisé pour la réalisation d'une vraie page web.</p>
 		<p>Nous allons créer 2 fichiers : un fichier qui contiendra du HTML (<b>index.html</b>) et un fichier qui contiendra du CSS (<b>style.css</b>).</p>
@@ -125,7 +122,7 @@ h2
 			<li>À l'aide d'un éditeur de texte, créer un nouveau fichier.</li>
 			<li>Sauvegarder le fichier en précisant son nom, "index.html".</li>
 			<li>Écrire le code suivant dans l'éditeur de texte (sans oublier de sauvegarder quand vous avez terminé) :</li>
-			<textarea><!doctype html>
+			<textarea rows="12"><!doctype html>
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
@@ -140,7 +137,7 @@ h2
 			<li>Tester le code à l'aide d'un navigateur web (Firefox ou Chrome) en "double-cliquant" sur le fichier index.html.</li>
 		</ol>
 		<p>Dans le code de la question 11, vous reconnaissez le code se trouvant entre les balises &lt;body&gt; :</p>
-		<textarea><body>
+		<textarea rows="4"><body>
 ......
 </body>
 		</textarea>
@@ -152,13 +149,11 @@ h2
 		<ol start="13">
 			<li>Toujours à l'aide d'un éditeur de texte, vous allez créer un fichier qui va contenir le CSS de notre page (style.css). Compléter ce fichier à l'aide du code suivant :</li>
 		</ol>
-		<textarea>h1
-{
+		<textarea rows="10">h1{
 	text-align: center;
 	background-color: red;
 }
-p
-{
+p{
 	font-family: Verdana;
 	font-style: italic;
 	color: green;
@@ -167,7 +162,7 @@ p
 		<p>Pour l'instant notre CSS ne sera pas appliqué à notre page, pour ce faire, il faut modifier notre code HTML en ajoutant une ligne qui va permettre d'associer notre code CSS à notre page.</p>
 		<ol start="14">
 			<li>Modifier le code HTML avec la ligne suivante &lt;link rel="stylesheet" href="style.css"&gt; : </li>
-			<textarea><!doctype html>
+			<textarea rows="13"><!doctype html>
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
@@ -183,7 +178,7 @@ p
 			<li>Tester le code à l'aide d'un navigateur web (en “double-cliquant” sur le fichier index.html).</li>
 		</ol>
 		<p>Dans l'exemple que nous venons de voir, les fichiers "index.html" et "style.css" se trouvent dans le même dossier. Il est souvent utile de placer les fichiers CSS dans un dossier "CSS". Il faudra alors modifier le code HTML en conséquence :</p>
-		<textarea><link rel="stylesheet" href="CSS/style.css"></textarea>
+		<textarea rows="2"><link rel="stylesheet" href="CSS/style.css"></textarea>
 		<h2>Listes des principales balises</h2>
 		<b>Les textes</b></br>
 		<table>
@@ -237,22 +232,22 @@ p
 			<li><b>src</b> = chemin jusqu'à l'image.</li>
 			<li><b>alt</b> = description de l'image (cet attribut est utilisé notamment par les systèmes de description des pages web utilisées par les non-voyants).</li>
 		</ul>
-		<textarea><img src = "img/une_image.jpg" alt = "une pieuvre"></textarea>
+		<textarea rows="2"><img src = "img/une_image.jpg" alt = "une pieuvre"></textarea>
 		<b>Les liens</b></br>
 		<p>La balise permettant de créer des liens hypertextes est la balise <b>a</b>, ce sont ces liens hypertextes qui permettent de passer d'une page à une autre.</p>
 		<p>L'attribut <b>href</b> a pour valeur le chemin jusqu'à la page.</p>
 		<p>La phrase placée entre la balise ouvrante et la fermante défini la zone cliquable permettant accéder au lien dans href.</p>
-		<textarea><a href = "une_autre_page.html"> Cliquez ici pour vous rendre une une autre page.</a></textarea>
+		<textarea rows="2"><a href = "une_autre_page.html"> Cliquez ici pour vous rendre une une autre page.</a></textarea>
 		<b>Les listes</b></br>
 		<p>Il existe deux types de listes : </p>
 		<ul>
 			<li>numérotées:</li>
-			<textearea><ol>
+			<textearea rows="6"><ol>
     <li> premier élément de la liste </li>
     <li> deuxième élément de la liste </li>
     <li> .... </li>
 </ol>
-			</textarea>
+			</textarea rows="6">
 			<li>non numérotées :</li>
 			<textarea><ul>
     <li> élément de la liste </li>
@@ -261,7 +256,7 @@ p
 			</textarea>
 		</ul>
 		<b>Les tableaux</b></br>
-		<textarea><table>
+		<textarea rows="11"><table>
     <tr>
     	<td> premiere case de la premiere ligne du tableau</td>
         <td> deuxieme case de la premiere ligne du tableau</td>
