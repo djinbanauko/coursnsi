@@ -31,8 +31,8 @@
 		<ol>
 			<li>Écrire le code suivant dans la partie HTML :</li>
 			<textarea rows="3">
-				<h1>Hello World! Ceci est un titre</h1>
-				<p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
+	<h1>Hello World! Ceci est un titre</h1>
+	<p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
 			</textarea>
 			<li>Dire ce qui s'affiche dans la fenêtre.</li>
 			<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
@@ -41,17 +41,17 @@
 		<p>En observant attentivement le code, vous devriez forcément remarquer que toute balise ouverte doit être refermée à un moment ou un autre. La balise ouvrante et la balise fermante peuvent être sur la même ligne ou pas, cela n'a pas d'importance, la seule question à se poser ici est : ai-je bien refermé toutes les balises que j'ai ouvertes ?
 		<p> Enfin pour terminer avec les généralités sur les balises, il est important de savoir qu'une structure du type :</p>
 		<textarea rows="5">
-			<balise1>
-				<balise2>
-			</balise1>
-				</balise2>
+<balise1>
+	<balise2>
+</balise1>
+	</balise2>
 		</textarea>
 		<p>est interdite, la balise2 a été ouverte après la balise1, elle devra donc être refermée avant la balise1.</br> En revanche, l'enchaînement suivant est correct :</p>
 		<textarea rows="5">
-			<balise1>
-				<balise2>
-				</balise2>
-			</balise1>
+<balise1>
+	<balise2>
+	</balise2>
+</balise1>
 		</textarea>
 		<p>Notez que dans notre exemple de la question question 1 nous respectons bien cette règle "d'imbrication" des balises avec la balise &lt;p&gt; et la balise &lt;strong&gt;.</p>
 		<p>Il est important de comprendre que chaque balise a une signification qu'il faut bien respecter (on parle de la <b>sémantique</b> des balises). Vous trouverez une liste non exhaustive des balises et de leur sémantique plus bas.</p>
@@ -61,19 +61,21 @@
 		<p>Il existe beaucoup d'attributs différents, nous allons nous contenter de 2 exemples avec l'attribut <b>id</b> (id pour identifiant) et <b>class</b>.</p>
 		<ol start="3">
 			<li>Écrire le code HTML suivant :</li>
-			<textarea rows="4"> <h1>Ceci est un titre</h1>
-				<h2 class="titre_1">Ceci est un sous titre</h2>
-				<p id="para_1">Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
+			<textarea rows="4"> 
+<h1>Ceci est un titre</h1>
+<h2 class="titre_1">Ceci est un sous titre</h2>
+<p id="para_1">Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
 			</textarea>
 			<li>Dire ce qui s'affiche dans la fenêtre.</li>
-			<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+			<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </p>
 		</ol>	
 		<p>Le HTML n'a pas été conçu pour gérer la mise en page (c'est possible, mais c'est une mauvaise pratique). Le HTML s'occupe uniquement du contenu et de la sémantique, pour tout ce qui concerne la mise en page et l'aspect "décoratif" (on parle du "style" de la page), on utilisera le CSS (Cascading Style Sheets).</p>
 		<h2>CSS</h2>
 		<p>Dans JSFIDDLE, il est possible d'écrire du CSS dans la fenêtre en haut à droite.</p>
 		<ol start="5">
 			<li>Écrire le code HTML suivant dans la partie HTML :</li>
-			<textarea rows="4"><h1>Ceci est un titre</h1>
+			<textarea rows="4">
+<h1>Ceci est un titre</h1>
 <h2>Ceci est un sous titre</h2>
 <p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
 			</textarea>
@@ -90,23 +92,25 @@ h2{
 }
 			</textarea>
 			<li>Dire ce qui s'affiche dans la fenêtre.</li>
-			<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+			<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
 		</ol>	
 		<p>Dans l'exemple de la question 5, les propriétés "<b>text-align</b>" et "<b>background-color</b>" seront appliquées au contenu de toutes les balises de type h1 (avec respectivement les valeurs "center" et "red").....</p>
 		<ol start="7">
 			<li>Écrire le code HTML suivant  dans la partie HTML:</li>
-			<textarea rows="4"><h1>Ceci est un titre</h1>
+			<textarea rows="4">
+<h1>Ceci est un titre</h1>
 <h2>Ceci est un sous titre</h2>
 <p id="para_1">Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
 			</textarea>
 			<p>et le code CSS suivant dans la partie CSS:</p>
-			<textarea rows="5">#para_1{
+			<textarea rows="5">
+#para_1{
 	font-style: italic;
 	color: green;
 }
 			</textarea>
 			<li>Dire ce qui s'affiche dans la fenêtre. Que remarquez vous ? </li>
-			<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+			<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
 		</ol>	
 		<p>Il est donc possible de cibler un paragraphe et pas un autre en utilisant l'<b>id</b> du paragraphe (en CSS l'<b>id</b> se traduisant par le signe <b>#</b>).</p>
 		<p>Il est aussi possible d'utiliser l'attribut <b>class</b> à la place de l'id. Dans le CSS on utilisera le point <b>.</b> à la place du #.</p>
@@ -122,7 +126,8 @@ h2{
 			<li>À l'aide d'un éditeur de texte, créer un nouveau fichier.</li>
 			<li>Sauvegarder le fichier en précisant son nom, "index.html".</li>
 			<li>Écrire le code suivant dans l'éditeur de texte (sans oublier de sauvegarder quand vous avez terminé) :</li>
-			<textarea rows="12"><!doctype html>
+			<textarea rows="12">
+<!doctype html>
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
@@ -137,8 +142,9 @@ h2{
 			<li>Tester le code à l'aide d'un navigateur web (Firefox ou Chrome) en "double-cliquant" sur le fichier index.html.</li>
 		</ol>
 		<p>Dans le code de la question 11, vous reconnaissez le code se trouvant entre les balises &lt;body&gt; :</p>
-		<textarea rows="4"><body>
-......
+		<textarea rows="4">
+<body>
+	......
 </body>
 		</textarea>
 		<p>Tout votre code HTML devra se trouver entre ces 2 balises.</br>Le reste des balises devraient vous êtes inconnues. Passons-les en revue :</br>La première ligne :</p>
@@ -149,7 +155,8 @@ h2{
 		<ol start="13">
 			<li>Toujours à l'aide d'un éditeur de texte, vous allez créer un fichier qui va contenir le CSS de notre page (style.css). Compléter ce fichier à l'aide du code suivant :</li>
 		</ol>
-		<textarea rows="10">h1{
+		<textarea rows="10">
+h1{
 	text-align: center;
 	background-color: red;
 }
@@ -162,7 +169,8 @@ p{
 		<p>Pour l'instant notre CSS ne sera pas appliqué à notre page, pour ce faire, il faut modifier notre code HTML en ajoutant une ligne qui va permettre d'associer notre code CSS à notre page.</p>
 		<ol start="14">
 			<li>Modifier le code HTML avec la ligne suivante &lt;link rel="stylesheet" href="style.css"&gt; : </li>
-			<textarea rows="13"><!doctype html>
+			<textarea rows="13">
+<!doctype html>
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
@@ -244,29 +252,32 @@ p{
 		<p>Il existe deux types de listes : </p>
 		<ul>
 			<li>numérotées:</li>
-			<textarea rows="6"><ol>
-    <li> premier élément de la liste </li>
-    <li> deuxième élément de la liste </li>
-    <li> .... </li>
+			<textarea rows="6">
+<ol>
+	<li> premier élément de la liste </li>
+  <li> deuxième élément de la liste </li>
+  <li> .... </li>
 </ol>
 			</textarea>
 			<li>non numérotées :</li>
-			<textarea><ul>
-    <li> élément de la liste </li>
-    <li> .... </li>
+			<textarea>
+<ul>
+	<li> élément de la liste </li>
+  <li> .... </li>
 </ul>
 			</textarea>
 		</ul>
 		<b>Les tableaux</b></br>
-		<textarea rows="11"><table>
-    <tr>
-    	<td> premiere case de la premiere ligne du tableau</td>
-        <td> deuxieme case de la premiere ligne du tableau</td>
-    </tr>
-    <tr>
-    	<td> premiere case de la deuxieme ligne du tableau</td>
-        <td> deuxieme case de la deuxieme ligne du tableau</td>
-    </tr>
+		<textarea rows="11">
+<table>
+	<tr>
+  	<td> premiere case de la premiere ligne du tableau</td>
+    <td> deuxieme case de la premiere ligne du tableau</td>
+  </tr>
+  <tr>
+  	<td> premiere case de la deuxieme ligne du tableau</td>
+      <td> deuxieme case de la deuxieme ligne du tableau</td>
+  </tr>
 </table>
 		</textarea>
 		<b>Les formulaires</b></br>
