@@ -296,7 +296,180 @@ p{
 		</textarea>
 		<b>Les formulaires</b></br>
 		<p>Les formulaires permettent à l'utilisateur de transmettre des informations. Un formulaire devra être délimité par des balises <b>form</b>:</p>
-
+		<p>Il existe différentes balises permettant de construire un formulaire, les plus importantes sont :</p>
+		<ul>
+			<li>La balise <b>input</b>, elle possède un attribut <b>type</b> qui lui permet de jouer des rôles très différents.</li>
+			<li>La balise <b>button</b>.</li>
+		</ul>
+		<ol start="16">
+			<li>Créer un fichier html contenant le code suivant :</li>
+		</ol>
+		<textarea rows="15">
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Voici mon site</title>
+	</head>
+	<body>
+		<form>
+			<p>voici un champ de texte : <input type="text"/></p>
+			<p>voici une checkbox <input type="checkbox"/></p>
+			<button>Cliquez ici !</button>
+		</form>
+	</body>
+</html>
+		</textarea>
+		<ol start="17">
+			<li>Testez votre code à l'aide d'un navigateur web (en “double-cliquant” sur le fichier html que vous venez de créer).</li>
+		</ol>
+		<b>Les balises génériques</b></br>
+		<p>Les deux balises très utilisées sont <b>div</b> et <b>span</b>.</br>Elles n'ont aucune signification particulière, ce sont des balises dites "génériques".</p>
+		<i>À quoi servent-elles alors ?</i></br>
+		<p>À organiser la page, à regrouper plusieurs balises dans une même entité.</br>Pourquoi 2 balises génériques ?</p>
+		<p>Parce que div est une balise de type "<b>block</b>" et que span est une balise de type "<b>inline</b>"!</p>
+		<p>Sans vouloir trop entrer dans les détails, il faut bien comprendre que l'ordre des balises dans le code HTML a une grande importance. Les balises sont affichées les unes après les autres, on parle du flux normal de la page.</p>
+		<p>C'est ici qu'entrent en jeu les balises de type "<b>block</b>" et les balises de type "<b>inline</b>".
+		<ul>
+			<li>Les contenus des balises de type "<b>block</b>" (p, div,h1,...) se placent sur la page web les <b>uns en dessous des autres.</b></li>
+			<li>Les contenus des balises de type "<b>inline</b>" (strong, img, span, a) se placent sur la page web les <b>uns à côté des autres</b>.</li>
+		</ul>
+		<p>Cela revient à dire qu'une balise de type “block” prend toute la largeur de la page alors qu'une balise de type "inline" prend juste la largeur qui lui est nécessaire.</p>
+		<ol start="18">
+			<li>Créer un fichier html contenant le code suivant :</li>
+		</ol>
+		<textarea rows="16">
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Voici mon site</title>
+	</head>
+	<body>
+		<div>div est une balise de type "block"</div>
+		<p>la balise p est une autre balise de type block</p>
+		<span>En revanche, span est une balise de type "inline"</span>
+		<a href="www.google.fr">Et voici une autre balise de type "inline"</a>
+		<h1>h1 est bien une balise de type "block"</h1>
+		<span>la malheureuse balise span est "obligée" de se placer en dessous</span>
+	</body>
+</html>
+		</textarea>
+		<ol start="19">
+			<li>Tester ce code.</li>
+		</ol>
+		<a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1608357-memento-des-balises-html"> Plus de balises</a></br>
+		<h3>Listes des principales propriétés de style</h3>
+		<b>Les textes</b></br>
+		<table>
+			<tr>
+				<td><b>Propriété</b></td>
+				<td><b>Description</b></td>
+			</tr>
+			<tr>
+				<td>font-family</td>
+				<td>Choix de la police</td>
+			</tr>
+			<tr>
+				<td>font-size</td>
+				<td>Taille du texte en px, % ou em</td>
+			</tr>
+			<tr>
+				<td>text-align</td>
+				<td>Alignement horizontal du texte :</br>left, center, right ou justify</td>
+			</tr>
+			<tr>
+				<td>color</td>
+				<td>Couleur du texte :</br>nom, rgb( rouge, vert, bleu) ou #CF1A20</td>
+			</tr>
+		</table>
+		<b>Les couleurs et fonds</b></br>
+		<table>
+			<tr>
+				<td><b>Propriété</b></td>
+				<td><b>Description</b></td>
+			</tr>
+			<tr>
+				<td>background-color</td>
+				<td>Couleur de fond:</br>nom, rgb( rouge, vert, bleu) ou #CF1A20</td>
+			</tr>
+			<tr>
+				<td>background-image</td>
+				<td>Image de fond</br>url("chemin_de_l_image.jpg")</td>
+			</tr>
+			<tr>
+				<td>background-repeat</td>
+				<td>Répétition du fond</br>repeat-x, repeat-y, no-repeat, repeat</td>
+			</tr>
+			<tr>
+				<td>opacity</td>
+				<td>Opacité : valeur entre 0 et 1</td>
+			</tr>
+		</table>
+		<b>Les tailles, marges et bordures</b></br>
+		<table>
+			<tr>
+				<td><b>Propriété</b></td>
+				<td><b>Description</b></td>
+			</tr>
+			<tr>
+				<td>width</td>
+				<td>largeur en px ou %</td>
+			</tr>
+			<tr>
+				<td>height</td>
+				<td>hauteur en px ou %</td>
+			</tr>
+			<tr>
+				<td>margin-top</td>
+				<td>marge extérieure haute en px</td>
+			</tr>
+			<tr>
+				<td>margin-left</td>
+				<td>marge extérieure gauche en px</td>
+			</tr>
+			<tr>
+				<td>margin-right</td>
+				<td>marge extérieure droite en px</td>
+			</tr>
+			<tr>
+				<td>margin-bottom</td>
+				<td>marge extérieure basse en px</td>
+			</tr>
+			<tr>
+				<td>margin</td>
+				<td>toutes les marges extérieure en px</td>
+			</tr>
+			<tr>
+				<td>padding-top</td>
+				<td>marges intérieure haute en px</td>
+			</tr>
+			<tr>
+				<td>padding-left</td>
+				<td>marges intérieure gauche en px</td>
+			</tr>
+			<tr>
+				<td>padding-right</td>
+				<td>marges intérieure droite en px</td>
+			</tr>
+			<tr>
+				<td>padding-bottom</td>
+				<td>marges intérieure basse en px</td>
+			</tr>
+			<tr>
+				<td>padding</td>
+				<td>toutes les marges intérieures en px</td>
+			</tr>
+			<tr>
+				<td>border-width</td>
+				<td>Epaisseur de bordure en px</td>
+			</tr>
+			<tr>
+				<td>border color</td>
+				<td>Couleur de bordure:</br>nom, rgb( rouge, vert, bleu) ou #CF1A20</td>
+			</tr>
+		</table>
+		<a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1608902-memento-des-proprietes-css">Plus de propriétés CSS.</a>
 	</div>
 </body>
 <footer>
