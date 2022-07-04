@@ -15,8 +15,8 @@
 		<li id="home"><a href=''><img id="home_icon" src="../../img/home.png"></a></li>
   	</ul>
   	<div class="corps">
-    	<a href="pdf/traitement_image.pdf"><img src="../../img/pdf.png" style="zoom: 10%;"></a>
-    	<a href="odt/traitement_image.odt"><img src="../../img/odt.png" style="zoom: 10%;"></a>
+    	<a href="pdf/traitement_image.pdf"><img src="../../img/pdf.png" class="logo"></a>
+    	<a href="odt/traitement_image.odt"><img src="../../img/odt.png" class="logo"></a>
         <h1>Traitement d'image</h1>
         <p>Lorsque l'on prend une photographie, l'appareil corrige lui-même l'image finale, mais le résultat n'est pas toujours satisfaisant. On peut alors utiliser des logiciels de traitement d'image afin d'améliorer le résultat. Il est possible de faire subir à l'image toutes sortes de transformations : changement de format, de définition, modification des couleurs, trucages variés.</p>
         <p>Nous allons observé ces différents traitements grâce 2 activités. </p>
@@ -32,7 +32,7 @@
         </ol>
         <b>Définition :</b>
         <p>Contraste = Opposition entre deux valeurs, chacune faisant ressortir l'autre. L'oeil humain est particulièrement sensible au contraste, il est meilleur comparateur qu'analyseur.</p>
-		<img src="img/contraste.jpg" style="zoom:50%;"></br>
+		<img src="img/contraste.jpg" class="contrast"></br>
         <b>Utiliser des filtres</b>
         <ol>
             <li>Ouvrir la photo de votre choix avec le logiciel Gimp (clic droit + ouvrir avec Gimp).</li>
@@ -45,12 +45,12 @@
         <h2>Activité 2 : Traitement d'image avec Python</h2>
         <p>Nous allons utiliser le langage de programmation Python afin de directement travailler sur les pixels d'une image. Par travailler sur les pixels, j'entends déterminer la valeur du canal rouge, la valeur du canal et la valeur du canal bleu pour un pixel donné ou bien encore modifier carrément la couleur d'un pixel.</p>
         <p>Avant de commencer à écrire un programme qui nous permettra de travailler sur les pixels d'une image, il est nécessaire de préciser que chaque pixel a des coordonnées x,y.</p>
-        <img src="img/coordonnees.jpg" alt="coordonnee" style="zoom: 67%;">
+        <img src="img/coordonnees.jpg">
         <p>Comme vous pouvez le constater sur le schéma ci-dessus, le pixel de coordonnées (0,0) se trouve en haut à gauche de l'image. Si l'image fait 800 pixels de large et 600 pixels de haut, le pixel ayant pour coordonnées (400,300) sera au milieu de l'image.</p>
         <p>Dans un premier temps nous allons utiliser une simple photo de pomme pour faire nos premiers essais, ensuite, vous pourrez travailler avec l'image de votre choix. L'image de la pomme se trouve dans le dossier d'images que vous avez télécharger dans l'activité 1. Cette image devra se trouver dans le même dossier que vos programmes Python.</p>
         <b>-> Ouvrir Thonny</b>
         <p>Vous devez arriver sur une fenêtre semblable à celle-ci :</p>
-        <img src="img/thonny.jpg" alt="thonny" style="zoom:50%;">
+        <img src="img/thonny.jpg">
         <p>La partie basse appelée <b>console</b> sert en général à visualiser le résultat d'un programme python ainsi que les éventuels problèmes rencontrés.</p>
         <p>La partie droite appelée <b>Assistance</b> sert d'aide en cas de problème, espérons ne pas en avoir besoin !</p>
         <p>La partie centrale est la zone ou on entre du code python.</p>
