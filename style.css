@@ -40,8 +40,15 @@ code,textarea{
 	border-radius: 3px;
 	padding: 2px 4px 0px 4px;
   font-size: 0.9em;
-    resize: vertical;
+  resize: none;
 }
+tr{
+	width: 100%;
+}
+td{
+	width: 50%;
+}
+
 .corps{
 	margin: 50px;
 	padding : 20px;
