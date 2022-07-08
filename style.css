@@ -71,7 +71,7 @@ td{
 	width: 48px;
 }
 img{
-	width : 80%;
+	width : 25%;
 }
 .contrast{
 	width : 50%;
@@ -141,6 +141,7 @@ li {
 #home_icon{
 	vertical-align: middle;
 	zoom: 5%;
+	width : 100%;
 }
 #home{
 	float : left;
