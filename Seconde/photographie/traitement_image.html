@@ -45,24 +45,24 @@
         <h2>Activité 2 : Traitement d'image avec Python</h2>
         <p>Nous allons utiliser le langage de programmation Python afin de directement travailler sur les pixels d'une image. Par travailler sur les pixels, j'entends déterminer la valeur du canal rouge, la valeur du canal et la valeur du canal bleu pour un pixel donné ou bien encore modifier carrément la couleur d'un pixel.</p>
         <p>Avant de commencer à écrire un programme qui nous permettra de travailler sur les pixels d'une image, il est nécessaire de préciser que chaque pixel a des coordonnées x,y.</p>
-        <img src="img/coordonnees.jpg" id="contrast">
+        <img src="img/coordonnees.jpg" class="contrast">
         <p>Comme vous pouvez le constater sur le schéma ci-dessus, le pixel de coordonnées (0,0) se trouve en haut à gauche de l'image. Si l'image fait 800 pixels de large et 600 pixels de haut, le pixel ayant pour coordonnées (400,300) sera au milieu de l'image.</p>
         <p>Dans un premier temps nous allons utiliser une simple photo de pomme pour faire nos premiers essais, ensuite, vous pourrez travailler avec l'image de votre choix. L'image de la pomme se trouve dans le dossier d'images que vous avez télécharger dans l'activité 1. Cette image devra se trouver dans le même dossier que vos programmes Python.</p>
         <b>-> Ouvrir Thonny</b>
         <p>Vous devez arriver sur une fenêtre semblable à celle-ci :</p>
-        <img src="img/thonny.jpg" id="contrast">
+        <img src="img/thonny.jpg" class="contrast">
         <p>La partie basse appelée <b>console</b> sert en général à visualiser le résultat d'un programme python ainsi que les éventuels problèmes rencontrés.</p>
         <p>La partie droite appelée <b>Assistance</b> sert d'aide en cas de problème, espérons ne pas en avoir besoin !</p>
         <p>La partie centrale est la zone ou on entre du code python.</p>
         <p>Le bouton rond vert avec une petite flèche blanche à intérieur sert à tester le code python.</p>
         <ol>
 			<li>Copier et tester le code suivant dans thonny :</li>
-                <pre><code lang='python'>
-				from PIL import Image
-				img = Image.open("pomme.jpg")
-				r,v,b=img.getpixel((100,250))
-				print("canal rouge :",r,"canal vert :",v,"canal bleu : ",b)
-				</code></pre>
+                <textarea rows ="5">
+from PIL import Image
+img = Image.open("pomme.jpg")
+r,v,b=img.getpixel((100,250))
+print("canal rouge :",r,"canal vert :",v,"canal bleu : ",b)
+				</textarea>
 		</ol>
         <p>Ce programme vous donne le canal rouge, le canal vert et le canal bleu du pixel de coordonnées (100,250) de l'image "pomme.jpg"</p>
         <p>Voici une analyse ligne par ligne du programme ci-dessus :</p>
@@ -79,12 +79,12 @@
         <p>Il est possible de modifier les canaux RVB d'un pixel :</p>
         <ol start='3'>
             <li>Copier et tester le code suivant dans thonny :</li>
-            <pre><code lang='python'>
-			from PIL import Image
-			img = Image.open("pomme.jpg")
-			img.putpixel((250,250),(255,0,0))
-			img.show()
-			</code></pre>
+            <textarea rows ="5">
+from PIL import Image
+img = Image.open("pomme.jpg")
+img.putpixel((250,250),(255,0,0))
+img.show()
+			</textarea>
             <p>Regardez attentivement le centre de l'image, vous devriez voir un pixel rouge à la place d'un pixel vert.</p>
         <p>Voici une analyse ligne par ligne du programme ci-dessus :</p>
         <p>Les deux premières lignes sont identiques que celles à la question 1.</p>
