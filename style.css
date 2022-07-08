@@ -76,6 +76,9 @@ img{
 .contrast{
 	width : 50%;
 }
+#capture{
+	width:80%;
+}
 
 /*page accueil*/
 #pdp{
