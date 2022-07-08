@@ -57,13 +57,13 @@
         <p>Le bouton rond vert avec une petite flèche blanche à intérieur sert à tester le code python.</p>
         <ol>
 			<li>Copier et tester le code suivant dans thonny :</li>
+	</ol>
                 <textarea rows ="5">
 from PIL import Image
 img = Image.open("pomme.jpg")
 r,v,b=img.getpixel((100,250))
 print("canal rouge :",r,"canal vert :",v,"canal bleu : ",b)
 				</textarea>
-		</ol>
         <p>Ce programme vous donne le canal rouge, le canal vert et le canal bleu du pixel de coordonnées (100,250) de l'image "pomme.jpg"</p>
         <p>Voici une analyse ligne par ligne du programme ci-dessus :</p>
         <ul>
@@ -79,6 +79,7 @@ print("canal rouge :",r,"canal vert :",v,"canal bleu : ",b)
         <p>Il est possible de modifier les canaux RVB d'un pixel :</p>
         <ol start='3'>
             <li>Copier et tester le code suivant dans thonny :</li>
+	</ol>
             <textarea rows ="5">
 from PIL import Image
 img = Image.open("pomme.jpg")
@@ -94,8 +95,8 @@ img.show()
         </ul>
         <ol start='4'>
             <li>Modifiez le programme de la question 3 afin de colorier le pixel de coordonnées (100,250) en bleu.</li>
-                <p>Appeler l'enseignant afin de valider cette question.</p>
-        </ol>
+	</ol>        
+	<p>Appeler l'enseignant afin de valider cette question.</p>
         <p>Modifiez un pixel c'est déjà bien, mais comment faire pour modifier plusieurs pixels ? La réponse est simple, nous allons utiliser des boucles "for";. Le but ici n'est pas de détailler le fonctionnement des boucles "for" en Python, vous devez juste comprendre que grâce à ces boucles nous allons pouvoir balayer toute l'image et ne plus nous contenter de modifier les pixels un par un.</p>
         <ol start='5'>
             <li>Copier et tester le programme suivant (ATTENTION : l'exécution de ce programme n'est pas très intéressante en soi, vous pouvez l'arrêter à tout moment en appuyant simultanément sur la touche Ctrl et sur la touche C):</li>
@@ -130,6 +131,7 @@ for y in range(hauteur_image):
         <p>Compliquons un peu la chose en modifiant tous les pixels de l'image :</p>
         <ol start='6'>
             <li> Copier et tester le code suivant :</li>
+	</ol>
             <textarea rows="13">
 from PIL import Image
 img = Image.open("pomme.jpg")
@@ -145,16 +147,24 @@ for y in range(hauteur_image):
 img.show()
 	    </textarea>
             <p>Expliquez en quelques mots ce que fait ce programme.</p>
-			<p> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </p>
-            <li>En vous inspirant de ce qui a été fait au à la question 6, écrire un programme qui inverse les valeurs des canaux bleu et rouge sans changer la valeur du canal vert</li>
-        	<p>Appeler l'enseignant pour valider cette question.</p>
+		<p> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </p>
+            <ol start="7">
+		<li>En vous inspirant de ce qui a été fait au à la question 6, écrire un programme qui inverse les valeurs des canaux bleu et rouge sans changer la valeur du canal vert</li>
+	</ol>
+		<p>Appeler l'enseignant pour valider cette question.</p>
+		<ol start="8">
             <li>Après avoir fait quelques recherches sur le "négatif d'une image", écrire un programme qui donne le négatif d'une image.</li>
-        	<p>Appeler l'enseignant pour valider cette question.</p>
+	</ol>
+			<p>Appeler l'enseignant pour valider cette question.</p>
+	<ol start="9">
             <li>Après avoir fait quelques recherches sur les "images en niveau de gris", écrire un programme qui transforme une "image couleur" en une "image en niveau de gris".</li>
-            <p>Petite astuce qui pourrait vous aider : en Python pour avoir une division entière (le résultat est un entier), il faut utiliser l'opérateur // à la place de l'opérateur /.</p>
+	</ol>    
+	<p>Petite astuce qui pourrait vous aider : en Python pour avoir une division entière (le résultat est un entier), il faut utiliser l'opérateur // à la place de l'opérateur /.</p>
         	<p>Appeler l'enseignant pour valider cette question.</p>
-            <li>Tester les programmes écrient dans les questions 8 et 9 avec une image de votre choix (attention aux variables "largeur_image" et "hauteur_image").</li>
-            <li>Copier et tester le programme suivant:</p>
+        <ol start="10">    
+	<li>Tester les programmes écrient dans les questions 8 et 9 avec une image de votre choix (attention aux variables "largeur_image" et "hauteur_image").</li>
+		<li>Copier et tester le programme suivant:</li>
+	</ol>
             <textarea rows="14">
 from PIL import Image
 img = Image.open("pomme.jpg")
@@ -172,7 +182,9 @@ img.show()
 	    </textarea>
             <p>Expliquer en quelques mots ce que fait le programme.</p>
 			<p> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </p>        </ol>
-            <li>Copier et tester le programme suivant :</li>
+        <ol start ="12">    
+	<li>Copier et tester le programme suivant :</li>
+	</ol>
             <textarea rows ="14">
 from PIL import Image
 img = Image.open("pomme.jpg")
@@ -190,7 +202,6 @@ img.show()
 			</textarea>
         	<p>Expliquer en quelques mots ce que fait le programme.</p>
 			<p> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </p>
-		</ol>
     </div>
 </body>
 <footer>
