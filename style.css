@@ -62,6 +62,10 @@ td{
 	margin: 50px;
 	padding : 20px;
 }
+.tab-col-5{
+	width: 20%;
+	border: 2px solid #eee;	
+}
 
 /* images */
 .logo{
