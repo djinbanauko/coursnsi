@@ -14,13 +14,52 @@
 		<li><a href='../'>Seconde</a></li>
 		<li id="home"><a href=''><img id="home_icon" src="../../img/home.png"></a></li>
 	</ul>
-    <div class="corps">
-        <a href="pdf/client_serveur.pdf"><img src="../../img/pdf.png" class="logo2"></a>
-        <a href="odt/client_serveur.odt"><img src="../../img/odt.png" class="logo2"></i></a>
-	    </br>
-        <h1>La relation client/serveur</h1>
-        En travaux...
-</div>
+   	<div class="corps">
+		<a href="pdf/client_serveur.pdf"><img src="../../img/pdf.png" class="logo2"></a>
+		<a href="odt/client_serveur.odt"><img src="../../img/odt.png" class="logo2"></i></a>
+		    </br>
+		<h1>La relation client/serveur</h1>
+		<h2>Introduction</h2>
+		<p>Voici une conversation entre deux amis :</p>
+		<p><b>Joe</b> : Bonjour David, peux tu me ramener l'enveloppe rouge qui est dans la salle B101, dans mon bureau dans le troisième tiroir s'il te plait ?</p>
+		<p><b>David</b> : Bien-sûr Joe, je vais le chercher ..... Le voilà Joe.</p>
+		<p><b>Joe :</b> Merci David.</p>
+		<p>Joe et David sans le savoir viennent de créer un modèle <b>client/serveur</b> juste la sous vos yeux :</p>
+		<ul>
+			<li>Joe et David parlent la même langue. Sans ça, ils auraient du mal à se comprendre.</li>
+			<li>Joe, <i>le client</i>, adresse un <i>requête</i> à David: aller lui chercher une ressource dont il a besoin.</li>
+			<li>David, <i>le serveur</i>, est prêt à l'aider mais il a besoin de savoir où est localisée la dite ressource, il n'est pas médium.  Heureusement, Joe lui dit tout ce dont il a besoin :</li>
+			<ul>
+				<li>L'endroit où chercher est la salle B101.</li>
+				<li>Le <i>chemin d'accès</i> pour arriver à la ressource, à partir du site de la salle B101,  est <i>\dans le bureau\dans le troisième tiroir</i>. C'est un chemin <i>absolu</i> car précisé à partir du site.</li>
+				<li>Il pourrait y avoir plusieurs choses dans ce tiroir, mais Joe a précisé qu'il voulait l'enveloppe rouge : c'est la ressource dont il a besoin !</li>
+			</ul>
+			<li>Si le document n'est pas à l'endroit précisé, David ne pourra que lui dire qu'il ne le trouve pas. Sinon, il pourra le lui ramener.</li>
+		</ul>
+		<p>Joe, qui est un sacré casse pied en plus d'un grand fainéant, demande à nouveau à David :</p>
+		<ul>
+			<li>"J'aurai besoin du crayon bleu qui est dans le tiroir du dessus".</li>
+			<li>Cette fois le chemin est *relatif* car donné à partir du précédent emplacement et pas à partir du site de la salle B101.</li>
+		</ul>
+		<h2>Cours</h2>
+		<p>Sur internet, ce modèle <b>client/serveur</b> domine assez largement, même  s'il existe des cas où un ordinateur pourra jouer tour à tour le rôle de  client et le rôle de serveur (exemple le (<a href="https://www.journaldunet.fr/web-tech/dictionnaire-du-webmastering/1203399-p2p-peer-to-peer-definition-traduction-et-acteurs/">peer to peer</a>)) très souvent, des ordinateurs (les clients) passeront leur  temps à demander des ressources à d'autres ordinateurs (les serveurs).</p>
+		<img src="img/schema.png"></br>
+		<p>N'importe quel type d'ordinateur peut jouer le rôle de serveur, mais  dans le monde professionnel les serveurs sont des machines spécialisées  conçues pour fonctionner 24h sur 24h de la façon la plus fiable possible. Ils peuvent aussi avoir une  grosse capacité de stockage afin de stocker un grand nombre de  ressources (vidéos, sons, ...) , utiliser des systèmes de sauvegardes pour éviter les pertes tragiques de données et des moyens de protections très strictes.</p>
+		<img src="img/serveur.jpg"></br>
+		<p>Environ 6500 clients se connectent sur Google chaque seconde. Il serait impossible de gérer cela avec un seul serveur. Imaginez un restaurant où 6500 clients commandent leur repas en même temps au même serveur....</p>
+		<p>Google, Amazon ou encore Facebook possèdent un très grand nombre de  serveurs afin de pouvoir satisfaire les demandes des utilisateurs en  permanence. Ces entreprises possèdent d'immenses salles contenant  chacune des centaines ou des milliers de serveurs selon les besoins de l'entreprise qui les possèdent.</p>
+		<img src="img/serveurs.jpg"></br>
+		<p>Souvent les serveurs sont spécialisés dans certaines tâches, par  exemple, les serveurs qui envoient aux clients des pages au format HTML  sont appelés <i>serveur web</i>.</p>
+		<p>Il y a quelques années, le web était dit « statique » : le  concepteur de site web écrivait son code HTML et ce code était  simplement envoyé par le serveur web au client. Les personnes qui  consultaient le site avaient toutes le droit à la même page, le web  était purement "consultatif".</p>
+		<p>Les choses ont ensuite évolué : les serveurs sont aujourd'hui  capables de générer eux-mêmes du code HTML en utilisant des langages de programmation qui s'exécute sur le serveur avant qu'il ne vous envoie les données (le PHP par exemple). Les résultats qui  s'afficheront à l'écran dépendront donc des demandes effectuées par  l'utilisateur du site : le web est devenu dynamique : Selon l'endroit où vous habitez, votre âge, votre profil [...] la page affichée sera différente.</p>
+		<p>Différents langages de programmation peuvent être utilisés « côté  serveur » afin de permettre au serveur de générer lui-même le code HTML à  envoyer. Le plus utilisé encore aujourd'hui se nomme PHP. D'autres  langages sont utilisables côté serveur (pour permettre la génération  dynamique de code HTML) : Python...</p>
+		<b>Exercice :</b></br>
+		<p>Sur une feuille, faire un résumé de ce que vous avez retenu (entre 5 et 10 lignes). En détaillant les points suivants :</p>
+		<ul>
+			<li>Le principe de la relation client/serveur.</li>
+			<li>Qu'est ce qu'un serveur ?</li>
+		</ul>
+	</div>
 </body>
 <footer>
 	<p>JHermilier</p>
