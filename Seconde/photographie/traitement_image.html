@@ -100,27 +100,27 @@
         <ol start='5'>
             <li>Copier et tester le programme suivant (ATTENTION : l'exécution de ce programme n'est pas très intéressante en soi, vous pouvez l'arrêter à tout moment en appuyant simultanément sur la touche Ctrl et sur la touche C):</li>
         </ol>
-        <pre><code lang='python'>
-		from PIL import Image
-		img = Image.open("pomme.jpg")
-		largeur_image=500
-		hauteur_image=500
-		for y in range(hauteur_image):
-			for x in range(largeur_image):
-				r,v,b=img.getpixel((x,y))
-				print("rouge : ",r,"vert : ",v,"bleu : ",b)
-		print("fin")
-		</code></pre>
+        <textarea rows="10">
+from PIL import Image
+img = Image.open("pomme.jpg")
+largeur_image=500
+hauteur_image=500
+for y in range(hauteur_image):
+	for x in range(largeur_image):
+		r,v,b=img.getpixel((x,y))
+		print("rouge : ",r,"vert : ",v,"bleu : ",b)
+print("fin")
+	</textarea>
         <p>Quelques commentaires sur ce programme :</p>
         <ul>
             <li>Nous commençons par définir les variables "largeur_image" et "hauteur_image" ("largeur_image=500" et "hauteur_image=500"). Je pense que vous aurez compris que notre image "pomme.jpg" fait 500 pixels de large et 500 pixels de haut. Si vous désirez travailler avec une autre image, il faudra veiller à bien modifier la valeur de ces deux variables.</li>
             <li>Les 2 boucles "for" nous permettent de parcourir l'ensemble des pixels de l'image :</li>
         </ul>
-        <pre><code lang='python'>
-		for y in range(hauteur_image):
-			for x in range(largeur_image):
-				...
-		</code></pre>
+        <textarea rows ="4">
+for y in range(hauteur_image):
+	for x in range(largeur_image):
+		...
+	</textarea>
         <ul>
             <li>Le plus important ici est de bien comprendre que dans la suite du programme, les variables x et y vont nous permettre de parcourir l'ensemble des pixels de l'image : nous allons commencer avec le pixel de coordonnées (0,0), puis le pixel de coordonnées (1,0), puis le pixel de coordonnées (2,0)...jusqu'au pixel de coordonnées (499,0). Ensuite, nous allons changer de ligne avec le pixel de coordonnées (0,1), puis le pixel de coordonnées (1,1)...bref, le dernier pixel sera le pixel de coordonnées (499,499), tout cela grâce à la double boucle "for" !</li>
             <li>"r,v,b=img.getpixel((x,y))" cette ligne ne devrait pas poser de problème, nous avons juste remplacé les coordonnées des pixels par (x,y) afin de considérer l'ensemble des pixels de l'image. </li>
@@ -130,20 +130,20 @@
         <p>Compliquons un peu la chose en modifiant tous les pixels de l'image :</p>
         <ol start='6'>
             <li> Copier et tester le code suivant :</li>
-            <pre><code lang='python'>
-			from PIL import Image
-			img = Image.open("pomme.jpg")
-			largeur_image=500
-			hauteur_image=500
-			for y in range(hauteur_image):
-				for x in range(largeur_image):
-					r,v,b=img.getpixel((x,y))
-					n_r=v
-					n_v=b
-					n_b=r
-					img.putpixel((x,y),(n_r,n_v,n_b))
-			img.show()
-			</code></pre>
+            <textarea rows="13">
+from PIL import Image
+img = Image.open("pomme.jpg")
+largeur_image=500
+hauteur_image=500
+for y in range(hauteur_image):
+	for x in range(largeur_image):
+		r,v,b=img.getpixel((x,y))
+		n_r=v
+		n_v=b
+		n_b=r
+		img.putpixel((x,y),(n_r,n_v,n_b))
+img.show()
+	    </textarea>
             <p>Expliquez en quelques mots ce que fait ce programme.</p>
 			<p> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </p>
             <li>En vous inspirant de ce qui a été fait au à la question 6, écrire un programme qui inverse les valeurs des canaux bleu et rouge sans changer la valeur du canal vert</li>
@@ -155,39 +155,39 @@
         	<p>Appeler l'enseignant pour valider cette question.</p>
             <li>Tester les programmes écrient dans les questions 8 et 9 avec une image de votre choix (attention aux variables "largeur_image" et "hauteur_image").</li>
             <li>Copier et tester le programme suivant:</p>
-            <pre><code lang='python'>
-			from PIL import Image
-			img = Image.open("pomme.jpg")
-			largeur_image=500
-			hauteur_image=500
-			for y in range(hauteur_image):
-				for x in range(largeur_image):
-					r,v,b=img.getpixel((x,y))
-					if b < 200:
-						n_b=255-b
-					else :
-						n_b=b
-					img.putpixel((x,y),(r,v,n_b))
-			img.show()
-			</code></pre>
+            <textarea rows="14">
+from PIL import Image
+img = Image.open("pomme.jpg")
+largeur_image=500
+hauteur_image=500
+for y in range(hauteur_image):
+	for x in range(largeur_image):
+		r,v,b=img.getpixel((x,y))
+		if b < 200:
+			n_b=255-b
+		else :
+			n_b=b
+		img.putpixel((x,y),(r,v,n_b))
+img.show()
+	    </textarea>
             <p>Expliquer en quelques mots ce que fait le programme.</p>
 			<p> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </p>        </ol>
             <li>Copier et tester le programme suivant :</li>
-            <pre><code lang='python'>
-			from PIL import Image
-			img = Image.open("pomme.jpg")
-			largeur_image=500
-			hauteur_image=500
-			for y in range(hauteur_image):
-				for x in range(largeur_image):
-					r,v,b=img.getpixel((x,y))
-					if v>100 and y>250:
-						n_v=0
-					else :
-						n_v=255
-					img.putpixel((x,y),(r,n_v,b))
-			img.show()
-			</code></pre>
+            <textarea rows ="14">
+from PIL import Image
+img = Image.open("pomme.jpg")
+largeur_image=500
+hauteur_image=500
+for y in range(hauteur_image):
+	for x in range(largeur_image):
+		r,v,b=img.getpixel((x,y))
+		if v>100 and y>250:
+			n_v=0
+		else :
+			n_v=255
+		img.putpixel((x,y),(r,n_v,b))
+img.show()
+			</textarea>
         	<p>Expliquer en quelques mots ce que fait le programme.</p>
 			<p> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </p>
 		</ol>
