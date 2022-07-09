@@ -66,6 +66,10 @@ td{
 	width: 20%;
 	border: 2px solid #eee;	
 }
+.tab-col-3{
+	width: 33%;
+	border: 2px solid #eee;
+}
 
 /* images */
 .logo{
