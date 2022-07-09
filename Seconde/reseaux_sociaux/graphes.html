@@ -18,8 +18,193 @@
 	    <a href="pdf/graphes.pdf"><img src="../../img/pdf.png" class="logo2"></a>
 		<a href="odt/graphes.odt"><img src="../../img/odt.png" class="logo2"></i></a>
 		</br>
-      <p>En travaux ...</p>
-</div>
+        <h1>Les graphes</h1>
+        <p>Imaginez un réseau social ayant 6 abonnés (A, B, C, D, E et F) où :</p>
+        <ul>
+            <li>A est ami avec B, C et D</li>
+            <li>B est ami avec A et D</li>
+            <li>C est ami avec A, E et D</li>
+            <li>D est ami avec tous les autres abonnés</li>
+            <li>E est ami avec C, D et F</li>
+            <li>F est ami avec E et D</li>
+        </ul>
+        <p>La description de ce réseau social, malgré son faible nombre d'abonnés, est déjà quelque peu rébarbative, alors imaginez cette même description avec un réseau social comportant des millions d'abonnés !</p>
+        <p>Il existe un moyen plus "visuel" pour représenter ce réseau social : on peut représenter chaque abonné par un cercle (avec le nom de l'abonné situé dans le cercle) et chaque relation "X est ami avec Y" par un segment de droite reliant X et Y ("X est ami avec Y" et "Y est ami avec X" étant représenté par le même segment de droite).</p>
+        <p>Voici ce que cela donne avec le réseau social décrit ci-dessus :</p>
+        <img src="img/graphe1.jpg">
+        <p>Ce genre de figure s'appelle un <b>graphe</b>. Les graphes sont des objets mathématiques très utilisés, notamment en informatique. Les cercles sont appelés des sommets et les segments de droites des arêtes.</p>
+        <b>Exercice :</b></br>
+        <p>Construire un graphe de réseau social à partir des informations suivantes :</p>
+        <ul>
+            <li>Amélie est ami avec Bastien et Emi.</li>
+            <li>Bastien est ami avec Amélie et Camille.</li>
+            <li>Camille est ami avec Bastien, Franck et Diane.</li>
+            <li>Diane est ami avec Camille, Franck et Emi.</li>
+            <li>Emi est ami avec Amélie, Diane et Franck.</li>
+            <li>Franck est ami avec Camille, Diane et Emi.</li>
+        </ul>
+        </br></br></br></br></br></br></br></br>
+        <h2>Quelques définitions</h2>
+        <p><b>Chaîne :</b>Dans un graphe, une chaîne reliant un sommet x à un sommet y est définie par une suite finie d'arêtes consécutives, reliant x à y.</p>
+        <p><i>exemple :</i>Dans le graphe donné ci-dessus (graphe 1), A-D-E-C est une chaîne.</p>
+        <p><b>Distance entre 2 sommets :</b>La distance entre deux sommets d'un graphe est le nombre minimum d'arêtes d'une chaîne allant de l'un à l'autre.</p>
+        <p><i>exemple :</i> La distance entre le sommet A (graphe 1) et le sommet F est de 2 (chaîne A-D-F).</p>
+        <p><b>/!\ATTENTION :</b>On parle bien du nombre minimum d'arêtes, A-D-E-F est aussi une chaîne entre A et F mais dans ce cas, nous avons 3 arêtes.</p>
+        <p><b>Excentricité :</b>L'excentricité d'un sommet est la distance maximale existant entre ce sommet et les autres sommets du graphe.</p>
+        <p><i>exemple 1 :</i>Toujours dans le graphe 1 : distance (A-B) = 1 ; distance (A-C) = 1 ; distance (A-D) = 1 ; distance (A-E) = 2 ; distance (A-F) = 2 ; nous pouvons donc dire que la distance maximale existant entre le sommet A et les autres sommets du graphe est de 2 (distance (A-E) et distance (A-F)). Nous pouvons donc dire que l'excentricité de A est de 2.</p>
+        <p><i>exemple 2 :</i>distance (D-A) = 1 ; distance (D-B) = 1 ; distance (D-C) = 1 ; distance (D-E) = 1 ; distance (D-F) = 1 ; nous pouvons donc dire que l'excentricité de D est de 1.</p>
+        <p><b>Centre :</b>On appelle centre d'un graphe, le sommet d'excentricité minimale (le centre n'est pas nécessairement unique).</p>
+        <p><i>exemple :</i>Dans le graphe 1 tous les sommets ont une excentricité de 2 à l'exception du sommet D qui a une excentricité de 1, nous pouvons donc affirmer que le centre du graphe 1 est le sommet D.</p>
+        <p><b>Rayon :</b>On appelle rayon d'un graphe G, l'excentricité d'un centre de G.</p>
+        <p><i>exemple :</i>D a une excentricité de 1, c'est le centre du graphe 1, nous pouvons donc dire que le rayon du graphe 1 est de 1.</p>
+        <p><b>Diamètre :</b>On appelle diamètre d'un graphe G, la distance maximale entre deux sommets du graphe G.</p>
+        <p><i>exemple :</i>Dans le graphe 1 la distance maximale entre 2 sommets est de 2, nous pouvons donc dire que le diamètre du graphe est de 2.</p>
+        </br>
+        <h2>Exercice</h2>
+        <b>Exercice 1:</b></br>
+        <p>Soit le graphe suivant :</p>
+        <img src="img/graphe3.jpg"></br>
+        <ol>
+            <li>Déterminez le (ou les) centre(s) du graphe. </li>
+        </ol>
+        <table>
+            <tr>
+                <td class="tab_titre tab-col-7">Sommet</td>
+                <td class="tab_titre tab-col-7">Distance A</td>
+                <td class="tab_titre tab-col-7">Distance B</td>
+                <td class="tab_titre tab-col-7">Distance C</td>
+                <td class="tab_titre tab-col-7">Distance D</td>
+                <td class="tab_titre tab-col-7">Distance E</td>
+                <td class="tab_titre tab-col-7">Distance F</td>
+            </tr>
+            <tr>
+                <td class="tab-col-7">A</td>
+                <td class="tab-col-7">0</td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+            </tr>
+            <tr>
+                <td class="tab-col-7">B</td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7">0</td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+            </tr>
+            <tr>
+                <td class="tab-col-7">C</td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7">0</td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+            </tr>
+            <tr>
+                <td class="tab-col-7">D</td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7">0</td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+            </tr>
+            <tr>
+                <td class="tab-col-7">E</td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7">0</td>
+                <td class="tab-col-7"> </td>
+            </tr>
+            <tr>
+                <td class="tab-col-7">F</td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7"> </td>
+                <td class="tab-col-7">0</td>
+            </tr>
+        </table>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="2">
+            <li>En déduire le rayon du graphe. </li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="3">
+            <li>Déterminez le diamètre du graphe.</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <b>Exercice 2 :</b></br>
+        <p>Manon, élève en classe de seconde, vient d'être élue déléguée par ses camarades. Elle a de nombreux amis sur Instagram, et voudrait profiter de ce réseau social pour diffuser des informations à la classe . Le réseaux de Manon comporte 12 amis.</p>
+        <ul>
+            <li>Emma est amie avec Adam, Kevin et Manon. </li>
+            <li>Damien est ami avec Manon et Raphaël.</li>
+            <li>Raphaël et Manon sont amis.</li>
+            <li>Kevin est ami avec Chloé, Hayfaa et Victor.</li>
+            <li>Chloé et Victor sont amis.</li>
+        </ul>
+        <ol>
+            <li>Reconstituer le graphe des relations à partir des liens d'amitié existants.</li>
+            </br></br></br></br></br></br></br></br>
+            <li>Déterminer le rayon, le diamètre et le centre de ce graphe.</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="3">
+            <li>Conseiller à Manon deux liens d'amitié à créer sur le réseau afin d'être placée, elle aussi, au centre du graphe. Ajouter les arêtes correspondantes au graphe dans une autre couleur.</li>   
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="4">
+            <li>Si le lien d'amitié entre Emma et Manon se rompt, quelle sera la conséquence sur les centres du graphe ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <b>Exercice 3 :</b></br>
+        <ol>
+            <li>Compléter les caractéristiques de chacun des graphes suivants.</li>
+        </ol>
+        <img src="img/graphes5.jpg"></br>
+        <table>
+            <tr>
+                <td class="tab_titre tab-col-4">Caractéristiques</td>
+                <td class="tab_titre tab-col-4">Le graphe Taureau</td>
+                <td class="tab_titre tab-col-4">Le graphe Petersen</td>
+                <td class="tab_titre tab-col-4">Le graphe Criquet</td>
+            </tr>
+            <tr>
+                <td class="tab_titre  tab-col-4">Nombre de sommets</td>
+                <td class="tab-col-4"> </td>
+                <td class="tab-col-4"> </td>
+                <td class="tab-col-4"> </td>
+            </tr>
+            <tr>
+                <td class="tab_titre  tab-col-4">Nombres d'arêtes</td>
+                <td class="tab-col-4"> </td>
+                <td class="tab-col-4"> </td>
+                <td class="tab-col-4"> </td>
+            </tr>
+            <tr>
+                <td class="tab_titre  tab-col-4">Rayon</td>
+                <td class="tab-col-4"> </td>
+                <td class="tab-col-4"> </td>
+                <td class="tab-col-4"> </td>
+            </tr>
+            <tr>
+                <td class="tab_titre  tab-col-4">Diamètre</td>
+                <td class="tab-col-4"> </td>
+                <td class="tab-col-4"> </td>
+                <td class="tab-col-4"> </td>
+            </tr>
+        </table>
+        <ol start="2">
+            <li>Entourer en couleur le ou les centre(s) des trois graphes.</li>
+        </ol>
+    </div>
 </body>
 <footer>
 	<p>JHermilier</p>
