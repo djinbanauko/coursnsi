@@ -3,7 +3,7 @@
 <head>
 	<meta charset='UTF-8'>
 	<link href="../../style.css" rel="stylesheet" type="text/css">
-	<title>Introduction Web</title>
+	<title>TCP/IP</title>
 	<link rel="icon" href="../../img/caille.png">
 </head>
 <body>
@@ -15,11 +15,85 @@
 		<li id="home"><a href='../../'><img id="home_icon" src="../../img/home.png"></a></li>
 	</ul>
     <div class="corps">
-	<a href="pdf/introduction_web.pdf"><img src="../../img/pdf.png" class="logo2"></a>
-        <a href="odt/introduction_web.odt"><img src="../../img/odt.png" class="logo2"></i></a>
-	</br>
-  <p>En travaux...</p>
-</div>
+        <a href="pdf/tcp.pdf"><img src="../../img/pdf.png" class="logo2"></a>
+        <a href="odt/tcp.odt"><img src="../../img/odt.png" class="logo2"></i></a>
+        </br>
+        <h1>Les protocoles TCP/IP</h1>
+        <h2>Introduction</h2>
+        <p>Pour communiquer, les ordinateurs (ou tous autres appareils connectés entre eux) utilisent des ensemble de règles appelées <b>protocoles</b>. Il existe de nombreux protocoles, chacun d'entre eux réalisant une tâche bien précise.</p>
+        <p>Nous allons voir dans ce cours le rôle des protocoles TCP et IP.</p>
+        <h2>Le protocole TCP</h2>
+        <p>Le principe du protocole TCP (<i>Transfert Control Protocol</i>), est similaire à l'expédition d'un colis par la poste. Admettons que vous ayez commandé un meuble en kit à l'entreprise Dupont en Suède. Dupont ne peut pas envoyer un énorme carton avec le meuble entier, alors il décide de l'envoyer pièce par pièce en empaquetant chaque pièce soigneusement.</p>
+        <p>Ensuite, Dupont amène tous les paquets à la poste de son quartier. Celle-ci va les transporter jusqu'à la poste centrale qui dirigera certains paquets vers l'aéroport pour un transport aérien, d'autres vers une gare pour un transport ferroviaire, d'autres vers un port pour un transport fluvial... On peut imaginer toutes les possibilités qui vont amener les paquets jusqu'à vous.</p>
+        <p>Lorsque vous recevez les colis, comme Dupont a joint la notice de montage à chaque paquet, vous pouvez vérifier s'il ne manque pas une pièce et éventuellement faire une réclamation.</p>
+        <i>C'est le même principe pour le réseau informatique !</i></br>
+        <p>Un utilisateur A veut envoyer le message "Salut, comment ça va ?" à un utilisateur B.</p>
+        <p>Le message est décomposé en paquets qui contiennent chacun un bloc de données (le nombre de paquets dépend de la taille du message) : c'est le rôle du protocole TCP.</p>
+        <img src="img/tcp.png"></br>
+        <p>Ensuite, chaque paquet va transiter par différents points dans le réseau jusqu'à atteindre le destinataire. Chaque paquet peut avoir une route différente.</p>
+        <p>À l'arrivée, le protocole TCP permet de reconstituer le message envoyé à partir de tous les paquets reçus, et éventuellement de renvoyer d'éventuels paquets perdus :</p>
+        <img src="img/tcp_ip.png"></br>
+        <b>Définition</b></br>
+        <p>Le rôle du protocole TCP est de découper les données à envoyer en plusieurs paquets numérotés.</p>
+        <h2>Le protocole IP</h2>
+        <p>Une fois le meuble découper en plusieurs paquets numérotés, les boites sont transmises au service postal de l'entreprise dont le rôle est de coller les adresses postales du destinataire et de l'expéditeur sur chacune d'entre-elles.</p>
+        <p>Pour reprendre l'exemple de l'envoi du message "Salut, comment ça va ?" de A à B, le protocole TCP avait découpé et numéroté ce message en trois paquets, et le protocole IP va donc ajouter à chacun de ces paquets l'adresse IP de A et celle de B :</p>
+        <img src="img/ip.png"></br>
+        <p>C'est grâce à l'adresse IP de B (destinataire) que les paquets arrivent au bon endroit et c'est grâce à l'adresse IP de A (expéditeur) que les accusés de réceptions arrivent au bon endroit.</p>
+        <b>Définitions :</b></br>
+        <p>Le rôle du <b>protocole IP</b> (Internet protocol) est d'ajouter l'adresse IP de l'expéditeur et celle du destinataire à chaque paquet de données créé par le protocole TCP. </p>
+        <p>L'<b>adresse IP</b> est une adresse unique attribuée à chaque objet connecté qui, comme l'adresse postale sur une lettre, permet d'identifier de manière unique le destinataire et l'expéditeur. Elles sont représentées par 4 valeurs entre 0 et 255 chacune quand on utilise la version la plus courante d'IP (IPv4) et 64 valeurs avec IPv6.</p>
+        <b>Encapsulation :</b></br>
+        <p>Le protocole IP encapsule les données issues du protocole TCP :</p>
+        <img src="img/tcp_ip_encapsulation.png"></br>
+        <h2>Activité</h2>
+        <b>Matériel nécessaire :</b></br>
+        <ul>
+            <li>Une photo </li>
+            <li>Des enveloppes</li>
+        </ul>
+        <p>Vous voulez envoyer une photo à un de vos camarades présent dans la classe (le destinataire ne doit pas être votre voisin). Pour cela, vous allez mettre en œuvre les protocoles TCP et IP à l'aide du matériel qui vous est fourni.</p>
+        <ol>
+            <li>Choisir le destinataire.</li>
+        </ol>
+        <b>Le protocole TCP :</b></br>
+        <ol start="2">
+            <li>La photo que vous souhaitez envoyer ne passe pas entièrement dans l'enveloppe mise à votre disposition, en vous basant sur le principe de TCP, proposer une solution, pour régler ce problème.</li>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        </ol>
+        <ol start="3">
+            <li>Mettez en œuvre le solution retenue.</li>
+            <li>Numérotez les différents éléments de manière logique : permettant au destinataire de reconstituer votre image.</li>
+        </ol>
+        <b>Encapsulation :</b></br>
+        <ol start="5">
+            <li>Mettre les éléments dans les enveloppes.</li>
+        </ol>
+        <b>Le protocole IP :</b></br>
+        <ol start="6">
+            <li>Mettre sur le devant de l'enveloppe le prénom du destinataire.</li>
+            <li>Mettre sur l'arrière de l'enveloppe le prénom de l'émetteur (le votre).</li>
+        </ol>
+        <b>Envoi :</b></br>
+        <ol start="8">
+            <li>Donner le premier paquet à votre voisin de droite.</li>
+            <li>Attendez l'accusé de réception du premier paquet.</li>
+            <li>Donner le deuxième paquet à votre voisin de gauche.</li>
+            <li>Ainsi de suite en alternant les voisins jusqu'à la fin de la transmission.</li>
+        </ol>
+        <b>Réception :</b></br>
+        <p>Si vous recevez un paquet qui ne vous est pas destiné :</p>
+        <ul>
+            <li>Ne l'ouvrez pas !!</li>
+            <li>Transmettez le à un de vos voisins.</li>
+        </ul>
+        <p>Si vous recevez un paquet qui vous est destiné :</p>
+        <ul>
+            <li>Ouvrez le !</li>
+            <li>Ecrire un accusé de réception (à l'aide de la fiche fournie).</li>
+        </ul>
+        <p>Une fois tous les paquets reçus, reconstituer votre image.</p>
+    </div>
 </body>
 <footer>
 	<p>JHermilier</p>
