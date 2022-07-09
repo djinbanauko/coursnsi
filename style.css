@@ -62,6 +62,15 @@ td{
 	margin: 50px;
 	padding : 20px;
 }
+.tab-col-16{
+	width: 6.25%;
+}
+.tab-col-10{
+	width: 10%;
+}
+.tab-col-9{
+	width: 11%;
+}
 .tab-col-7{
 	width: 14%;
 }
