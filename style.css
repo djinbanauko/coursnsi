@@ -64,11 +64,12 @@ td{
 }
 .tab-col-5{
 	width: 20%;
-	border: 2px solid #eee;	
+}
+.tab-col-4{
+	width: 25%;
 }
 .tab-col-3{
 	width: 33%;
-	border: 2px solid #eee;
 }
 
 /* images */
