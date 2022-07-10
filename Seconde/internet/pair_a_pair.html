@@ -3,7 +3,7 @@
 <head>
 	<meta charset='UTF-8'>
 	<link href="../../style.css" rel="stylesheet" type="text/css">
-	<title>Introduction Web</title>
+	<title>Réseau pair à pair</title>
 	<link rel="icon" href="../../img/caille.png">
 </head>
 <body>
@@ -15,11 +15,22 @@
 		<li id="home"><a href='../../'><img id="home_icon" src="../../img/home.png"></a></li>
 	</ul>
     <div class="corps">
-	<a href="pdf/introduction_web.pdf"><img src="../../img/pdf.png" class="logo2"></a>
+	    <a href="pdf/introduction_web.pdf"><img src="../../img/pdf.png" class="logo2"></a>
         <a href="odt/introduction_web.odt"><img src="../../img/odt.png" class="logo2"></i></a>
-	</br>
-  <p>En travaux...</p>
-</div>
+	    </br>
+        <h1>Réseau pair à pair</h1>
+        <p>La plupart du temps, les échanges sur internet sont basés sur l'architecture "client-serveur", que nous avons vu dans notre séquence sur le web.</p>
+        <img src="img/client_serv.png"></br>
+        <p>Les réseaux pair-à-pair, ne sont pas basés sur l'architecture client-serveur classique. En effet, la notion de client et de serveur n'a pas vraiment de sens dans les réseaux pair à pair, puisqu'un ordinateur (on parle de "nœud") peut être tour à tour client et serveur, et même client et serveur en même temps !</p>
+        <img src="img/p2p.png"></br>
+        <p>Prenons un exemple, volontairement simple : 3 machines A, B et C appartenant toutes les trois au même réseau pair à pair. Un fichier "fic1" est disponible sur la machine A, un fichier "fic2" est disponible sur la machine B et un fichier "fic3" est disponible sur la machine C. </p>
+        <p>Le nœud (machine) B désire obtenir le fichier "fic1", le nœud A désire obtenir le fichier "fic3" et le nœud C désire aussi obtenir le fichier "fic1". Intéressons-nous au nœud A : le nœud A va envoyer le fichier "fic1" vers le nœud B et le nœud C, dans le même temps le nœud C va envoyer le fichier "fic3" vers le nœud A, le nœud A va donc recevoir le fichier "fic3". Bilan : le nœud A est à la fois client (il reçoit le fichier "fic3") et serveur (il envoie le fichier "fic1" vers le nœud B et vers le nœud C).</p>
+        <img src="img/exemple.png"></br>
+        <p>Il est possible d'utiliser ces réseaux pair à pair pour des systèmes de "calculs distribués", qui propose de répartir des calculs extrêmement complexes sur un grand nombre d'ordinateurs personnels, chaque ordinateur ayant "un petit bout" du calcul à effectuer, et tout cela dans le but de faire avancer la recherche scientifique.</p>
+        <p>Mais revenons à l'utilisation principale des réseaux pair à pair : le partage de fichier. Il existe un grand nombre de protocoles s'appuyant sur le pair à pair qui permettent de partager des fichiers, par exemple emule, BitTorrent... Souvent le BitTorrent est associé au "piratage" de contenus (à ne pas confondre avec le piratage de système informatique), ouvrons donc une petite parenthèse sur ce sujet :</p>
+        <p>Partager un contenu (musique, film, logiciel...) de façon illicite est puni par la loi (<a href="https://www.service-public.fr/particuliers/vosdroits/F32108">voir ici pour plus de détails</a>). À chaque contenu peut être associée une "licence" ; avec certaines licences, vous êtes uniquement autorisé à utiliser les fichiers que vous avez achetés, mais vous n'avez pas le droit de les partager avec qui que ce soit. Dans d'autres cas, la licence liée à un contenu vous autorise à partager ce contenu ou même à le modifier à volonté ; on parle alors souvent de licence "libre". Il est important de bien comprendre qu'une licence libre ne veut pas dire que l'on peut faire ce que l'on veut avec un contenu, dans tous les cas il faut se renseigner sur la licence attachée à un contenu afin de pouvoir l'utiliser en toute légalité.</p>
+        <p>Revenons au protocole BitTorrent : l'utilisation du BitTorrent n'a rien d'illégal en soi, vous pouvez l'utiliser tant que vous voulez à condition de bien vérifier que la licence du contenu partagé autorise bien le partage. Quelle que soit votre utilisation du protocole BitTorrent, il est nécessaire d'attirer votre attention sur le fait qu'une personne mal intentionnée peut partager, en vous faisant croire qu'il s'agit du dernier jeu à la mode, des logiciels malveillants (vers, virus,...) qui pourront potentiellement endommager votre ordinateur, par exemple en chiffrant les données contenues sur votre disque dur afin de les rendre inaccessibles.</p>
+    </div>
 </body>
 <footer>
 	<p>JHermilier</p>
