@@ -20,6 +20,9 @@ h1{
   margin-bottom: 1rem;
   font-weight: bold;
 }
+w-auto{
+	width: auto;
+}
 h2{
 	font-size: 1.75em;
   line-height: 1.225;
