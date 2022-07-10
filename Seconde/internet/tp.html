@@ -3,7 +3,7 @@
 <head>
 	<meta charset='UTF-8'>
 	<link href="../../style.css" rel="stylesheet" type="text/css">
-	<title>Introduction Web</title>
+	<title>TP Filius</title>
 	<link rel="icon" href="../../img/caille.png">
 </head>
 <body>
@@ -15,11 +15,138 @@
 		<li id="home"><a href='../../'><img id="home_icon" src="../../img/home.png"></a></li>
 	</ul>
     <div class="corps">
-	<a href="pdf/introduction_web.pdf"><img src="../../img/pdf.png" class="logo2"></a>
-        <a href="odt/introduction_web.odt"><img src="../../img/odt.png" class="logo2"></i></a>
-	</br>
-  <p>En travaux...</p>
-</div>
+	    <a href="pdf/tp.pdf"><img src="../../img/pdf.png" class="logo2"></a>
+        <a href="odt/tp.odt"><img src="../../img/odt.png" class="logo2"></i></a>
+	    </br>
+        <h1>TP Filius</h1>
+        <b>Remarque :</b></br>
+        <p>Vous trouverez <a href="../../Tutoriels/filius.html">ici</a>, une présentation des bases de Filius, cela pourrait vous être utile, pensez à y jeter un œil.</p>
+        <ol>
+            <li>Lancer le logiciel filius.</li>
+        </ol>
+        <h2>Un premier réseau </h2>
+        <ol start="2">
+            <li>Placer un premier ordinateur (portable ou non).</li>
+            <li>Double cliquer dessus afin de faire apparaitre la fenêtre de propriétés.</li>
+            <li>Modifier le nom et l'adresse IP afin d'obtenir :</li>
+        </ol>
+        <img src="img/q2.jpg"></br>
+        <ol start="5">
+            <li>Placer un deuxième ordinateur, modifier son nom pour <b>M2</b> et son adresse IP pour <b>192.168.0.2</b>.</li>
+        </ol>
+        <p>Nous allons maintenant relier les deux ordinateurs, pour cela, il vous suffit de cliquer dans cet ordre sur  "câble", le premier ordinateur puis le deuxième ordinateur.</p>
+        <img src="img/cable.jpg"></br>
+        <p>Félicitations, vous avez créé votre premier réseau !</p>
+        <p>Testons maintenant ce réseau.</p>
+        <ol start="6">
+            <li>Passer en mode simulation (la flèche verte).</li>
+            <li>Cliquer sur l'ordinateur M1 puis sur l'icône <i>installation de logiciel</i>.</li>
+            <li>Sélectionner <i>Ligne de commande</i> puis cliquer sur la flèche gauche afin d'obtenir :</li>
+        </ol>
+        <img src="img/install.jpg"></br>
+        <ol start="9">
+            <li>Appliquer les modifications en cliquant sur le bouton.</li>
+            <li>Lancer <b>Ligne de commande</b> en cliquant sur l'icône.</li>
+        </ol>
+        <p>Pour vérifier la possibilité d'atteindre un autre ordinateur, on utilise la commande <b>ping adresseIP</b>. Cette dernière essaie de joindre l'adresse IP précisée en lui envoyant un petit <i>paquet</i> puis attend une réponse éventuelle et enfin affiche le temps que l'envoie du message et le retour de l'accusé de réception ont pris.</p>
+        <p>Essayons de joindre le deuxième ordinateur.</p>
+        <ol start="11">
+            <li>Tester la commande ping 192.168.0.2.</li>
+        </ol>
+        <img src="img/command.jpg"></br>
+        <p>La dernière ligne nous indique que tous les paquets ont été reçus, parfait, tout fonctionne !</p>
+        <p>Nous allons maintenant agrandir notre réseau.</p>
+        <ol start="12">
+            <li>Repasser en mode construction (le marteau).</li>
+            <li>Faire un clique droit sur le câble puis le supprimer.</li>
+            <li>Placer un troisième ordinateur de nom <b>M3</b> et d'adresse IP <b>192.168.0.3</b>.</li>
+            <li>Placer un switch.</li>
+            <li>Relier les 3 ordinateurs au switch afin d'obtenir ceci :</li>
+        </ol>
+        <img src="img/switch.jpg"></br>
+        <ol start="17">
+            <li>Passer en mode simulation, cliquer sur M1, ouvrir <i>Ligne de commande</i> puis essayer de joindre M3 (192.168.0.3) en utilisant la commande ping.</li>
+        </ol>
+        <i>Remarque :</i></br>
+        <p>Lors de l'exécution du ping, vous pouvez observer la route prise par les paquets (les câbles s'allument en vert).</p>
+        <p>Une dernière précision :</p>
+        <p>Dans les caractéristiques des ordinateurs, vous pouvez apercevoir un "netmask" (masque de réseau en français), vous devez juste savoir que :</p>
+        <ul>
+            <li>pour une adresse IP qui se termine par /8, on a un netmask qui est "255.0.0.0".</li>
+            <li>pour une adresse IP qui se termine par /16, on a un netmask qui est "255.255.0.0".</li>
+            <li>pour une adresse IP qui se termine par /24, on a un netmask qui est "255.255.255.0".</li>
+        </ul>
+        <b>Exercice 1 :</b></br>
+        <ol>
+            <li>En utilisant le logiciel Filius, créer un réseau de 4 machines (M1, M2, M3 et M4). L'adresse IP de la machine M1 est "192.168.1.1/24", choisissez les adresses IP des machines M2, M3 et M4.</li>
+        </ol>
+        <p>Adresse M2 :</p>
+        <p>Adresse M3 :</p>
+        <p>Adresse M4 :</p>
+        <ol start="2">
+            <li>Effectuer un "ping" de la machine M2 vers la machine M4.</li>
+        </ol>
+        <p>Vous savez donc créer de petits réseaux locaux, nous allons maintenant voir comment relier des réseaux locaux entre eux.</p>
+        <ol start="18">
+            <li>En utilisant Filius, reproduire l'image ci-dessous sachant que :</li>
+            <ul>
+                <li>L'adresse IP de M1 est 192.168.0.1</li>
+                <li>L'adresse IP de M2 est 192.168.0.2</li>
+                <li>L'adresse IP de M3 est 192.168.0.3</li>
+                <li>L'adresse IP de M4 est 192.168.1.1</li>
+                <li>L'adresse IP de M5 est 192.168.1.2</li>
+                <li>L'adresse IP de M6 est 192.168.1.3</li>
+            </ul>
+            <img src="img/deux_res.jpg"></br>
+            <li>Placer un routeur au dessus des deux switch, nous choisirons un nombre d'interfaces = 2.</li>
+            <li>Relier les deux switch au routeur à l'aide de câbles.</li>
+        </ol>
+        <p>Il faut maintenant configurer le routeur afin qu'il serve de passerelle entre nos deux réseaux locaux.</p>
+        <ol start="21">
+            <li>Cliquer sur le routeur afin d'afficher ses propriétés.</li>
+        </ol>
+        <img src="img/routeur.jpg"></br>
+        <p>Nous allons nous intéresser aux deux onglets ayant pour nom des adresses IP. Vous remarquerez que lorsque vous changer d'onglet, les câbles de gauche et de droite reliés au routeur changent de couleur.</p>
+        <p>Nous voulons que notre routeur puisse communiquer avec notre premier réseau, il faut donc lui donner une adresse IP qui le lui permet, choisissons <b>192.168.0.254</b>.</p>
+        <ol start="22">
+            <li>Changer l'adresse IP dans le deuxième onglet (le câble de gauche s'allume en vert).</li>
+        </ol>
+        <p>Nous voulons que notre routeur puisse aussi communiquer avec notre deuxième réseau, il faut donc lui donner une adresse IP qui le lui permet, choisissons <b>192.168.1.254</b>.</p>
+        <ol start="23">
+            <li>Changer l'adresse IP dans le troisième onglet (le câble de droite s'allume en vert).</li>
+            <li>Cocher la case "routage automatique" dans l'onglet général.</li>
+            <li>Remplir le champ "passerelle" des ordinateurs M1, M2 et M3 avec l'adresse du routeur <b>192.168.0.254</b>.</li>
+        </ol>
+        <img src="img/passerelle.jpg"></br>
+        <ol start="26">
+            <li>Remplir le champ "passerelle" des ordinateurs M4, M5 et M6 avec l'adresse du routeur <b>192.168.1.254</b>.</li>
+            <li>Vérifier la liaison entre l'ordinateur M1 et l'ordinateur M2 à l'aide de la commande ping.</li>*
+            <li>Vérifier la liaison entre l'ordinateur M1 et l'ordinateur M4 à l'aide de la commande ping.</li>
+        </ol>
+        <b>Une dernière commande :</b></br>
+        <p>La commande "traceroute" permet de suivre le chemin qu'un paquet de données va suivre pour aller d'une machine à l'autre.</p>
+        <ol start="29">
+            <li>Tester cette commande entre M1 et M4.</li>
+            <li>Recopier le chemin obtenu et vérifier "manuellement".</li>
+        </ol>
+        <b>Exercice 2 :</b></br>
+        <p>En utilisant le logiciel Filius, créer 3 réseaux de 2 machines chacun. Ces 3 réseaux seront reliés par un routeur. Après avoir effectué toutes les opérations de configuration nécessaires, effectuez un ping entre deux machines de deux réseaux différents.</p>
+        <b>Exercice 3 :</b></br>
+        <p>Nous allons maintenant travailler sur un réseau plus complexe :</p>
+        <img src="img/internet.png"></br>
+        <ol>
+            <li>À l'aide du logiciel Filius, ouvrir le fichier <a href="fic/snt_sim_res.fls">snt_sim_res.fls</a> présent dans le commun de la classe.</li>
+            <li>Faire un "traceroute" entre l'ordinateur M14 et l'ordinateur M9. </li>
+            <li>Noter le chemin parcouru pour aller de la machine M14 à la machine M9.</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </p>
+        <ol start="4">
+            <li>Supprimer le câble réseau qui relie le routeur F au routeur E (simulation de panne), refaire un "traceroute" entre M14 et M9. </li>
+            <li>Que constatez-vous ? </li>
+        </ol>
+        <p>(ATTENTION : cela peut ne pas fonctionner du premier coup, car la mise à jour des tables de routage n'est pas immédiate : vous pouvez essayer de faire un ping entre M14 et M9, si cela ne fonctionne pas (timeout), attendez quelques secondes et recommencez. Une fois que le ping fonctionne, vous pouvez faire le traceroute).</p>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </p>
+    </div>
 </body>
 <footer>
 	<p>JHermilier</p>
