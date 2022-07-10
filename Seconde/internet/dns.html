@@ -1,1 +1,94 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<link href="../../style.css" rel="stylesheet" type="text/css">
+	<title>Serveur DNS</title>
+	<link rel="icon" href="../../img/caille.png">
+</head>
+<body>
+	<ul class = "nav">
+		<li><a href='../../Tutoriels/'> Tutoriels</a></li>
+		<li><a href='../../Terminale/'>Terminale</a></li>
+		<li><a href='../../Premiere/'>Première</a></li>
+		<li><a href='../'>Seconde</a></li>
+		<li id="home"><a href='../../'><img id="home_icon" src="../../img/home.png"></a></li>
+	</ul>
+    <div class="corps">
+	    <a href="pdf/dns.pdf"><img src="../../img/pdf.png" class="logo2"></a>
+        <a href="odt/dns.odt"><img src="../../img/odt.png" class="logo2"></i></a>
+	    </br>
+        <h1>Serveur DNS</h1>
+        <p>Étudions l'adresse qui se trouve dans la barre d'adresse de votre navigateur web :</p>
+        <a href="https://pixees.fr/informatiquelycee/n_site/snt_internet_dns.html">https://pixees.fr/informatiquelycee/n_site/snt_internet_dns.html</a></br>
+        <p>Cette adresse peut-être décomposée en quatre parties :</p>
+        <ul>
+            <li>la partie "https" (HyperText Transfert Protocol).</li>
+            <li>"pixees.fr" est la partie qui va nous intéresser ici, "fr" est une extension du nom de domaine et "pixees" est un nom de domaine.</li>
+            <li>la partie "informatiquelycee/n_site/snt_internet_dns.html" nous l'avons vu dans la séquence sur le web, c'est l'URL.</li>
+        </ul>
+        <p>Sans trop rentrer dans les détails, "pixees.fr" désigne une machine sur un réseau.</p>
+        <p>Étrange...jusqu'à présent nous avons vu que c'est une adresse IP qui permet de reconnaitre une machine sur un réseau, pas une combinaison du genre "a.b" avec a un nom de domaine et b une extension du nom de domaine (cette combinaison est appelée "<b>adresse symbolique</b>") comme dans "pixees.fr".</p>
+        <p>Rassurez-vous, en fin de compte, c'est bien une adresse IP qui permet d'identifier une machine sur un réseau, mais étant donné que pour un humain il est beaucoup plus facile de retenir "pixees.fr" que de retenir l'adresse IP 128.93.162.128, un service dénommé <b>DNS (Domain Name Server)</b> permet de traduire les adresses IP (exemple "128.93.162.128") en adresse symbolique (exemple "pixees.fr") et vice versa.</p>
+        <ol>
+            <li>Dans la barre d'adresse de votre navigateur, tapez "<a href="http://128.93.162.128/informatiquelycee/n_site/snt_internet_dns.html">http://128.93.162.128/informatiquelycee/n_site/snt_internet_dns.html</a>".</li>
+        </ol>
+        <p>Comme vous pouvez le constater, cela fonctionne parfaitement, adresse IP ou adresse symbolique : même résultat !</p>
+        <ol start="2">
+            <li>Sur votre ordinateur, ouvrez une console (si vous ne savez pas comment faire, demandez de l'aide à votre enseignant). Dans la console, nous allons faire un "ping", comme nous avons appris à le faire avec le simulateur Filius, mais au lieu de taper : ping "une adresse IP", vous allez taper : "ping pixees.fr"</li>
+        </ol>
+        <p>Vous devriez alors voir quelque chose qui ressemble à ceci :</p>
+        <img src="img/ping.jpg"></br>
+        <p>Comme vous pouvez le constater, l'adresse IP de la machine "pixees.fr" est bien 128.93.162.128.</p>
+        <p>Pour certaines adresses publiques, Il est possible d'effectuer ce genre de traduction sur un site web : <a href="https://www.whatsmyip.org/whois-dns-lookup/">https://www.whatsmyip.org/whois-dns-lookup/</a>.</p>
+        <ol start="3">
+            <li>Aller sur le lien ci-dessus et recueillir des information sur la machine "pixees.fr".</li>
+        </ol>
+        <p>Comme vous pouvez le constater, ce site fournit énormément d'informations (n'hésitez pas à cliquer sur "montrer" en bas de page).</p>
+        <p>Toutes ces informations peuvent être utilisées par exemple pour vérifier l'origine d'un site (en cas de doute sur les contenus d'un site,...).</p>
+        <h2>Exercice</h2>
+        <ol>
+            <li>Ouvrir le fichier <a href="snt_sim_dns.fls">snt_sim_dns.fls</a> avec filius.</li>
+        </ol>
+        <b>Serveur DNS</b></br>
+        <ol start="2">
+            <li>Placer un nouvel ordinateur dont le nom sera "serveur DNS".</li>
+            <li>Changer l'adresse IP par : 192.168.3.1.</li>
+            <li>Remplir le champ "passerelle" par l'adresse 192.168.3.254.</li>
+        </ol>
+        <b>Routeur</b></br>
+        <ol start="5">
+            <li>Cliquer sur le routeur, puis sur le bouton "gérer les connexions" et enfin sur "+".</li>
+            <li>Relier le serveur DNS au routeur.</li>
+            <li>Modifier l'adresse IP du câble entre le routeur et le serveur DNS (il doit s'allumer en vert) pour l'adresse 192.168.3.254.</li>
+        </ol>
+        <b>M1</b></br>
+        <ol start="8">
+            <li>Cliquer sur l'ordinateur M1, modifier le champ "serveur DNS", y mettre l'adresse de notre serveur.</li>
+        </ol>
+        <b>Mode simulation</b></br>
+        <ol start="9">
+            <li>Passer en mode simulation.</li>
+            <li>Ouvrir le bureau de l'ordinateur "serveur DNS", et installer le logiciel "serveur DNS". </li>
+            <li>Ouvrir l'application fraichement installée, vous obtenez quelque chose semblable à :</li>
+        </ol>
+        <img src="img/capt.jpg"></br>
+        <p>Modifier les champs :</p>
+        <ul>
+            <li>Nom de domaine = M4</li>
+            <li>Adresse IP = 192.168.2.1</li>
+        </ul>
+        <p>Puis cliquer sur le bouton "ajouter" pour valider.</p>
+        <ol start="12">
+            <li>Ouvrir l'application ligne de commande depuis l'ordinateur M1.</li>
+            <li>Exécuter la commande "ping M4".</li>
+        </ol>
+    </div>
+</body>
+<footer>
+	<p>JHermilier</p>
+	<p>Contact : hermiliernsi@gmail.com</p>
+	<a href = "../../ressources.html"> Ressources utilisées</a> 
+</footer>
+</html>
 
