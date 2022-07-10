@@ -29,23 +29,23 @@
         <i>C'est le même principe pour le réseau informatique !</i></br>
         <p>Un utilisateur A veut envoyer le message "Salut, comment ça va ?" à un utilisateur B.</p>
         <p>Le message est décomposé en paquets qui contiennent chacun un bloc de données (le nombre de paquets dépend de la taille du message) : c'est le rôle du protocole TCP.</p>
-        <img src="img/tcp.png"></br>
+        <img class="w-auto" src="img/tcp.png"></br>
         <p>Ensuite, chaque paquet va transiter par différents points dans le réseau jusqu'à atteindre le destinataire. Chaque paquet peut avoir une route différente.</p>
         <p>À l'arrivée, le protocole TCP permet de reconstituer le message envoyé à partir de tous les paquets reçus, et éventuellement de renvoyer d'éventuels paquets perdus :</p>
-        <img src="img/tcp_ip.png"></br>
+        <img class="w-auto" src="img/tcp_ip.png"></br>
         <b>Définition</b></br>
         <p>Le rôle du protocole TCP est de découper les données à envoyer en plusieurs paquets numérotés.</p>
         <h2>Le protocole IP</h2>
         <p>Une fois le meuble découper en plusieurs paquets numérotés, les boites sont transmises au service postal de l'entreprise dont le rôle est de coller les adresses postales du destinataire et de l'expéditeur sur chacune d'entre-elles.</p>
         <p>Pour reprendre l'exemple de l'envoi du message "Salut, comment ça va ?" de A à B, le protocole TCP avait découpé et numéroté ce message en trois paquets, et le protocole IP va donc ajouter à chacun de ces paquets l'adresse IP de A et celle de B :</p>
-        <img src="img/ip.png"></br>
+        <img class="w-auto" src="img/ip.png"></br>
         <p>C'est grâce à l'adresse IP de B (destinataire) que les paquets arrivent au bon endroit et c'est grâce à l'adresse IP de A (expéditeur) que les accusés de réceptions arrivent au bon endroit.</p>
         <b>Définitions :</b></br>
         <p>Le rôle du <b>protocole IP</b> (Internet protocol) est d'ajouter l'adresse IP de l'expéditeur et celle du destinataire à chaque paquet de données créé par le protocole TCP. </p>
         <p>L'<b>adresse IP</b> est une adresse unique attribuée à chaque objet connecté qui, comme l'adresse postale sur une lettre, permet d'identifier de manière unique le destinataire et l'expéditeur. Elles sont représentées par 4 valeurs entre 0 et 255 chacune quand on utilise la version la plus courante d'IP (IPv4) et 64 valeurs avec IPv6.</p>
         <b>Encapsulation :</b></br>
         <p>Le protocole IP encapsule les données issues du protocole TCP :</p>
-        <img src="img/tcp_ip_encapsulation.png"></br>
+        <img class="w-auto" src="img/tcp_ip_encapsulation.png"></br>
         <h2>Activité</h2>
         <b>Matériel nécessaire :</b></br>
         <ul>
