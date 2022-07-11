@@ -15,11 +15,244 @@
 		<li id="home"><a href='../../'><img id="home_icon" src="../../img/home.png"></a></li>
 	</ul>
     <div class="corps">
-	<a href="pdf/introduction_web.pdf"><img src="../../img/pdf.png" class="logo2"></a>
-        <a href="odt/introduction_web.odt"><img src="../../img/odt.png" class="logo2"></i></a>
-	</br>
-  <p>En travaux...</p>
-</div>
+	    <a href="pdf/traitements.pdf"><img src="../../img/pdf.png" class="logo2"></a>
+        <a href="odt/traitements.odt"><img src="../../img/odt.png" class="logo2"></i></a>
+	    </br>
+        <h1>Poissons, insectes et pandas</h1>
+        <h2>Contexte</h2>
+        <p>Animal Crossing : New Horizons est un jeu de type bac à sable sorti sur Nintendo Switch en 2020. Dans ce jeu, de nombreuses activités sont réalisables parmi lesquelles la pêche et la chasse aux insectes.</p>
+        <img src="img\capture.png"></br>
+        <p>Les créatures capturées durant ces activités diffèrent en fonction du jour et de l’heure à laquelle le joueur joue. Ainsi chacune de ces créatures possèdent des caractéristiques qui lui sont propres comme le milieu de vie, le prix de revente, ... Nous allons étudier cet ensemble de données qui vous a été distribué sous forme de fichier CSV.</p>
+        <p>Voici un extrait du fichier <b>insectes.csv</b>, qui comme l’extension l’indique est un fichier de format CSV :</p>
+        <textarea rows="14">
+nom,rareté,lieu,prix,période,horaire,type
+Guêpe,Rare,Arbres,2500,Toute l'année,Toute la journée,insecte
+Rosalia batesi,Rare,Souches d'arbres,3000,Mai - Septembre,Toute la journée,insecte
+Cicindèle,Rare,Sol,1500,Février - Octobre,Toute la journée,insecte
+Taupe-grillon,Commun,Sous terre,500,Novembre - Mai,Toute la journée,insecte
+Charancon bleu,Rare,Palmiers,800,Juillet - Aout,Toute la journée,insecte
+Scarabée Atlas,Très rare,Palmiers,8000,Juillet - Aout,17h - 8h,insecte
+Troides brookiana,Rare,Ciel,2500,Avril - Septembre,8h - 17h,insecte
+Cigale hyalessa,Commun,Arbres,300,Juillet - Aout,8h - 17h,insecte
+Cigale cicadelle,Commun,Arbres,400,Aout - Septembre,8h - 17h,insecte
+Acrida cinerea,Commun,Sol,200,Avril - Novembre,8h - 19h,insecte
+Scarabée Goliath,Très rare,Palmiers,8000,Juin - Septembre,17h - 8h,insecte
+...
+        </textarea>
+        <b>-> Les différents descripteurs :</b></br>
+        <ul>
+            <li>Nom : le nom de l'insecte.</li>
+            <li>Rareté : Chaque insecte peut être Commune, Rare ou Très rare, cela donne une indication sur les chances de l'attraper.</li>
+            <li>Lieu : Le milieu de vie de l'insecte: l'endroit où l'on peut la capturer.</li>
+            <li>Prix : Le prix de revente auprès de Méli et Mélo, les deux marchands du jeu. </li>
+            <li>Période : La période de l'année à laquelle est capturable l'insecte.</li>
+            <li>Horaire : Le créneau horaire à laquelle est capturable l'insecte.</li>
+            <li>Type : Le type de créature, ici nous auront seulement des insectes.</li>
+        </ul>
+        <h2>Partie A : Traitements avec un éditeur de texte.</h2>
+        <ol>
+            <li>Ouvrir le fichier insectes.csv avec un éditeur de texte.</li>
+        </ol>
+        <i>Aide : Click droit puis "ouvrir avec ... " choisir "bloc note".</i></br>
+        <ol start="2">
+            <li>Combien y a-t-il d'insectes ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="3">
+            <li>Quelles sont les caractéristiques du Catacanthus ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="4">
+            <li>Quel insecte est le moins cher ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="5">
+            <li>Combien d'insectes sont très rares ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="6">
+            <li>Parmi les insectes très rares, quels sont les trois premièrs par ordre alphabétique de nom ?</li>
+            <ul>
+                <li> </li>
+                <li> </li>
+                <li> </li>
+            </ul>
+            <li>Existe-t-il des insectes de rareté commune dont le prix dépasse les 1000 clochettes ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <p>Toutes ces opérations sont fastidieuses et prennent énormément de temps, heureusement il existe un moyen plus simple de visualiser et traiter ces données.</p>
+        <h2>Partie B : Traitements avec un tableur</h2>
+        <ol start="8">
+            <li>Ouvrir le fichier insectes.csv avec LibreOffice.</li>
+        </ol>
+        <i>Aide : click droit puis "ouvrir avec ... " puis choisir LibreOffice.</i></br>
+        <p>Vous obtenez la fenêtre suivante :</p>
+        <img src="img\tableur.png"></br>
+        <ol start="9">
+            <li>Choisir le séparateur correspondant à notre fichier puis appuyer sur "OK".</li>
+        </ol>
+        <p>Les données s’affichent alors sous forme de tableau déjà beaucoup plus lisible qu’avec l’éditeur de texte.</p>
+        <ol start="10">
+            <li>Vérifier le nombre d'insectes trouvées à la question 1 (pensez à utiliser les chiffres sur la gauche)</li>
+        </ol>
+        <p>Différentes opérations sont réalisables sur les colonnes, on peut par exemple trier les données en fonction de l’attribut nom. Pour cela :</p>
+        <p>-> cliquer sur n’importe quelle case du tableau, de sorte à simplement la sélectionner.</p>
+        <p>-> aller sur <b>Données</b> puis <b>trier…</b></p>
+        <p>La fenêtre suivante s’ouvre :</p>
+        <img src="img\trier.png"></br>
+        <ol start="11">
+            <li>Choisir l’attribut <b>nom</b> comme clé de tri 1.</li>
+            <li>Trouver l'insecte nommé "Mante orchidée", copier ci-dessous ses caractéristiques.</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <p>Vous remarquerez qu’il est bien évidemment beaucoup plus simple de trouver un insecte grâce à son nom maintenant que la table est triée.</p>
+        <ol start="13">
+            <li>Comment faut-il trier le tableau pour trouver facilement l'insecte le moins chère ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="14">
+            <li>Faites ce tri et vérifiez donc votre réponse à la question 3.</li>
+        </ol>
+        <p>La formule "=NB.SI(B2:B11;"=Rare")" compte le nombre de cellules entre B2 et B11 dont le contenu = Rare.</p>
+        <ol start="15">
+            <li>Recopier cette formule dans la case A88 du tableur et la tester. À quoi correspond le résultat obtenu ? </li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="16">
+            <li>Écrire dans la case C88 du tableur une formule qui permet de compter le nombre d'insectes "Très rare" (Pensez à utiliser la formule vue juste au-dessus). Recopier le résultat obtenu en dessous de cette question.</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="17">
+            <li>Écrire combien d'insectes vivent dans les palmiers dont le prix de vente est supérieur à 10000 clochettes.</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <i>Aide :</i></br>
+        <p>-> Utiliser un tri sur la colonne <b>lieu</b>.</p>
+        <p>-> Extraire "manuellement" la partie du tableau contenant les créatures vivant dans les palmiers.</p>
+        <p>-> Utiliser <b>NB.SI</b> sur ce nouveau tableau réduit pour trouver les créatures dont le prix >10000.</p>
+        <ol start="18">
+            <li>En utilisant tout ce que l’on vient de voir, dire s’il existe une créature rare dont la valeur est 5600 clochettes.</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <p>L’utilisation du tableur a permis de simplifier une grande partie des opérations, mais pas toutes, les deux dernières questions restent longues à traiter. Nous allons donc voir une troisième et dernière façon de traiter les données en table, en utilisant la bibliothèque <b>pandas</b> de python.</p>
+        <h2>Partie C : Traitements avec Python.</h2>
+        <b>Remarque :</b></br>
+        <p>Vous trouverez <a href="../../Tutoriels/thonny.html">ici</a>, une présentation des bases de Thonny, cela pourrait vous être utile, pensez à y jeter un œil.</p>
+        <ol start="19">
+            <li>Ouvrir Thonny.</li>
+            <li>Créer un nouveau fichier dont le nom est "traitement_donnees".</li>
+        </ol>
+        <i>Aide : Cliquer sur  "Fichier" puis "Nouveau", choisissez ensuite l'endroit où enregistrer le fichier.</i></br>
+        <p>Il n'est évidemment pas nécessaire d'avoir des connaissances en programmation, ou en python pour continuer cette activité. En effet, nous n'allons pas nous servir des fonctionnalité de base de python, mais une <b>bibliothèque</b> qui permet de manipuler et visualiser des données dans différents formats dont celui qui nous intéresse aujourd'hui (le CSV). Cette bibliothèque s'appelle <b>pandas</b>.</p>
+        <p>Pour pouvoir utiliser une bibliothèque en python, il est impératif de l'importer, pour cela il suffit d'utiliser la ligne suivante :</p>
+        <textarea>import pandas</textarea>
+        <ol start="21">
+            <li>Recopier cette ligne de code en haut de la partie éditeur.</li>
+        </ol>
+        <p>Maintenant que nous avons importer la bibliothèque, nous allons l'utiliser.</p>
+        <ol start="22">
+            <li>Recopier la ligne suivante :</li>
+        </ol>
+        <textarea>insectes = pandas.read_csv('insectes.csv', sep=',')</textarea>
+        <p>Cette ligne sert à ouvrir le fichier CSV.</p>
+        <ol start="23">
+            <li>Cliquer sur le triangle vert, qui permet d'exécuter le programme que vous venez de saisir.</li>
+            <li>Dans la partie console, saisir la ligne suivante :</li>
+        </ol>
+        <textarea>>>> insectes</textarea>
+        <p>Vous devriez voir apparaitre les données contenues dans la variable "creatures1" rangées sous la forme d'un tableau, un peu comme ce que nous obtenions en ouvrant le fichier "creatures1.csv" avec un tableur.</p>
+        <ol start="25">
+            <li>La ligne suivante permet de sélectionner toutes les données correspondantes à un descripteur :</li>
+        </ol>
+        <textarea>>>> insectes['nom']</textarea>
+        <p>Tester la ligne de code dans la console et recopier les 3 premières lignes obtenues.</p>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="26">
+            <li>Pour savoir combien d'insectes il y a dans le jeu, il suffit d'utiliser la ligne suivante :</li>
+        </ol>
+        <textarea>>>> len(insectes)</textarea>
+        <p>Tester cette ligne dans la console et recopier le résultat obtenu.</p>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="27">
+            <li>La recherche se simplifie, par exemple, pour retrouver les caractéristiques de l'insecte nommée "Ligie" :</li>
+        </ol>
+        <textarea>>>> insectes[insectes['nom'] == 'Ligie']</textarea>
+        <p>Recopier le résultat obtenu.</p>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <p>Sur le même principe, on peut chercher les insectes dont le prix est inférieur à 100 clochettes.</p>
+        <textarea>>>> insectes[insectes['prix'] < 200 ]</textarea>
+        <ol start="28">
+            <li>Tester la ligne de code ci-dessus et recopier le résultat obtenu.</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <p>Sur le même principe, la ligne à saisir pour obtenir les insectes dont le milieu de vie est le sol est la suivante :</p>
+        <textarea>>>> insectes[insectes['lieu'] == 'Sol']</textarea>
+        <ol start="29">
+            <li>Nous voulons savoir le prix de vente moyen des insectes, pour cela nous utilisons les lignes suivantes :</li>
+        </ol>
+        <textarea rows="4">
+effectif = len(insectes)
+prix_total = insectes['prix'].sum()
+prix_moyen = prix_total/effectif
+        </textarea>
+        <p>La première ligne nous la connaissons, elle calcul le nombre total d'insectes.</p>
+        <p>La seconde ligne sert à calculer la somme totale des prix de ventes.</p>
+        <p>La dernière ligne sert à calculer la moyenne (rappel : en divisant la somme total par l'effectif).</p>
+        <ol start="30">
+            <li>Quel est le prix de vente moyen des insectes ? </li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <h2>-> À votre tour de mettre en application pandas pour répondre aux questions suivantes.</h2>
+        <ol start="31">
+            <li>Recopier la ligne à utiliser pour ouvrir le fichier <b>poissons.csv</b>.</li>
+        </ol>
+        <textarea>poissons = pandas.read_csv('poissons.csv', sep=',')</textarea>
+        <ol start="32">
+            <li>Quels sont les descripteurs et leur types ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="33">
+            <li>Recopier la ligne à utiliser afin de trouver les poissons disponibles toute l'année.</li>
+        </ol>
+        <textarea> </textarea>
+        <ol start="34">
+            <li>Recopier la ligne à utiliser afin de trouver le poisson dont le nom est  "Scarus".</li>
+        </ol>
+        <textarea> </textarea>
+        <ol start="35">
+            <li>Recopier la ligne à utiliser afin de trouver le nombre de poissons.</li>
+        </ol>
+        <textarea> </textarea>
+        <ol start="36">
+            <li>Combien y-a-t-il de créatures au total dans le jeu ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="37">
+            <li>Toujours en utilisant pandas, trouver le prix le plus élevé.</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="38">
+            <li>Recopier la ligne permettant de trouver le poisson dont le prix est égal au prix le plus élevé. Ainsi que le résultat obtenu.</li>
+        </ol>
+        <textarea rows="4"></textarea>
+        <ol start="39">
+            <li>Recopier les lignes de code à utiliser pour calculer le prix moyen des poissons.</li>
+        </ol>
+        <textarea rows="4"></textarea>
+        <ol start="40">
+            <li>Quel est le prix moyen des poissons ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="41">
+            <li>Est-il plus rentable de pécher ou de capturer des insectes ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>  
+    </div>
 </body>
 <footer>
 	<p>JHermilier</p>
