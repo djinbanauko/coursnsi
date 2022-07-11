@@ -3,7 +3,7 @@
 <head>
 	<meta charset='UTF-8'>
 	<link href="../../style.css" rel="stylesheet" type="text/css">
-	<title>Introduction Web</title>
+	<title>Données structurées</title>
 	<link rel="icon" href="../../img/caille.png">
 </head>
 <body>
@@ -15,11 +15,144 @@
 		<li id="home"><a href='../../'><img id="home_icon" src="../../img/home.png"></a></li>
 	</ul>
     <div class="corps">
-	<a href="pdf/introduction_web.pdf"><img src="../../img/pdf.png" class="logo2"></a>
-        <a href="odt/introduction_web.odt"><img src="../../img/odt.png" class="logo2"></i></a>
-	</br>
-  <p>En travaux...</p>
-</div>
+	    <a href="pdf/donnees_structurees.pdf"><img src="../../img/pdf.png" class="logo2"></a>
+        <a href="odt/donnees_structurees.odt"><img src="../../img/odt.png" class="logo2"></i></a>
+	    </br>
+        <h1>Données structurées</h1>
+        <h2>Introduction</h2>
+        <p>Pour décrire un objet (individu, voiture, entreprise, état, etc.. ) on peut utiliser des mots (chaînes de caractères) ou des nombres : on les appelle des <b>données</b>.</p>
+        <p>Cependant, les données brutes ne servent pas à grand chose. Pour pouvoir les exploiter et les traiter, il est impératif de les structurer !</p>
+        <h2>Définitions</h2>
+        <p>Pour structurer ces données, nous allons les organiser sous forme de <b>table</b> semblable à :</p>
+        <table>
+            <tr>
+                <td class="tab_titre tab-col-3">Titre</td>
+                <td class="tab_titre tab-col-3">Genre</td>
+                <td class="tab_titre tab-col-3">Année de sortie</td>
+            </tr>
+            <tr>
+                <td class="tab-col-3">The Batman</td>
+                <td class="tab-col-3">film</td>
+                <td class="tab-col-3">2022</td>
+            </tr>
+            <tr>
+                <td class="tab-col-3">Elite</td>
+                <td class="tab-col-3">série</td>
+                <td class="tab-col-3">2018</td>
+            </tr>
+            <tr>
+                <td class="tab-col-3">My hero academia</td>
+                <td class="tab-col-3">animé</td>
+                <td class="tab-col-3">2014</td>
+            </tr>
+            <tr>
+                <td class="tab-col-3">Good Girls</td>
+                <td class="tab-col-3">série</td>
+                <td class="tab-col-3">2014</td>
+            </tr>
+        </table>
+        <p>Quelques points de vocabulaires sont à préciser :</p>
+        <b>Descripteur</b></br>
+        <p>Un descripteur est un mot ou un groupe de mots qui permet de préciser la nature du contenu d'une donnée.</p>
+        <i>Exemple :</i></br>
+        <p>Il y a 3 descripteurs dans notre table : Titre, Genre et Année de sortie.</p>
+        <b>Valeur</b></br>
+        <p>La valeur d'une donnée est un nombre, une chaine de caractères ou autre symbole.</p>
+        <i>Exemple :</i></br>
+        <p>Il y a 12 valeurs dans notre table : The Batman, film, 2022, Elite, série, 2018, My hero academia, animé, 2014, Good girls, serie, 2018.</p>
+        <b>Table</b></br>
+        <p>Une table est un ensemble de descripteurs et de valeurs, organisé sous la forme d'un tableau formé de lignes et de colonnes.</p>
+        <p>Structurer les données c'est bien mais pourquoi faire ? Pour pouvoir les traiter ! Nous verrons tout cela lors de notre prochain cours. En attendant, intéressons nous à la manière dont on peut structurer des données avec un ordinateur.</p>
+        <h2>Le format CSV</h2>
+        <p>Voici un exemple de fichier CSV :</p>
+        <textarea rows="6">
+Titre,Genre,Année de sortie
+The Batman,film,2022
+Elite,serie,2018
+My hero academia,anime,2014
+Good girls,serie,2018
+        </textarea>
+        <p>En l'observant, vous pourrez facilement repérer que cet extrait de fichier CSV représente notre table vue plus haut. Vous pourrez donc en déduire la syntaxe à utiliser, à savoir :</p>
+        <ul>
+            <li> </li>
+            <li> </li>
+            <li> </li>
+        </ul>
+        <p>Un fichier CSV (Comma Separated Value) est un fichier utilisé pour structurer des données, en les organisant sous forme de lignes et colonnes.</p>
+        <i>Remarque :</i></br>
+        <p>La virgule n'est pas le seul séparateur autorisé, le point-virgule peut lui aussi faire l'affaire.</p>
+        <h2>Activité</h2>
+        <table>
+            <tr>
+                <td class="tab_titre tab-col-3">Prénom</td>
+                <td class="tab_titre tab-col-3">Année de naissance</td>
+                <td class="tab_titre tab-col-3">Couleur des yeux</td>
+            </tr>
+            <tr>
+                <td class="tab-col-3">Ana</td>
+                <td class="tab-col-3">2001</td>
+                <td class="tab-col-3">Vert</td>
+            </tr>
+            <tr>
+                <td class="tab-col-3">Juliette</td>
+                <td class="tab-col-3">1988</td>
+                <td class="tab-col-3">Bleu</td>
+            </tr>
+            <tr>
+                <td class="tab-col-3">Marc</td>
+                <td class="tab-col-3">1995</td>
+                <td class="tab-col-3">Marron</td>
+            </tr>
+        </table>
+        <ol>
+            <li>Combien cette table compte de descripteurs ? </li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="2">
+            <li>Combien cette table compte de colonnes ? Que peut-on en déduire ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="3">
+            <li>Ou sont localisés les descripteurs dans la table ? </li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="4">
+            <li>Combien cette table possède-t-elle de valeurs ? </li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="5">
+            <li>Préciser le/s type/s des valeurs.</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="6">
+            <li>Ouvrir l'application bloc-notes. En respectant le format CSV, construire à la main un fichier représentant la table de l'activité. Penser à appuyer sur la touche <i>Entrée</i> à la fin de chaque ligne de la table, sauf pour la dernière.</li>
+        </ol>
+        <textarea rows="5">
+
+
+
+
+        </textarea>
+        <ol start="7">
+            <li>Enregistrer votre travail sous le nom <i>individus.csv</i>, sans oublier de renseigner l'extension.CSV.</li>
+        </ol>
+        <p>Nous allons tester la validité du fichier CSV. </p>
+        <ol start="8">
+            <li>Ouvrir l'application <i>LibreOffice Calc</i>. </li>
+            <li>Copier/coller le contenu du fichier CSV dans LibreOffice Calc, en choisissant <b>Virgule</b> comme options de séparateur.</li>
+        </ol>
+        <p>Vous remarquerez qu'il est simple de changer de logiciel. Ce qui n'est pas le cas de tous les types de fichiers de données.</p>
+        <ol start="10">
+            <li>Créer un nouveau fichier dans LibreOffice Calc puis saisir les mêmes données que précédemment.</li>
+            <li>Enregistrer votre travail sous le nom <i>tableau.ods</i>.</li>
+            <li>Essayer maintenant d'ouvrir ce fichier avec l'application bloc note.</li>
+        </ol>
+        <p>Les données affichées sont illisibles.</p>
+        <ol start="13">
+            <li>Quel type de données (ods ou CSV) vous parait le plus adapté pour des échanges de données ? </li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+    </div>
 </body>
 <footer>
 	<p>JHermilier</p>
