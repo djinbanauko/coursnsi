@@ -55,6 +55,7 @@ tr{
 td{
 	width: 50%;
 	border: 2px solid #eee;
+	height : 1.2rem;
 }
 .tab_titre{
 	font-weight: bold;
