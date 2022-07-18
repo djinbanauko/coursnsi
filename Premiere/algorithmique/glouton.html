@@ -15,11 +15,319 @@
 		<li id="home"><a href='../../'><img id="home_icon" src="img/home.png"></a></li>
 	</ul>
 	<div class="corps">
-		<a href="pdf/glouton.pdf"><img src="../../img/pdf.png" class="logo2"></a>
-		<a href="odt/glouton.odt"><img src="../../img/odt.png" class="logo2"></i></a>
+		<a href="../pdf/glouton.pdf"><img src="../../img/pdf.png" class="logo2"></a>
+		<a href="../odt/glouton.odt"><img src="../../img/odt.png" class="logo2"></i></a>
 		</br>
-		<h1>Algorithmes glouton</h1>
-	</div>
+		<h1>Aménagement glouton</h1>
+        <p><b>Point du programme abordé :</b> Algorithmes gloutons</p>
+        <p><b>Durée :</b> 3h</p>
+
+        <h3>Contexte</h3>>
+        <p>Animal Crossing : New Horizons est un jeu de type bac à sable sorti sur Nintendo Switch en 2020. Dans ce jeu, le joueur possède une maison qu'il peut décorer avec les objets qu'il fabrique ou trouve tout au long de son aventure, maison que l'on peut découper en 6x6 cases (soit 36 cases), semblable à :</p>
+        <img src="img/maison.png">
+        <p>Vous êtes un joueur débutant et possédez de ce fait la liste d'objets suivante :</p>
+        <table>
+            <tr>
+                <td class="tab_titre tab-col-4">Noms</td>
+                <td class="tab_titre tab-col-4">Dimensions</td>
+                <td class="tab_titre tab-col-4">Nombres de cases</td>
+                <td class="tab_titre tab-col-4">Points d'utilité</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Lit double</td>
+                <td class="tab-col-4">3x3</td>
+                <td class="tab-col-4">9</td>
+                <td class="tab-col-4">50</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Bureau</td>
+                <td class="tab-col-4">2x3</td>
+                <td class="tab-col-4">6</td>
+                <td class="tab-col-4">20</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Bibliothèque</td>
+                <td class="tab-col-4">2x3</td>
+                <td class="tab-col-4">6</td>
+                <td class="tab-col-4">5</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Commode</td>
+                <td class="tab-col-4">2x3</td>
+                <td class="tab-col-4">6</td>
+                <td class="tab-col-4">2</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Lampe</td>
+                <td class="tab-col-4">2x2</td>
+                <td class="tab-col-4">4</td>
+                <td class="tab-col-4">10</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Globe terrestre</td>
+                <td class="tab-col-4">2x2</td>
+                <td class="tab-col-4">4</td>
+                <td class="tab-col-4">1</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Guéridon</td>
+                <td class="tab-col-4">2x2</td>
+                <td class="tab-col-4">4</td>
+                <td class="tab-col-4">5</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Petite table</td>
+                <td class="tab-col-4">2x2</td>
+                <td class="tab-col-4">4</td>
+                <td class="tab-col-4">5</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Vase</td>
+                <td class="tab-col-4">2x2</td>
+                <td class="tab-col-4">4</td>
+                <td class="tab-col-4">1</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Coffre en bois</td>
+                <td class="tab-col-4">2x2</td>
+                <td class="tab-col-4">4</td>
+                <td class="tab-col-4">2</td>
+            </tr>            
+        </table>
+        <p>À chaque objet sont attribuées des dimensions et des points d’utilités.</p>
+        <b>-> À l’aide des supports physiques à votre disposition, faites des simulations d’aménagement de votre maison.</b></br>
+        <ol>
+            <li>uelle est la liste d’objets maximisant le nombre de points d’utilités avec une maison de dimensions 6x6 ?</li>
+        </ol>
+        <table>
+            <tr>
+                <td class="tab_titre tab-col-3">Nombre de cases vides</td>
+                <td class="tab_titre tab-col-3">Points d'utilités maximum</td>
+                <td class="tab_titre tab-col-3">Nombre de cases vide restantes</td>
+            </tr>
+            <tr>
+                <td class="tab-col-3">36</td>
+                <td class="tab-col-3"> </td>
+                <td class="tab-col-3"> </td>
+            </tr>
+            <tr>
+                <td class="tab-col-3"></td>
+                <td class="tab-col-3"> </td>
+                <td class="tab-col-3"> </td>
+            </tr>
+            <tr>
+                <td class="tab-col-3"></td>
+                <td class="tab-col-3"> </td>
+                <td class="tab-col-3"> </td>
+            </tr>
+            <tr>
+                <td class="tab-col-3"></td>
+                <td class="tab-col-3"> </td>
+                <td class="tab-col-3"> </td>
+            </tr>
+            <tr>
+                <td class="tab-col-3"></td>
+                <td class="tab-col-3"> </td>
+                <td class="tab-col-3"> </td>
+            </tr>
+            <tr>
+                <td class="tab-col-3"></td>
+                <td class="tab-col-3"> </td>
+                <td class="tab-col-3"> </td>
+            </tr>
+            <tr>
+                <td class="tab-col-3"></td>
+                <td class="tab-col-3"> </td>
+                <td class="tab-col-3"> </td>
+            </tr>
+        </table>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="2">
+            <li>Quelle stratégie adopter pour remplir la pièce d’objets qui MAXIMISENT le nombre de points d’utilités ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="3">
+            <li>Quelle est la liste d’objets maximisant le nombre de points d’utilités avec une maison de dimensions 5x5?</li>
+        </ol>
+        <table>
+            <tr>
+                <td class="tab_titre tab-col-3">Nombre de cases vides</td>
+                <td class="tab_titre tab-col-3">Points d'utilités maximum</td>
+                <td class="tab_titre tab-col-3">Nombre de cases vide restantes</td>
+            </tr>
+            <tr>
+                <td class="tab-col-3"> </td>
+                <td class="tab-col-3"> </td>
+                <td class="tab-col-3"> </td>
+            </tr>
+            <tr>
+                <td class="tab-col-3"> </td>
+                <td class="tab-col-3"> </td>
+                <td class="tab-col-3"> </td>
+            </tr>
+            <tr>
+                <td class="tab-col-3"> </td>
+                <td class="tab-col-3"> </td>
+                <td class="tab-col-3"> </td>
+            </tr>
+            <tr>
+                <td class="tab-col-3"> </td>
+                <td class="tab-col-3"> </td>
+                <td class="tab-col-3"> </td>
+            </tr>
+        </table>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <p>Nous voulons implémenter un algorithme qui permet de déterminer cette solution. </p>
+        <ol start="4">
+            <li>Quelle structure de données utiliser pour représenter un objet ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="5">
+            <li>Quelle structure de données utiliser pour représenter les différents objets disponibles ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <b>-> Soit les fonctions suivantes :</b></br>
+        <textarea rows="11">
+def points_d_utilites (objet):
+    """
+    Renvoie le nombre de points d’utilités d’un objet
+    :param objet : (dict) représentant un objet
+    :return: (int) le nombre de points d'utilités
+    """
+    return objet['pts']
+
+def trier_liste (liste_objets) :
+    return sorted(liste_objets, key=points_d_utilites, reverse=True)
+        </textarea>
+        <b>Vous trouverez <a href="fic/glouton.py">ici</a> un fichier python.</b></br>
+        <ol start="6">
+            <li>Ouvrir le fichier glouton.py et tester les lignes suivantes :</li>
+        </ol>
+        <textarea rows="6">
+>>> points_d_utilites(LISTE_OBJETS[0])
+???
+>>>  liste_objets = trier_liste (LISTE_OBJETS)
+>>> liste_objets
+???
+        </textarea>
+        <ol start="7">
+            <li>Quel est le rôle de la fonction trier_liste ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="8">
+            <li>Ecrire la docstring de la fonction trier_liste.</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="9">
+            <li> Quel est l’avantage de trier la liste dans l’ordre décroissant de points d’utilités ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="10">
+            <li>Implémenter à partir du pseudo code suivant la fonction choix_objets qui répond à la spécification donnée dans le fichier fourni.</li>
+        </ol>
+        <textarea rows="13">
+Trier la liste d’objets disponibles
+Initialiser la solution à tableau vide
+Initialiser i à 0
+Initialiser le score à 0
+Tant que i est plus petit que la longueur de la liste d’objets et que la surface disponible est non nulle:
+	Stocker dans objet le dictionnaire stocké dans la liste à l’indice i
+	Si la surface disponible moins la taille de l’objet est str plus grand que 0:
+		Ajouter le nom de l’objet à la solution
+		Soustraire la taille de l’objet à la surface disponible
+		Ajouter le nombre de points d’utilités au score total
+	Incrémenter i de 1
+Renvoyer la solution, le score total
+        </textarea>
+        <ol start="11">
+            <li>Tester votre fonction avec comme surface 25 puis 36. Vérifier alors les résultats trouvés aux questions 2 et 3.</li>
+        </ol>
+        <p>Nous souhaitons aménager une seconde pièce de notre maison ayant pour dimensions <b>4x5 cases</b>, nous avons décidé de faire une cuisine, pour cela nous possédons la liste d’objets suivante :</p>
+        <table>
+            <tr>
+                <td class="tab_titre tab-col-4">Noms</td>
+                <td class="tab_titre tab-col-4">Dimensions</td>
+                <td class="tab_titre tab-col-4">Nombres de cases</td>
+                <td class="tab_titre tab-col-4">Points d'utilité</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Four</td>
+                <td class="tab-col-4">1x2</td>
+                <td class="tab-col-4">2</td>
+                <td class="tab-col-4">20</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Placard</td>
+                <td class="tab-col-4">1x2</td>
+                <td class="tab-col-4">2</td>
+                <td class="tab-col-4">20</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Lave-vaisselle</td>
+                <td class="tab-col-4">1x2</td>
+                <td class="tab-col-4">2</td>
+                <td class="tab-col-4">10</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Réfrigérateur</td>
+                <td class="tab-col-4">1x2</td>
+                <td class="tab-col-4">2</td>
+                <td class="tab-col-4">30</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Plaque électrique</td>
+                <td class="tab-col-4">1x2</td>
+                <td class="tab-col-4">2</td>
+                <td class="tab-col-4">30</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Table</td>
+                <td class="tab-col-4">3x3</td>
+                <td class="tab-col-4">9</td>
+                <td class="tab-col-4">50</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Evier</td>
+                <td class="tab-col-4">2x2</td>
+                <td class="tab-col-4">4</td>
+                <td class="tab-col-4">30</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Micro - ondes</td>
+                <td class="tab-col-4">1x2</td>
+                <td class="tab-col-4">2</td>
+                <td class="tab-col-4">30</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Cafetière</td>
+                <td class="tab-col-4">1x2</td>
+                <td class="tab-col-4">2</td>
+                <td class="tab-col-4">20</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Plante</td>
+                <td class="tab-col-4">1x2</td>
+                <td class="tab-col-4">2</td>
+                <td class="tab-col-4">5</td>
+            </tr>
+        </table>
+        <ol start="12">
+            <li>Ecrire la liste de dictionnaires correspondante à nos nouveaux objets.</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="13">
+            <li>Ecrire la liste de dictionnaires correspondante à nos nouveaux objets.</li>
+        </ol>
+        <p>Résultat obtenu :</p>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <ol start="14">
+            <li>Cette solution est-elle la meilleure ? N'y-a-t-il pas de combinaisons maximisant le score d'utilité autre que celle obtenue avec l'algorithme ?</li>
+        </ol>
+        <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+        <b>Nota bene :</b></br>
+        <p>Dans ce TP, nous avons réfléchi et mis en œuvre une stratégie afin d’optimiser le nombre de points d’utilités. Nous avons convenu de choisir à chaque fois l’objet possédant le plus de points d’utilités pouvant être placé dans la surface disponible. Cette stratégie met en œuvre une succession de choix optimaux locaux sur des problèmes de plus en plus petits. Le nom officiel de la famille d’algorithmes utilisant cette stratégie est <b>Algorithme glouton</b>.</p>
+        <p><i>Définition</i>Optimiser un problème, c’est déterminer la solution répondant à une caractéristique spécifique. Par exemple, déterminer le minimum ou le maximum d’une fonction est un problème d’optimisation. Optimiser le problème de ce TP, est trouver l’ensemble de objets visant à maximiser le nombre de points d’utilités pour une surface donnée.</p>
+    </div>
 <footer>
 	<p>JHermilier</p>
 	<p>Contact : hermiliernsi@gmail.com</p>
