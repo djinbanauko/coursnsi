@@ -12,11 +12,12 @@
 		<li><a href='../'>Terminale</a></li>
 		<li><a href='../../Premiere'>Première</a></li>
 		<li><a href='../../Seconde/'>Seconde</a></li>
-		<li id="home"><a href='../../'><img id="home_icon" src="img/home.png"></a></li>
+		<li id="home"><a href='../../'><img id="home_icon" src="../../img/home.png"></a></li>
 	</ul>
 	<div class="corps">
 		<a href="pdf/bdd.pdf"><img src="../../img/pdf.png" class="logo2"></a>
-		<a href="odt/bdd.odt"><img src="../../img/odt.png" class="logo2"></i></a>
+		<a href="odt/modele_relationnel.odt"><img src="../../img/odt.png" class="logo2"></a>
+		<a href="md/modele_relationnel.md"><img src="../../img/md.png" class="logo2"></a>
 		</br>
 		<h1>Modèle relationnel</h1>
         <h2>Définitions</h2>
@@ -27,40 +28,40 @@
         <i>Exemple :</i>
         <p>Voici un tableau à deux dimensions représentant la relation appelée <i>Artistes</i>.</p>
         <table>
-            <tr>
-                <td>id_artiste</td>
-                <td>prenom</td>
-                <td>nom</td>
-                <td>pseudonyme</td>
-                <td>date_de_naissance</td>
+            <tr class="tab_titre">
+                <td class="tab-col-5">id_artiste</td>
+                <td class="tab-col-5">prenom</td>
+                <td class="tab-col-5">nom</td>
+                <td class="tab-col-5">pseudonyme</td>
+                <td class="tab-col-5">date_de_naissance</td>
             </tr>
             <tr>
-                <td>1</td>
-                <td>Aurélien</td>
-                <td>Cotentin</td>
-                <td>Orelsan</td>
-                <td>01/08/1982</td>
+                <td class="tab-col-5">1</td>
+                <td class="tab-col-5">Aurélien</td>
+                <td class="tab-col-5">Cotentin</td>
+                <td class="tab-col-5">Orelsan</td>
+                <td class="tab-col-5">01/08/1982</td>
             </tr>
             <tr>
-                <td>2</td>
-                <td>William</td>
-                <td>Kalubi Mwamba</td>
-                <td>Damso</td>
-                <td>10/05/1992</td>
+                <td class="tab-col-5">2</td>
+                <td class="tab-col-5">William</td>
+                <td class="tab-col-5">Kalubi Mwamba</td>
+                <td class="tab-col-5">Damso</td>
+                <td class="tab-col-5">10/05/1992</td>
             </tr>
             <tr>
-                <td>3</td>
-                <td>Julien</td>
-                <td>Schwarzer</td>
-                <td>SCH</td>
-                <td>06/04/1993</td>
+                <td class="tab-col-5">3</td>
+                <td class="tab-col-5">Julien</td>
+                <td class="tab-col-5">Schwarzer</td>
+                <td class="tab-col-5">SCH</td>
+                <td class="tab-col-5">06/04/1993</td>
             </tr>
             <tr>
-                <td>4</td>
-                <td>Issa</td>
-                <td>Lorenzo Diakhaté</td>
-                <td>Freeze Corleone</td>
-                <td>06/06/1992</td>
+                <td class="tab-col-5">4</td>
+                <td class="tab-col-5">Issa</td>
+                <td class="tab-col-5">Lorenzo Diakhaté</td>
+                <td class="tab-col-5">Freeze Corleone</td>
+                <td class="tab-col-5">06/06/1992</td>
             </tr>
         </table>
         <ol>
@@ -285,7 +286,7 @@
         <p>Il faut maintenant créer un lien entre nos relations.</p>
         <h2>Clé étrangère</h2>
         <p>Pour établir un lien entre 2 relations R<sub>A</sub> et R<sub>B</sub>, on ajoute à R<sub>A</sub> un attribut x qui prendra les valeurs de la clé primaire de R<sub>B</sub>. Cet attribut x est appelé clef étrangère (l'attribut correspond à la clé primaire d'une autre table, d'où le nom).</p>
-        <p>Dans l'exemple ci-dessus, l'attribut "id_album" de la relation *Chansons* permet bien d'établir un lien entre la relation *Chansons* et la relation <i>Albums</i>, conclusion : "id_album" est une clé étrangère.</p>
+	<p>Dans l'exemple ci-dessus, l'attribut "id_album" de la relation <i>Chansons</i> permet bien d'établir un lien entre la relation <i>Chansons</i> et la relation <i>Albums</i>, conclusion : "id_album" est une clé étrangère.</p>
         <p>Une clé étrangère est une <b>contrainte d'intégrité</b> qui permet de garder une cohérence entre les deux relations :</p>
         <ul>
             <li>Ces valeurs doivent pré-exister dans la relation à laquelle elle fait référence : on ne peut pas ajouter à la clé étrangère une valeur qui n'est pas présente parmi les valeurs de la clé primaire de l'autre relation.</li>
@@ -347,12 +348,13 @@
         </ol>
         <h2>Exercices</h2>
         <i>Difficulté 1</i>
+	</br>
         <b>Exercice 1 :</b>
         <p>Associer chaque terme du modèle à sa description.</p>
-        <p>Clé étrangère                                       p-uplet mettant en relation les attributs.</p>
-        <p>Clé primaire										 Fait "référence" à un élément.</p>
-        <p>Domaine                                               Ensemble de valeurs possibles.</p>
-        <p>Enregistrement                                    Identifie de façon unique chaque élément.</p>
+        <pre>Clé étrangère                                       p-uplet mettant en relation les attributs.</pre>
+        <pre>Clé primaire										 Fait "référence" à un élément.</pre>
+        <pre>Domaine                                               Ensemble de valeurs possibles.</pre>
+        <pre>Enregistrement                                    Identifie de façon unique chaque élément.</pre>
         <b>Exercice 2 :</b>
         <p>Soit la table suivante :</p>
         <table>
@@ -476,6 +478,7 @@
             <li>Cette base de données semble-t-elle bien modélisée ? Si ce n'est pas le cas, proposer une modification.</li>
         </ol>
         <i>Difficulté 2</i>
+	</br>
         <b>Exercice 4 :</b>
         <p>On souhaite modéliser un annuaire téléphonique simple dans lequel chaque personne (identifiée par son nom et son prénom) est associée à son numéro de téléphone . Proposer un schéma de relation de cet annuaire.</p>
         <b>Exercice 5 :</b>
