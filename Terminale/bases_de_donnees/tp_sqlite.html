@@ -32,20 +32,16 @@
         </ul>
         <p>Création de table :</p>
         <p>On utilise la commande  <b>CREATE  TABLE</b>  de la manière suivante :</p>
-        <textarea rows="5">
-            CREATE TABLE nom_de_ma_table  (   attribut1   domaine1  contrainte1 ,
+        <textarea rows="5">CREATE TABLE nom_de_ma_table  (   attribut1   domaine1  contrainte1 ,
             attribut2   domaine 2  contrainte1 ,                
             ………………………………....,
-            attribut_n   domaine_n  contrainte_n) ;
-        </textarea>
+            attribut_n   domaine_n  contrainte_n) ;</textarea>
         <p>attribut = nom de la colonnes</p>
         <p>domaine = type de valeur : CHAR(n) , VARCHAR(n) , INT , …</p>
         <p>contrainte = PRIMARY KEY , REFERENCES une_table (attribut) ,  NOT NULL , … )</p>
         <i>Exemple :</i>
-        <textarea rows="3">
-            CREATE TABLE Livre(code_barre CHAR(15)   REFERENCES usager(code_barre),
-            isbn CHAR(14)PRIMARY KEY ) ;
-        </textarea>
+        <textarea rows="3">CREATE TABLE Livre(code_barre CHAR(15)   REFERENCES usager(code_barre),
+            isbn CHAR(14)PRIMARY KEY ) ;</textarea>
         <p>à savoir que l'attribut <i>code_barre</i> est la clé primaire de la table <i>usager</i>.</p>
         <p>Insertion dans une table :</p>
         <textarea rows="2">INSERT INTO  nom_de_la_table      VALUES(valeur1,valeur2,…..) ;</textarea>
@@ -61,7 +57,7 @@
         </ul>
         <ol>
             <li>Quelles sont les clés primaires de ces tables ?</li>
-            <li>Récupérer le fichier <a href="documents/lycee.db">lycee.db</a></li>
+            <li>Récupérer le fichier <a href="documents/lycee.db">lycee.db</a>.</li>
             <li>Lancer sqlite3.exe</li>
             <li>Importer la base de données <i>lycee</i> à l'aide de la commande <b>.open lycee.db</b>.</li>
             <li>Afficher les tables présente dans cette base de données à l'aide de la commande <b>.tables</b>.</li>
@@ -74,10 +70,8 @@
             <li>Créer la table <i>inscription</i>.</li>
             <li>Insérez vous dans la table <i>inscription</i>.</li>
             <li>Afficher la table inscription.</li>
-        </ol>
-    
-    
-    
+            <li>Rajoutez l’ensemble de vos camarades dans la table <i>eleve</i> puis dans la table <i>inscription</i>.</li>
+	</ol>
     </div>
 <footer>
 	<p>JHermilier</p>
