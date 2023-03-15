@@ -20,7 +20,64 @@
     <a href="md/tp_sqlite.odt"><img src="../../img/md.png" class="logo2"></a>
 		</br>
 		<h1>TP SQLite</h1>
-	</div>
+        <h2>Notions de bases</h2>
+        <p>Quelques types de  valeurs :</p>
+        <ul>
+            <li><b>NULL</b> : la valeur null</li>
+            <li><b>INTEGER</b> : entier, booléen(0 ou 1)</li>
+            <li><b>REAL</b> : nombre flottant</li>
+            <li><b>VARCHAR(n)</b> : chaîne de caractère de longueur variable allant jusqu'à  n</li>
+            <li><b>CHAR(n)</b> : chaîne de caractère de longueur n</li>
+        </ul>
+        <p>Création de table :</p>
+        <p>On utilise la commande  <b>CREATE  TABLE</b>  de la manière suivante :</p>
+        <textarea rows="5">
+            CREATE TABLE nom_de_ma_table  (   attribut1   domaine1  contrainte1 ,
+            attribut2   domaine 2  contrainte1 ,                
+            ………………………………....,
+            attribut_n   domaine_n  contrainte_n) ;
+        </textarea>
+        <p>attribut = nom de la colonnes</p>
+        <p>domaine = type de valeur : CHAR(n) , VARCHAR(n) , INT , …</p>
+        <p>contrainte = PRIMARY KEY , REFERENCES une_table (attribut) ,  NOT NULL , … )</p>
+        <i>Exemple :</i>
+        <textarea rows="3">
+            CREATE TABLE Livre(code_barre CHAR(15)   REFERENCES usager(code_barre),
+            isbn CHAR(14)PRIMARY KEY ) ;
+        </textarea>
+        <p>à savoir que l'attribut <i>code_barre</i> est la clé primaire de la table <i>usager</i>.</p>
+        <p>Insertion dans une table :</p>
+        <textarea rows="2">INSERT INTO  nom_de_la_table      VALUES(valeur1,valeur2,…..) ;</textarea>
+        <h2>Mise en Pratique</h2>
+        <p>La base de données <i>lycee</i> que vous utiliserez pour le tp est composée de 3 tables :</p>
+        <p><i>eleve</i> (id_eleve, nom, prenom)</p>
+        <p><i>option</i> (id_option, nom option)</p>
+        <p><i>inscription</i> (id_eleve, id_option)</p>
+        <ul>
+            <li>La table eleve contient l'id de l'élève qui est exprimé sur 4 chiffres ainsi que son nom et son prénom qui ont une longueur maximal de 28.</li>
+            <li>La table option contient l'id de l'option exprimé sur un chiffre et le nom de cette option.</li>
+            <li>- La table inscription contient l'id de l'élève et l'id de l'option dans laquelle il est inscrite .</li>
+        </ul>
+        <ol>
+            <li>Quelles sont les clés primaires de ces tables ?</li>
+            <li>Récupérer le fichier <a href="documents/lycee.db">lycee.db</a></li>
+            <li>Lancer sqlite3.exe</li>
+            <li>Importer la base de données <i>lycee</i> à l'aide de la commande <b>.open lycee.db</b>.</li>
+            <li>Afficher les tables présente dans cette base de données à l'aide de la commande <b>.tables</b>.</li>
+            <li>Créer la table <i>eleve</i>.</li>
+            <li>Ajoutez vous dans la table <i>eleve</i>.</li>
+            <li>Sauvegarder à l'aide de la commande <b>.save lycee.db</b>.</li>
+            <li>Afficher votre table à l'aide de la commande <b>SELECT * FROM eleve ;</b></li>
+            <li>Ajouter votre camarade  dans la table <i>eleve</i>.</li>
+            <li>Afficher de nouveau votre table.</li>
+            <li>Créer la table <i>inscription</i>.</li>
+            <li>Insérez vous dans la table <i>inscription</i>.</li>
+            <li>Afficher la table inscription.</li>
+        </ol>
+    
+    
+    
+    </div>
 <footer>
 	<p>JHermilier</p>
 	<p>Contact : hermiliernsi@gmail.com</p>
