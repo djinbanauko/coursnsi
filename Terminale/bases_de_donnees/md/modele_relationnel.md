@@ -35,18 +35,23 @@ Voici un tableau à deux dimensions représentant la relation appelée *Artistes
 
 
 
-
-
 Chaque attribut est associé à un **domaine**, c'est l'ensemble de valeurs que peut prendre une donnée. Le domaine est en quelque sorte un équivalent du type en python.
 
 Par exemple, un **domaine** peut être :
 
 - L'ensemble des entiers (INT)
+
 - L'ensemble des nombres flottants (FLOAT)
+
 - Les chaines de caractères (TEXT) 
+
 - Les dates (DATE)
+
 - Les booléens (BOOL)
+
 - etc 
+
+  
 
 Dans notre exemple :
 
@@ -57,6 +62,8 @@ Dans notre exemple :
 - Le domaine de l'attribut id_artiste est INT.
 
 Sur les domaines, une contrainte se pose, la **contrainte de Domaine** : seules les valeurs présentent dans le domaine sont utilisables.
+
+
 
 ## Clé primaire
 
@@ -70,13 +77,13 @@ Dans une relation, une **clé primaire** (Primary Key) identifie de manière uni
 
 
 
-
-
 *Remarque :*
 
 Dans certaines relations, les attributs ne permettent pas choisir une clé primaire appropriée, en cas d'homonymes par exemple. On ajoute alors à la relation une colonne dédiée qui sera la clé primaire avec un simple numéro, un identifiant souvent appelé **id**  qui fera une clé primaire simple et fiable.
 
 L'existence d'une clé primaire est une **contrainte d'entité** qui permet de vérifier qu'il n'existe pas deux enregistrements identiques dans la base. Ce qui est interdit comme nous l'avons déjà dit. 
+
+
 
 ## Base de données relationnelle
 
@@ -121,8 +128,6 @@ Reprenons notre exemple, on peux ajouter à notre base de données, la relation 
 
 
 
-
-
 La base peut contenir plus de deux relations bien entendu. Voici, par exemple, une autre relation que nous appellerons *Chansons* :
 
 | titre                | id_artiste | id_album | numero | annee_de_sortie |
@@ -143,6 +148,8 @@ C'est le fait d'avoir plusieurs tables qui rend inutile de stipuler, pour chaque
 Par la suite, nous allons donc supprimer cet attribut !
 
 Il faut maintenant créer un lien entre nos relations.
+
+
 
 ## Clé étrangère
 
@@ -223,6 +230,10 @@ On appelle **schéma relationnel** l'ensemble de tous les schémas de relation d
 
 
 
+
+
+
+
 ## Exercices
 
 *Difficulté 1*
@@ -255,7 +266,11 @@ Soit la table suivante :
 
    
 
+   
+
 2. Quel est le domaine de l'attribut kilométrage ?
+
+
 
 
 
@@ -263,15 +278,19 @@ Soit la table suivante :
 
 
 
+
+
 4. Donner le schéma de relation de la table.
 
-
+ 
 
 
 
 **Exercice 3 :**
 
 Une sandwicherie effectuant des livraisons à domicile dispose d'une base de données dont certains extraits de tables sont reproduits ci-dessous. 
+
+
 
 La table *Sandwichs* :
 
@@ -301,11 +320,17 @@ La tables *Commandes* :
 
 
 
+
+
 2. Quel attribut ou groupe d'attribut peut constituer une clé primaire pour la table *Sandwichs* ? 
 
 
 
+
+
 3. Quels attributs ou groupe d'attribut sont des clés étrangères dans la table *Commandes* ?
+
+
 
 
 
