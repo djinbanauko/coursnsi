@@ -12,12 +12,11 @@
 		<li><a href='../'>Terminale</a></li>
 		<li><a href='../../Premiere'>Première</a></li>
 		<li><a href='../../Seconde/'>Seconde</a></li>
-		<li id="home"><a href='../../'><img id="home_icon" src="../../img/home.png"></a></li>
+		<li id="home"><a href='../../'><img id="home_icon" src="img/home.png"></a></li>
 	</ul>
 	<div class="corps">
-		<a href="pdf/modele_relationnel.pdf"><img src="../../img/pdf.png" class="logo2"></a>
-		<a href="odt/modele_relationnel.odt"><img src="../../img/odt.png" class="logo2"></a>
-		<a href="md/modele_relationnel.md"><img src="../../img/md.png" class="logo2"></a>
+		<a href="pdf/bdd.pdf"><img src="../../img/pdf.png" class="logo2"></a>
+		<a href="odt/bdd.odt"><img src="../../img/odt.png" class="logo2"></i></a>
 		</br>
 		<h1>Modèle relationnel</h1>
         <h2>Définitions</h2>
@@ -66,8 +65,427 @@
         </table>
         <ol>
             <li>Quels sont les attributs de cette relation?</li>
+            <li>Donner le premier enregistrement.</li>
+            <li>Donner la dernière entrée de cette relation.</li>
         </ol>
-	</div>
+        <p>Chaque attribut est associé à un <b>domaine</b>, c'est l'ensemble de valeurs que peut prendre une donnée. Le domaine est en quelque sorte un équivalent du type en python.</p>
+        <p>Par exemple, un <b>domaine</b> peut être :</p>
+        <ul>
+            <li>L'ensemble des entiers (INT)</li>
+            <li>L'ensemble des nombres flottants (FLOAT)</li>
+            <li>Les chaines de caractères (TEXT) </li>
+            <li>Les dates (DATE)</li>
+            <li>Les booléens (BOOL)</li>
+            <li>etc </li>
+        </ul>
+        <p>Dans notre exemple :</p>
+        <ul>
+            <li>Les attributs pseudonyme, nom et prenom sont des chaînes de caractères, on dit alors qu'ils sont associés au domaine TEXT.</li>
+            <li>Le domaine de l'attribut date_de_naissance est DATE.</li>
+            <li>Le domaine de l'attribut id_artiste est INT.</li>
+        </ul>
+        <p>Sur les domaines, une contrainte se pose, la <b>contrainte de Domaine</b> : seules les valeurs présentent dans le domaine sont utilisables.</p>
+        <h2>Clé primaire</h2>
+        <p>Dans une relation, une <b>clé primaire</b> (Primary Key) identifie de manière unique un enregistrement d'une relation. Elle ne peut être vide (NULL). Elle peut être composée d'un ou plusieurs attributs.</p>
+        <ol start="4">
+            <li>Dans la relation <i>Artistes</i> vue plus haut, quel attribut peut être une clé primaire ?</li>
+            <li>Peut-on choisir une autre clé primaire ? Justifier.</li>
+        </ol>
+        <i>Remarque :</i>
+        <p>Dans certaines relations, les attributs ne permettent pas choisir une clé primaire appropriée, en cas d'homonymes par exemple. On ajoute alors à la relation une colonne dédiée qui sera la clé primaire avec un simple numéro, un identifiant souvent appelé <b>id</b>  qui fera une clé primaire simple et fiable.</p>
+        <p>L'existence d'une clé primaire est une <b>contrainte d'entité</b> qui permet de vérifier qu'il n'existe pas deux enregistrements identiques dans la base. Ce qui est interdit comme nous l'avons déjà dit. </p>
+        <h2>Base de données relationnelle</h2>
+        <p>Une base de données est constituée d'un ensemble de relations (donc de plusieurs tables).</p>
+        <p>Reprenons notre exemple, on peux ajouter à notre base de données, la relation suivante, que nous appellerons <i>Albums</i>.</p>
+        <table>
+            <tr class="tab_titre">
+                <td class="tab-col-5">id_album</td>
+                <td class="tab-col-5">titre</td>
+                <td class="tab-col-5">id_artiste</td>
+                <td class="tab-col-5">date_de_sortie</td>
+                <td class="tab-col-5">label</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">1</td>
+                <td class="tab-col-5">Ipséité</td>
+                <td class="tab-col-5">2</td>
+                <td class="tab-col-5">28/04/2017</td>
+                <td class="tab-col-5">Capitol</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">2</td>
+                <td class="tab-col-5">La fête est finie</td>
+                <td class="tab-col-5">1</td>
+                <td class="tab-col-5">20/10/2017</td>
+                <td class="tab-col-5">Wagram</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">3</td>
+                <td class="tab-col-5">Rooftop</td>
+                <td class="tab-col-5">3</td>
+                <td class="tab-col-5">29/11/2019</td>
+                <td class="tab-col-5">Maison Baron Rouge</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">4</td>
+                <td class="tab-col-5">Le chant des sirènes</td>
+                <td class="tab-col-5">1</td>
+                <td class="tab-col-5">05/05/2011</td>
+                <td class="tab-col-5">Wagram</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">5</td>
+                <td class="tab-col-5">FDT</td>
+                <td class="tab-col-5">4</td>
+                <td class="tab-col-5">11/09/2016</td>
+                <td class="tab-col-5">M.M.S Records</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">6</td>
+                <td class="tab-col-5">Anarchie</td>
+                <td class="tab-col-5">3</td>
+                <td class="tab-col-5">27/05/2016</td>
+                <td class="tab-col-5">Braabus</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">7</td>
+                <td class="tab-col-5">Batterie faible</td>
+                <td class="tab-col-5">2</td>
+                <td class="tab-col-5">08/07/2016</td>
+                <td class="tab-col-5">Universal</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">8</td>
+                <td class="tab-col-5">JVLIVS II</td>
+                <td class="tab-col-5">3</td>
+                <td class="tab-col-5">19/03/2021</td>
+                <td class="tab-col-5">Warner</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">9</td>
+                <td class="tab-col-5">Perdu d'avance</td>
+                <td class="tab-col-5">1</td>
+                <td class="tab-col-5">16/02/2009</td>
+                <td class="tab-col-5">Wagram</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">10</td>
+                <td class="tab-col-5">QALF</td>
+                <td class="tab-col-5">2</td>
+                <td class="tab-col-5">18/12/2020</td>
+                <td class="tab-col-5">Universal</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">11</td>
+                <td class="tab-col-5">Deo Favente</td>
+                <td class="tab-col-5">3</td>
+                <td class="tab-col-5">05/05/2017</td>
+                <td class="tab-col-5">Capitol</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">12</td>
+                <td class="tab-col-5">Projet Blue Beam</td>
+                <td class="tab-col-5">4</td>
+                <td class="tab-col-5">13/11/2018</td>
+                <td class="tab-col-5">M.M.S Records</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">13</td>
+                <td class="tab-col-5">Civilisation</td>
+                <td class="tab-col-5">1</td>
+                <td class="tab-col-5">19/11/2021</td>
+                <td class="tab-col-5">Wagram</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">14</td>
+                <td class="tab-col-5">A7</td>
+                <td class="tab-col-5">3</td>
+                <td class="tab-col-5">13/11/2015</td>
+                <td class="tab-col-5">Braabus</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">15</td>
+                <td class="tab-col-5">LMF</td>
+                <td class="tab-col-5">4</td>
+                <td class="tab-col-5">11/09/2020</td>
+                <td class="tab-col-5">M.M.S Records</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">16</td>
+                <td class="tab-col-5">Lithopédion</td>
+                <td class="tab-col-5">2</td>
+                <td class="tab-col-5">15/06/2018</td>
+                <td class="tab-col-5">Universal</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">17</td>
+                <td class="tab-col-5">Projet Purrp Beam</td>
+                <td class="tab-col-5">4</td>
+                <td class="tab-col-5">25/11/2019</td>
+                <td class="tab-col-5">CJusteRalenti Records</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">18</td>
+                <td class="tab-col-5">JVLIVS</td>
+                <td class="tab-col-5">3</td>
+                <td class="tab-col-5">19/10/2018</td>
+                <td class="tab-col-5">Maison Baron Rouge</td>
+            </tr>
+        </table>
+        <ol start="6">
+            <li>Quels sont les attributs de cette relation ? </li>
+            <li>Donner le cinquième enregistrement de la relation Albums.</li>
+            <li>Donner une entrée.</li>
+            <li>Donner un attribut ou un groupe d'attributs pouvant constituer une clé primaire pour cette relation.</li>
+        </ol>
+        <p>La base peut contenir plus de deux relations bien entendu. Voici, par exemple, une autre relation que nous appellerons <i>Chansons</i> :</p>
+        <table>
+            <tr class="tab_titre">
+                <td class="tab-col-5">titre</td>
+                <td class="tab-col-5">id_artiste</td>
+                <td class="tab-col-5">id_album</td>
+                <td class="tab-col-5">numero</td>
+                <td class="tab-col-5">annee_de_sortie</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">Freeze Raël</td>
+                <td class="tab-col-5">4</td>
+                <td class="tab-col-5">15</td>
+                <td class="tab-col-5">1</td>
+                <td class="tab-col-5">2020</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">911</td>
+                <td class="tab-col-5">2</td>
+                <td class="tab-col-5">10</td>
+                <td class="tab-col-5">11</td>
+                <td class="tab-col-5">2020</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">Mannschaft</td>
+                <td class="tab-col-5">3</td>
+                <td class="tab-col-5">8</td>
+                <td class="tab-col-5">5</td>
+                <td class="tab-col-5">2021</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">L'odeur de l'essence</td>
+                <td class="tab-col-5">1</td>
+                <td class="tab-col-5">13</td>
+                <td class="tab-col-5">8</td>
+                <td class="tab-col-5">2021</td>
+            </tr>
+        </table>
+        <i>Remarque :</i>
+        <p>C'est le fait d'avoir plusieurs tables qui rend inutile de stipuler, pour chaque album, quel est la date de création de son label par exemple.  <b>Définir plusieurs tables évite donc la redondance des valeurs et des colonnes et optimise ainsi la base de données</b>.</p>
+        <ol start="10">
+            <li>Quels attributs de la relation peuvent être obtenues à partir d'une autre relation ? </li>
+        </ol>
+        <p>Par la suite, nous allons donc supprimer cet attribut !</p>
+        <p>Il faut maintenant créer un lien entre nos relations.</p>
+        <h2>Clé étrangère</h2>
+        <p>Pour établir un lien entre 2 relations R<sub>A</sub> et R<sub>B</sub>, on ajoute à R<sub>A</sub> un attribut x qui prendra les valeurs de la clé primaire de R<sub>B</sub>. Cet attribut x est appelé clef étrangère (l'attribut correspond à la clé primaire d'une autre table, d'où le nom).</p>
+        <p>Dans l'exemple ci-dessus, l'attribut "id_album" de la relation *Chansons* permet bien d'établir un lien entre la relation *Chansons* et la relation <i>Albums</i>, conclusion : "id_album" est une clé étrangère.</p>
+        <p>Une clé étrangère est une <b>contrainte d'intégrité</b> qui permet de garder une cohérence entre les deux relations :</p>
+        <ul>
+            <li>Ces valeurs doivent pré-exister dans la relation à laquelle elle fait référence : on ne peut pas ajouter à la clé étrangère une valeur qui n'est pas présente parmi les valeurs de la clé primaire de l'autre relation.</li>
+            <li>On ne peut pas supprimer une valeur d'une clé primaire qui est référencée dans une clé étrangère.</li>
+        </ul>
+        <p>Dans notre exemple, impossible d'enregistrer un album de JUL ou de supprimer l'album Civilisation de la relation <i>Albums</i>.</p>
+        <p>Il nous faut déterminer un attribut (ou groupe d'attribut) qui constitue une clé étrangère de la relation <i>Chansons</i> vers la relation <i>Albums</i>.</p>
+        <p>Pour rappel, la relation <i>Chansons</i> a été modifiée et se trouve être celle-ci :</p>
+        <table>
+            <tr class="tab_titre">
+                <td class="tab-col-3">titre</td>
+                <td class="tab-col-3">id_album</td>
+                <td class="tab-col-3">numero</td>
+            </tr>
+            <tr>
+                <td class="tab-col-3">Freeze Raël</td>
+                <td class="tab-col-3">15</td>
+                <td class="tab-col-3">1</td>
+            </tr>
+            <tr>
+                <td class="tab-col-3">911</td>
+                <td class="tab-col-3">10</td>
+                <td class="tab-col-3">11</td>
+            </tr>
+            <tr>
+                <td class="tab-col-3">Mannschaft</td>
+                <td class="tab-col-3">8</td>
+                <td class="tab-col-3">5</td>
+            </tr>
+            <tr>
+                <td class="tab-col-3">L'odeur de l'essence</td>
+                <td class="tab-col-3">13</td>
+                <td class="tab-col-3">8</td>
+            </tr>
+        </table>
+        <ol start="11">
+            <li>A quelles possibles clés primaires de la relation <i>Albums</i> la relation <i>Chansons</i> ne peut en aucun cas faire référence ?</li>
+            <li>Quelle clé primaire doit-on alors impérativement choisir pour la relation <i>Albums</i> ?</li>
+            <li>Quelle est la clé étrangère de la relation <i>Chansons</i> qui référence cette clé primaire ?</li>
+        </ol>
+        <h2>Autres contraintes</h2>
+        <p>Nous avons vu que la clé primaire imposait une <b>contrainte d'unicité</b> et la clé étrangère une <b>contrainte d'intégrité</b>. Il existe d'autre type de contraintes, par exemple :</p>
+        <ul>
+            <li>Une bonne pratique consiste à interdire qu'un attribut ne pas pas être nul (NULL). Cette contrainte de non nullité se fait au moyen du mot clé <b>NOT NULL</b>.</li>
+            <li>Il arrive parfois qu'un attribut, bien qu'il ne soit pas une clé primaire, doivent être unique. Il est possible de forcer cette unicité sans utiliser l'attribut comme clé primaire.</li>
+            <li>On peut définir des <b>contraintes de domaine</b> en réduisant le domaine. Par exemple, un attribut entier peut voir sa plage réduite à un chiffre. Cela se fait lors de la requête pur créer la table ou en modifiant une table déjà existante.</li>
+        </ul>
+        <h2>Schéma relationnel</h2>
+        <p>Un <b>schéma de relation</b> d'une relation en précise le nom, les attributs et leurs domaines, la clé primaire et, éventuellement , la clé étrangère.</p>
+        <p>Ainsi, le schéma de relation de <i>Chansons</i> est :</p>
+        <p>Chansons(<u>titre</u> : TEXT, <u>numero</u> : INT,#id_album : INT)</p>
+        <ol start="14">
+            <li>Donner le schéma de relation de la relation <i>Artistes</i>.</li>
+            <li>Donner le schéma de relation de la relation <i>Albums</i>.</li>
+        </ol>
+        <p>On appelle <b>schéma relationnel</b> l'ensemble de tous les schémas de relation d'une base de donnée.</p>
+        <ol start="16">
+            <li>Donner le schéma relationnel de notre base, constituée des relations <i>Artistes</i>, <i>Chansons</i> et <i>Albums</i>.</li>
+        </ol>
+        <h2>Exercices</h2>
+        <i>Difficulté 1</i>
+        <b>Exercice 1 :</b>
+        <p>Associer chaque terme du modèle à sa description.</p>
+        <p>Clé étrangère                                       p-uplet mettant en relation les attributs.</p>
+        <p>Clé primaire										 Fait "référence" à un élément.</p>
+        <p>Domaine                                               Ensemble de valeurs possibles.</p>
+        <p>Enregistrement                                    Identifie de façon unique chaque élément.</p>
+        <b>Exercice 2 :</b>
+        <p>Soit la table suivante :</p>
+        <table>
+            <tr class="tab_titre">
+                <td class="tab-col-5">id_voiture</td>
+                <td class="tab-col-5">marque</td>
+                <td class="tab-col-5">modele</td>
+                <td class="tab-col-5">kilometrage</td>
+                <td class="tab-col-5">couleur</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">1</td>
+                <td class="tab-col-5">Renault</td>
+                <td class="tab-col-5">Clio</td>
+                <td class="tab-col-5">12000</td>
+                <td class="tab-col-5">Rouge</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">2</td>
+                <td class="tab-col-5">Peugeot</td>
+                <td class="tab-col-5">205</td>
+                <td class="tab-col-5">22000</td>
+                <td class="tab-col-5">Noir</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">3</td>
+                <td class="tab-col-5">Toyota</td>
+                <td class="tab-col-5">Yaris</td>
+                <td class="tab-col-5">33000</td>
+                <td class="tab-col-5">Noir</td>
+            </tr>
+        </table>
+        <ol>
+            <li>Combien d'attributs comporte cette table ? </li>
+            <li>Quel est le domaine de l'attribut kilométrage ?</li>
+            <li>Donner un attribut ou un groupe d'attributs pouvant constituer une clé primaire pour cette relation.</li>
+            <li>Donner le schéma de relation de la table.</li>
+        </ol>
+        <b>Exercice 3 :</b>
+        <p>Une sandwicherie effectuant des livraisons à domicile dispose d'une base de données dont certains extraits de tables sont reproduits ci-dessous.</p>
+        <p>La table <i>Sandwichs</i> :</p>
+        <table>
+            <tr class="tab_titre">
+                <td class="tab-col-2">nom_sandwich</td>
+                <td class="tab-col-2">prix</td>
+            </tr>
+            <tr>
+                <td class="tab-col-2">Cheeseburger</td>
+                <td class="tab-col-2">3,90</td>
+            </tr>
+            <tr>
+                <td class="tab-col-2">Double cheese</td>
+                <td class="tab-col-2">4,90</td>
+            </tr>
+            <tr>
+                <td class="tab-col-2">Italien</td>
+                <td class="tab-col-2">4,90</td>
+            </tr>
+            <tr>
+                <td class="tab-col-2">Foie gras</td>
+                <td class="tab-col-2">15,00</td>
+            </tr>            
+        </table>
+        <p>La table <i>Clients</i> :</p>
+        <table>
+            <tr class="tab_titre">
+                <td class="tab-col-4">nom</td>
+                <td class="tab-col-4">prenom</td>
+                <td class="tab-col-4">adresse</td>
+                <td class="tab-col-4">numero_client</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Bernard</td>
+                <td class="tab-col-4">Alain</td>
+                <td class="tab-col-4">9, rue Bienvenu, 13008 Marseille</td>
+                <td class="tab-col-4">42</td>
+            </tr>
+            <tr>
+                <td class="tab-col-4">Bernard</td>
+                <td class="tab-col-4">Yves</td>
+                <td class="tab-col-4">2, rue Lafayette, 13400 Aubagne</td>
+                <td class="tab-col-4">51</td>
+            </tr>
+        </table>
+        <p>La tables <i>Commandes</i> :</p>
+        <table>
+            <tr class="tab_titre">
+                <td class="tab-col-5">numero_client</td>
+                <td class="tab-col-5">nom_sandwich</td>
+                <td class="tab-col-5">quantite</td>
+                <td class="tab-col-5">numero_commande</td>
+                <td class="tab-col-5">date</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">42</td>
+                <td class="tab-col-5">Italien</td>
+                <td class="tab-col-5">2</td>
+                <td class="tab-col-5">12452</td>
+                <td class="tab-col-5">11/12/2019</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">42</td>
+                <td class="tab-col-5">Foie gras</td>
+                <td class="tab-col-5">1</td>
+                <td class="tab-col-5">12452</td>
+                <td class="tab-col-5">11/12/2019</td>
+            </tr>
+            <tr>
+                <td class="tab-col-5">51</td>
+                <td class="tab-col-5">Cheeseburger</td>
+                <td class="tab-col-5">4</td>
+                <td class="tab-col-5">13301</td>
+                <td class="tab-col-5">23/12/2019</td>
+            </tr>
+        </table>
+        <ol>
+            <li>Une commande peut-elle comporter plusieurs sandwichs de types différents ? </li>
+            <li>Quel attribut ou groupe d'attribut peut constituer une clé primaire pour la table <i>Sandwichs</i> ? </li>
+            <li>Quels attributs ou groupe d'attribut sont des clés étrangères dans la table <i>Commandes</i> ?</li>
+            <li>Quel est le schéma de relation de cette base de données ?</li>
+            <li>Cette base de données semble-t-elle bien modélisée ? Si ce n'est pas le cas, proposer une modification.</li>
+        </ol>
+        <i>Difficulté 2</i>
+        <b>Exercice 4 :</b>
+        <p>On souhaite modéliser un annuaire téléphonique simple dans lequel chaque personne (identifiée par son nom et son prénom) est associée à son numéro de téléphone . Proposer un schéma de relation de cet annuaire.</p>
+        <b>Exercice 5 :</b>
+        <p>Donner la modélisation relationnelle d'un bulletin scolaire. Cette dernière doit permettre de mentionner :</p>
+        <ul>
+            <li>Des élèves, possédants un numéro d'étudiant alphanumérique unique.</li>
+            <li>Un ensemble de matière fixées, mais qui ne sont pas données.</li>
+            <li>Au plus une note sur 20, par matière et par élève.</li>
+        </ul>
+    </div>
 <footer>
 	<p>JHermilier</p>
 	<p>Contact : hermiliernsi@gmail.com</p>
